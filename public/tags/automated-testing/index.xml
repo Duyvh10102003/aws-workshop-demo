@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automated Testing on AWS System Manager</title>
+    <link>//localhost:1313/tags/automated-testing/</link>
+    <description>Recent content in Automated Testing on AWS System Manager</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/automated-testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>//localhost:1313/1-introduce/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/1-introduce/</guid>
+      <description>&lt;h1 id=&#34;-workshop-kiểm-thử-tự-động-với-aws-codebuild-và-thực-thi-song-song&#34;&gt;🧪 Workshop: Kiểm thử tự động với AWS CodeBuild và thực thi song song&lt;/h1&gt;&#xA;&lt;h2 id=&#34;automated-testing-with-aws-codebuild--parallel-execution&#34;&gt;Automated Testing with AWS CodeBuild &amp;amp; Parallel Execution&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In the modern software development lifecycle, product quality and time-to-market are mission-critical. That&amp;rsquo;s why automated testing and cloud-based CI/CD pipelines have become essential industry standards.&lt;/p&gt;&#xA;&lt;h3 id=&#34;-workshop-objectives&#34;&gt;🎯 Workshop Objectives&lt;/h3&gt;&#xA;&lt;p&gt;This workshop guides you through implementing a complete automated testing pipeline for a web application built with .NET 8 MVC, featuring:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

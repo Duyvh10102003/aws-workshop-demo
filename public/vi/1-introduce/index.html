@@ -4,29 +4,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.9">
-    <meta name="description" content="">
+    <meta name="description" content="Xây dựng hệ thống kiểm thử tự động nâng cao cho ứng dụng .NET 8 MVC với AWS CodeBuild và CodeQL">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Giới thiệu :: AWS System Manager</title>
+    <title>Giới thiệu Workshop :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1752129933" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752129933" rel="stylesheet">
-    <link href="/css/hybrid.css?1752129933" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752129933" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752129933" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752129933" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752129933" rel="stylesheet">
-    <link href="/css/theme.css?1752129933" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752129933" rel="stylesheet">
+    <link href="/css/nucleus.css?1752206970" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1752206970" rel="stylesheet">
+    <link href="/css/hybrid.css?1752206970" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1752206970" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1752206970" rel="stylesheet">
+    <link href="/css/auto-complete.css?1752206970" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1752206970" rel="stylesheet">
+    <link href="/css/theme.css?1752206970" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1752206970" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1752129933" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1752206970" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752129933"></script>
+    <script src="/js/jquery-3.3.1.min.js?1752206970"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1752129933"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752129933"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1752206970"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1752206970"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1752129933"></script>
+<script type="text/javascript" src="/js/search.js?1752206970"></script>
 
     
   </div>
@@ -86,13 +86,13 @@
  
   
     
-    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu Workshop" class="dd-item 
         
         active
         
         ">
       <a href="/vi/1-introduce/">
-           <b> 1. </b> Giới thiệu
+           <b> 1. </b> Giới thiệu Workshop
           
             <i class="fas fa-check read-icon"></i>
           
@@ -112,266 +112,18 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/2-environment-setup/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/">
+      <a href="/vi/2-environment-setup/">
            <b> 2. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/" title="Chuẩn bị VPC và EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Chuẩn bị VPC và EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Tạo VPC " class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
-           <b> 2.1.1 </b> Tạo VPC 
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Tạo Public subnet" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
-           <b> 2.1.2 </b> Tạo Public subnet
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Tạo Private subnet" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
-           <b> 2.1.3 </b> Tạo Private subnet
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Tạo các security group" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
-           <b> 2.1.4 </b> Tạo các security group
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Tạo Public Linux EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Tạo Private Windows EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Tạo IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -386,449 +138,13 @@
  
   
     
-    <li data-nav-id="/vi/3-accessibilitytoinstances/" title="Tạo kết nối đến máy chủ EC2" class="dd-item 
+    <li data-nav-id="/vi/3-automated-unit-test/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-accessibilitytoinstances/">
-           <b> 3. </b> Tạo kết nối đến máy chủ EC2
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.1-public-instance/" title="Kết nối đến máy chủ Public" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.1-public-instance/">
-           <b> 3.1. </b> Kết nối đến máy chủ Public
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/">
-           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Kích hoạt DNS hostnames" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
-           <b> 3.2.1 </b> Kích hoạt DNS hostnames
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Tạo VPC Endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
-           <b> 3.2.2 </b> Tạo VPC Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Tạo Endpoint ssm" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
-           <b> 3.2.2.1 </b> Tạo Endpoint ssm
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Tạo Endpoint ssmmessages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
-           <b> 3.2.2.2 </b> Tạo Endpoint ssmmessages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Tạo Endpoint ec2messages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
-           <b> 3.2.2.3 </b> Tạo Endpoint ec2messages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Kết nối EC2 Private" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
-           <b> 3.2.3 </b> Kết nối EC2 Private
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/" title="Quản lý session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/">
-           <b> 4. </b> Quản lý session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.1-updateiamrole/">
-           <b> 4.1 </b> Cập nhật IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Tạo S3 Bucket
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.3-creategwes3/">
-           <b> 4.3 </b> Tạo S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/4-s3log/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-s3log/4.4-configsessionlogs/">
-           <b> 4.4 </b> Theo dõi session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-portfwd/" title="Port Forwarding" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-portfwd/">
-           <b> 5. </b> Port Forwarding
+      <a href="/vi/3-automated-unit-test/">
+           <b> 3. </b> Các bước chuẩn bị
           
             <i class="fas fa-check read-icon"></i>
           
@@ -848,13 +164,117 @@
  
   
     
-    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
+    <li data-nav-id="/vi/4-parallel-execution/" title="Các bước chuẩn bị" class="dd-item 
         
         
         
         ">
-      <a href="/vi/6-cleanup/">
-          <b>6. </b>Dọn dẹp tài nguyên  
+      <a href="/vi/4-parallel-execution/">
+           <b> 2. </b> Các bước chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-performance-testing/" title="Các bước chuẩn bị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-performance-testing/">
+           <b> 2. </b> Các bước chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-security-testing/" title="Các bước chuẩn bị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-security-testing/">
+           <b> 2. </b> Các bước chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-monitoring-cost/" title="Các bước chuẩn bị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-monitoring-cost/">
+           <b> 2. </b> Các bước chuẩn bị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/8-clean-up/" title="Dọn dẹp tài nguyên  " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/8-clean-up/">
+          <b>8 </b>Dọn dẹp tài nguyên  
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1003,7 +423,7 @@
             
           
           
-            <a href='/vi/'>Session Management</a> > Giới thiệu
+            <a href=''>Automated Testing with AWS CodeBuild</a> > Giới thiệu Workshop
           
         
           
@@ -1014,7 +434,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#automated-testing-with-aws-codebuild--parallel-execution">Automated Testing with AWS CodeBuild &amp; Parallel Execution</a></li>
+    <li><a href="#giới-thiệu">Giới thiệu</a>
+      <ul>
+        <li><a href="#-mục-tiêu-workshop">🎯 Mục tiêu workshop</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1024,13 +453,27 @@
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/vi/tags/aws">AWS</a>
+
+  <a class="tag-link" href="/vi/tags/devops">DevOps</a>
+
+  <a class="tag-link" href="/vi/tags/ci/cd">CI/CD</a>
+
+  <a class="tag-link" href="/vi/tags/automated-testing">Automated Testing</a>
+
+  <a class="tag-link" href="/vi/tags/.net-8">.NET 8</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-              Giới thiệu
+              Giới thiệu Workshop
             </h1>
           
 
@@ -1038,20 +481,27 @@
 
 
 
-	<p><strong>Session Manager</strong> là một chức năng nằm trong dịch vụ System Manager của AWS, Session Manager cung cấp khả năng quản lý các máy chủ một cách an toàn mà <strong>không cần mở port SSH, không cần Bastion Host hoặc quản lý SSH key</strong>.
-Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công ty yêu cầu quyền truy cập có kiểm soát, đảm bảo việc bảo mật nghiêm ngặt và ghi log truy việc truy cập trong khi vẫn cung cấp cho người dùng cuối quyền truy cập đa nền tảng.</p>
-<p>Với việc sử dụng Session Manager, bạn sẽ có được những ưu điểm sau:</p>
+	<h1 id="-workshop-kiểm-thử-tự-động-với-aws-codebuild-và-thực-thi-song-song">🧪 Workshop: Kiểm thử tự động với AWS CodeBuild và thực thi song song</h1>
+<h2 id="automated-testing-with-aws-codebuild--parallel-execution">Automated Testing with AWS CodeBuild &amp; Parallel Execution</h2>
+<hr>
+<h2 id="giới-thiệu">Giới thiệu</h2>
+<p>Trong thế giới phát triển phần mềm hiện đại, chất lượng sản phẩm và tốc độ ra mắt đóng vai trò sống còn. Đó là lý do tại sao <strong>kiểm thử tự động (automated testing)</strong> và các công cụ <strong>CI/CD hiện đại trên nền tảng đám mây</strong> đang trở thành tiêu chuẩn không thể thiếu.</p>
+<h3 id="-mục-tiêu-workshop">🎯 Mục tiêu workshop</h3>
+<p>Workshop này giúp bạn triển khai <strong>hệ thống kiểm thử tự động toàn diện</strong> cho ứng dụng web viết bằng <strong>.NET 8 MVC</strong>, với các nội dung thực hành chuyên sâu như:</p>
 <ul>
-<li>Không cần phải mở cổng 22 cho giao thức SSH.</li>
-<li>Có thể cấu hình để kết nối không cần đi ra ngoài internet.</li>
-<li>Không cần quản lý private key của server để kết nối SSH.</li>
-<li>Quản lý tập trung được user bằng việc sử dụng AWS IAM.</li>
-<li>Truy cập tới server một cách dễ dàng và đơn giản bằng một cú click chuột.</li>
-<li>Thời gian truy cập nhanh chóng hơn các phương thức truyền thống như SSH.</li>
-<li>Hỗ trợ nhiều hệ điều hành khác nhau như Linux, Windows, MacOS.</li>
-<li>Log lại được các phiên kết nối và các câu lệnh đã thực thi trong lúc kết nối tới server.</li>
+<li>✅ Tự động hóa kiểm thử mỗi khi đẩy mã lên GitHub</li>
+<li>⚙️ Thực thi kiểm thử song song để tối ưu thời gian build</li>
+<li>📈 Tích hợp kiểm thử hiệu năng (Performance Testing)</li>
+<li>🔐 Kiểm thử bảo mật bằng GitHub CodeQL</li>
+<li>💰 Theo dõi chi phí &amp; tối ưu hóa tài nguyên AWS sử dụng</li>
 </ul>
-<p>Với những ưu điểm trên, bạn có thể sử dụng Session Manager thay vì sử dụng kỹ thuật Bastion host giúp chúng ta tiết kiệm được thời gian và chi phí khi quản lý server Bastion.</p>
+<p>Đây là một <strong>workshop thực tiễn</strong>, mang tính ứng dụng cao, phù hợp cho:</p>
+<ul>
+<li>Sinh viên CNTT cần hoàn thành đề tài thực tập hoặc project tốt nghiệp</li>
+<li>Lập trình viên mới muốn học CI/CD với AWS</li>
+<li>DevOps Intern muốn hiểu rõ testing pipeline thực tế</li>
+</ul>
+<hr>
 
 
 
@@ -1117,36 +567,6 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -1213,276 +633,6 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1528,10 +678,10 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/" title="Session Management"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="" title="Automated Testing with AWS CodeBuild"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-prerequiste/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/2-environment-setup/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1541,19 +691,19 @@ Session Manager cũng giúp dễ dàng tuân thủ các chính sách của công
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752129933"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752129933"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752129933"></script>
-    <script src="/js/jquery.sticky.js?1752129933"></script>
-    <script src="/js/featherlight.min.js?1752129933"></script>
-    <script src="/js/highlight.pack.js?1752129933"></script>
+    <script src="/js/clipboard.min.js?1752206970"></script>
+    <script src="/js/perfect-scrollbar.min.js?1752206970"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1752206970"></script>
+    <script src="/js/jquery.sticky.js?1752206970"></script>
+    <script src="/js/featherlight.min.js?1752206970"></script>
+    <script src="/js/highlight.pack.js?1752206970"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752129933"></script>
-    <script src="/js/learn.js?1752129933"></script>
-    <script src="/js/hugo-learn.js?1752129933"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1752206970"></script>
+    <script src="/js/learn.js?1752206970"></script>
+    <script src="/js/hugo-learn.js?1752206970"></script>
 
-    <link href="/mermaid/mermaid.css?1752129933" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1752129933"></script>
+    <link href="/mermaid/mermaid.css?1752206970" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1752206970"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshop on AWS System Manager</title>
+    <link>//localhost:1313/vi/tags/workshop/</link>
+    <description>Recent content in Workshop on AWS System Manager</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Fri, 11 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/vi/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Giới thiệu Workshop</title>
+      <link>//localhost:1313/vi/1-introduce/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/vi/1-introduce/</guid>
+      <description>&lt;h1 id=&#34;-giới-thiệu-workshop&#34;&gt;🧪 Giới thiệu Workshop&lt;/h1&gt;&#xA;&lt;h2 id=&#34;automated-testing-with-aws-codebuild-and-parallel-execution&#34;&gt;Automated Testing with AWS CodeBuild and Parallel Execution&lt;/h2&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;🌐 Song ngữ: Tiếng Việt + English&lt;/strong&gt;&lt;br&gt;&#xA;Đây là phần giới thiệu tổng quan của workshop — cung cấp cái nhìn rõ ràng về mục tiêu, nội dung và lợi ích mà bạn sẽ nhận được.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;-giới-thiệu-bằng-tiếng-việt&#34;&gt;🇻🇳 Giới thiệu bằng tiếng Việt&lt;/h2&gt;&#xA;&lt;p&gt;Trong bối cảnh phát triển phần mềm hiện đại, việc áp dụng &lt;strong&gt;kiểm thử tự động&lt;/strong&gt; không chỉ giúp phát hiện lỗi sớm mà còn đảm bảo chất lượng phần mềm và rút ngắn chu kỳ phát hành sản phẩm.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
