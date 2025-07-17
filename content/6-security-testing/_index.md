@@ -1,25 +1,78 @@
 ---
-title : "Security Testing with CodeQL "
-date : 2025-07-11
-weight : 6
-chapter : false
-pre : " <b> 6. </b> "
+title: "Security Testing"
+date: 2025-07-04
+weight: 6
+chapter: false
+pre: "<b>6. </b>"
 ---
 
-In this section, you'll integrate **CodeQL security analysis** into your GitHub repository. CodeQL helps detect common vulnerabilities such as injection, data leakage, and insecure logic using static analysis.
+## Security Testing Overview
 
-## 🎯 Objectives
+This module focuses on implementing security testing in your CI/CD pipeline using AWS CodeBuild and CodeQL. You'll learn how to identify security vulnerabilities, analyze code for potential security issues, and implement security best practices.
 
-- Enable CodeQL analysis on GitHub
-- Review and understand security alerts
-- Fix identified vulnerabilities (if any)
-- Disable security scanning if unnecessary
+### What You'll Learn
 
-## 🧩 Steps
+1. Enable CodeQL Analysis
+   - Setup configuration
+   - Language support
+   - Query selection
+   - Integration setup
 
-| Step | Description | Path |
-|------|-------------|------|
-| 6.1 | Enable CodeQL on GitHub | [6.1-enable-codeql](6.1-enable-codeql/) |
-| 6.2 | Review and analyze alerts | [6.2-review-alerts](6.2-review-alerts/) |
-| 6.3 | Fix security vulnerabilities | [6.3-fix-vulnerabilities](6.3-fix-vulnerabilities/) |
-| 6.4 | Disable CodeQL if needed | [6.4-disable-if-needed](6.4-disable-if-needed/) |
+2. Review Security Alerts
+   - Alert analysis
+   - Severity levels
+   - False positive handling
+   - Prioritization
+
+3. Fix Security Issues
+   - Vulnerability remediation
+   - Code improvements
+   - Security patterns
+   - Best practices
+
+4. Configure Security Settings
+   - Alert configuration
+   - Scan scheduling
+   - Access control
+   - Reporting setup
+
+### Prerequisites
+
+Before starting this module, ensure you have:
+- Completed Module 5 (Performance Testing)
+- Understanding of security concepts
+- GitHub repository access
+- AWS CodeBuild configuration
+
+### Time Estimation
+- Total Module Time: ~2.5 hours
+- Individual Section Time: 35-40 minutes each
+
+### Module Structure
+
+1. [Enable CodeQL](6.1-enable-codeql/)
+   - Setup configuration
+   - Integration setup
+
+2. [Review Alerts](6.2-review-alerts/)
+   - Alert analysis
+   - Issue prioritization
+
+3. [Fix Vulnerabilities](6.3-fix-vulnerabilities/)
+   - Issue remediation
+   - Security improvements
+
+4. [Configure Settings](6.4-disable-if-needed/)
+   - Security configuration
+   - Scan management
+
+### Expected Outcomes
+
+By the end of this module, you will have:
+- Configured CodeQL analysis
+- Implemented security scanning
+- Reviewed security alerts
+- Fixed security vulnerabilities
+- Managed security settings
+
+Let's begin with [Enable CodeQL](6.1-enable-codeql/)!

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create VPC on AWS System Manager</title>
+    <title>Push and Trigger on AWS System Manager</title>
     <link>//localhost:1313/3-automated-unit-test/3.3-push-trigger/</link>
-    <description>Recent content in Create VPC on AWS System Manager</description>
+    <description>Recent content in Push and Trigger on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

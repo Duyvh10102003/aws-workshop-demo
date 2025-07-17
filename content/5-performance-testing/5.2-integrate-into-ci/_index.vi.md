@@ -1,41 +1,98 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Tích hợp vào CI/CD"
+date: 2025-07-04
+weight: 2
+chapter: false
+pre: "<b>5.2. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Tích hợp Kiểm thử Hiệu năng vào CI/CD
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Cấu hình Pipeline Build
+[Chèn ảnh: Cấu hình CodeBuild]
+1. Cập nhật BuildSpec
+   ```yaml
+   version: 0.2
+   phases:
+     install:
+       commands:
+         - curl -L https://github.com/grafana/k6/releases/download/v0.45.0/k6-v0.45.0-linux-amd64.tar.gz | tar xvz
+         - mv k6-v0.45.0-linux-amd64/k6 /usr/local/bin
+     build:
+       commands:
+         - k6 run performance-tests/load-test.js
+   ```
+   [Chèn ảnh: Cấu hình BuildSpec]
 
----
+2. Thiết lập Môi trường
+   [Chèn ảnh: Thiết lập môi trường]
+   - Cấu hình tài nguyên
+   - Đặt biến
+   - Xác định giới hạn
 
-#### 🎯 Mục tiêu
+### Triển khai Tự động hóa Kiểm thử
+[Chèn ảnh: Thiết lập tự động hóa kiểm thử]
+1. Tạo Quy trình Kiểm thử
+   - Điều kiện kích hoạt
+   - Trình tự kiểm thử
+   - Xử lý kết quả
+   [Chèn ảnh: Cấu hình quy trình]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Cấu hình Tài nguyên
+   [Chèn ảnh: Cấu hình tài nguyên]
+   - Yêu cầu tính toán
+   - Phân bổ bộ nhớ
+   - Cài đặt mạng
 
----
+### Thiết lập Giám sát
+[Chèn ảnh: Thiết lập giám sát]
+1. Cấu hình CloudWatch
+   - Thu thập chỉ số
+   - Tạo bảng điều khiển
+   - Cấu hình cảnh báo
+   [Chèn ảnh: Cài đặt CloudWatch]
 
-#### 🔧 Các bước thực hiện
+2. Thiết lập Thông báo
+   [Chèn ảnh: Thiết lập thông báo]
+   - Ngưỡng cảnh báo
+   - Kênh thông báo
+   - Hành động phản hồi
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] Pipeline đã cấu hình
+- [ ] Kiểm thử đã tự động hóa
+- [ ] Tài nguyên đã phân bổ
+- [ ] Giám sát đang hoạt động
+- [ ] Thông báo hoạt động
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề tích hợp phổ biến]
+1. Vấn đề Pipeline
+   - Lỗi build
+   - Vấn đề tài nguyên
+   - Lỗi cấu hình
 
-##### Bước 2: Tạo project kiểm thử
+2. Thực thi Kiểm thử
+   - Vấn đề thời gian
+   - Hạn chế tài nguyên
+   - Vấn đề mạng
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Vấn đề Giám sát
+   - Thu thập dữ liệu
+   - Kích hoạt cảnh báo
+   - Cập nhật bảng điều khiển
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất tích hợp]
+1. Cấu hình Pipeline
+   - Giai đoạn rõ ràng
+   - Tài nguyên phù hợp
+   - Xử lý lỗi
 
-#### 📦 Kết quả đầu ra
+2. Quản lý Kiểm thử
+   - Thực thi thường xuyên
+   - Theo dõi kết quả
+   - Giám sát hiệu năng
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi tích hợp với CI/CD, tiếp tục với [Xuất Kết quả](../5.3-export-results/)

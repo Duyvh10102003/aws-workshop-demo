@@ -1,41 +1,98 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Cấu hình Cài đặt"
+date: 2025-07-04
+weight: 4
+chapter: false
+pre: "<b>6.4. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Cấu hình Cài đặt Bảo mật
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Cấu hình Cài đặt CodeQL
+[Chèn ảnh: Cấu hình CodeQL]
+1. Cập nhật Cấu hình Phân tích
+   ```yaml
+   name: "Cấu hình CodeQL"
+   
+   queries:
+     - uses: security-extended
+     - uses: security-and-quality
+   
+   paths-ignore:
+     - '**/test/**'
+     - '**/generated/**'
+   ```
+   [Chèn ảnh: File cấu hình]
 
----
+2. Thiết lập Bộ Truy vấn
+   [Chèn ảnh: Thiết lập bộ truy vấn]
+   - Chọn loại truy vấn
+   - Cấu hình mức độ nghiêm trọng
+   - Đặt phạm vi phân tích
 
-#### 🎯 Mục tiêu
+### Cấu hình Cài đặt Cảnh báo
+[Chèn ảnh: Cấu hình cảnh báo]
+1. Đặt Quy tắc Cảnh báo
+   - Ngưỡng mức độ nghiêm trọng
+   - Quy tắc thông báo
+   - Hành động phản hồi
+   [Chèn ảnh: Quy tắc cảnh báo]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Cấu hình Thông báo
+   [Chèn ảnh: Thiết lập thông báo]
+   - Thông báo email
+   - Cảnh báo tích hợp
+   - Thông báo nhóm
 
----
+### Quản lý Kiểm soát Bảo mật
+[Chèn ảnh: Kiểm soát bảo mật]
+1. Kiểm soát Truy cập
+   - Quyền repository
+   - Truy cập phân tích
+   - Truy cập báo cáo
+   [Chèn ảnh: Cài đặt truy cập]
 
-#### 🔧 Các bước thực hiện
+2. Cấu hình Chính sách
+   [Chèn ảnh: Thiết lập chính sách]
+   - Chính sách bảo mật
+   - Quy tắc thực thi
+   - Cài đặt tuân thủ
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] CodeQL đã cấu hình
+- [ ] Cảnh báo đã thiết lập
+- [ ] Thông báo hoạt động
+- [ ] Kiểm soát truy cập đã xác minh
+- [ ] Chính sách đã triển khai
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề cấu hình phổ biến]
+1. Vấn đề Cấu hình
+   - Lỗi cú pháp
+   - Vấn đề quyền
+   - Lỗi tích hợp
 
-##### Bước 2: Tạo project kiểm thử
+2. Vấn đề Cảnh báo
+   - Thiếu thông báo
+   - Cảnh báo sai
+   - Quá tải cảnh báo
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Vấn đề Truy cập
+   - Từ chối quyền
+   - Lỗi xác thực
+   - Vấn đề tích hợp
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất cấu hình]
+1. Cài đặt Bảo mật
+   - Xem xét thường xuyên
+   - Tài liệu rõ ràng
+   - Giao tiếp nhóm
 
-#### 📦 Kết quả đầu ra
+2. Quản lý Cảnh báo
+   - Mức độ ưu tiên
+   - Quy trình phản hồi
+   - Bảo trì thường xuyên
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi cấu hình cài đặt bảo mật, tiếp tục với [Giám sát Chi phí](../../7-monitoring-cost/7.1-cloudwatch-logs/)

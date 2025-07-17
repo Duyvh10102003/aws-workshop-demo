@@ -1,41 +1,106 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Viết Unit Tests"
+date: 2025-07-04
+weight: 1
+chapter: false
+pre: "<b>3.1. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Viết Unit Tests
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Tạo Dự án Kiểm thử
+[Chèn ảnh: Tạo dự án kiểm thử mới trong VS Code]
+1. Tạo Dự án Kiểm thử
+   - Mở terminal trong thư mục giải pháp
+   - Tạo dự án xUnit mới
+   [Chèn ảnh: Lệnh terminal và kết quả]
 
----
+2. Thêm Tham chiếu Dự án
+   [Chèn ảnh: Thêm tham chiếu dự án trong VS Code]
+   - Tham chiếu dự án chính
+   - Xác minh tham chiếu đã thêm
+   [Chèn ảnh: Xác nhận tham chiếu dự án]
 
-#### 🎯 Mục tiêu
+### Viết Kiểm thử Cơ bản
+[Chèn ảnh: VS Code với file kiểm thử đang mở]
+1. Tạo Kiểm thử Calculator
+   ```csharp
+   // Ví dụ kiểm thử đơn giản
+   public class CalculatorTests
+   {
+       [Fact]
+       public void Add_TwoNumbers_ReturnsSum()
+       {
+           var calc = new Calculator();
+           var result = calc.Add(2, 3);
+           Assert.Equal(5, result);
+       }
+   }
+   ```
+   [Chèn ảnh: Mã kiểm thử với phần được đánh dấu]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+### Tổ chức Kiểm thử
+[Chèn ảnh: Cấu trúc dự án kiểm thử]
+1. Cấu trúc Thư mục
+   - Controllers/
+   - Services/
+   - Models/
+   [Chèn ảnh: Thư mục kiểm thử có tổ chức]
 
----
+2. Quy ước Đặt tên
+   [Chèn ảnh: Ví dụ đặt tên kiểm thử]
+   - TenLop_TenPhuongThuc_KetQuaMongDoi
+   - Tên rõ ràng và mô tả
 
-#### 🔧 Các bước thực hiện
+### Chạy Kiểm thử Cục bộ
+[Chèn ảnh: Test Explorer trong VS Code]
+1. Sử dụng Test Explorer
+   - Mở Test Explorer
+   - Chạy tất cả kiểm thử
+   - Xem kết quả
+   [Chèn ảnh: Hiển thị kết quả kiểm thử]
 
-##### Bước 1: Tạo solution và project chính
+2. Sử dụng Command Line
+   [Chèn ảnh: Terminal với lệnh kiểm thử]
+   ```bash
+   dotnet test
+   ```
 
+### Danh sách Xác minh
+- [ ] Dự án kiểm thử đã tạo
+- [ ] Tham chiếu dự án đã thêm
+- [ ] Kiểm thử cơ bản đã viết
+- [ ] Kiểm thử chạy thành công
+- [ ] Kết quả hiển thị chính xác
 
-##### Bước 2: Tạo project kiểm thử
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề kiểm thử phổ biến]
+1. Vấn đề Tham chiếu Dự án
+   - Kiểm tra đường dẫn dự án
+   - Xác minh phiên bản framework
+   - Xem xét dependencies
 
-##### Bước 3: Viết một test đơn vị đơn giản
+2. Vấn đề Phát hiện Kiểm thử
+   - Kiểm tra thuộc tính kiểm thử
+   - Xác minh lớp kiểm thử public
+   - Xem xét quy ước đặt tên
 
-##### 4: Chạy thử nghiệm kiểm thử
+3. Vấn đề Thực thi Kiểm thử
+   - Kiểm tra lỗi runtime
+   - Xác minh dependencies
+   - Xem xét ngữ cảnh kiểm thử
 
-#### 📦 Kết quả đầu ra
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất viết kiểm thử]
+1. Cấu trúc Kiểm thử
+   - Mẫu Arrange-Act-Assert
+   - Trách nhiệm đơn lẻ
+   - Khẳng định rõ ràng
 
+2. Tổ chức Mã
+   - Nhóm logic
+   - Đặt tên nhất quán
+   - Cô lập phù hợp
 
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi viết kiểm thử cơ bản, tiếp tục với [Thiết lập BuildSpec](../3.2-buildspec-setup/)

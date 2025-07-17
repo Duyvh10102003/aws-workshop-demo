@@ -1,41 +1,101 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Xuất Kết quả"
+date: 2025-07-04
+weight: 3
+chapter: false
+pre: "<b>5.3. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Xuất Kết quả Kiểm thử Hiệu năng
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Cấu hình Xuất Kết quả
+[Chèn ảnh: Cấu hình xuất kết quả]
+1. Thiết lập Định dạng Xuất
+   ```javascript
+   // Cấu hình xuất k6
+   export const options = {
+     ext: {
+       loadimpact: {
+         projectID: 123456,
+       },
+     },
+     outputFields: {
+       metrics: ['http_req_duration', 'http_reqs', 'vus'],
+       trend: ['p95', 'avg', 'med', 'min', 'max'],
+     },
+   };
+   ```
+   [Chèn ảnh: Cấu hình xuất]
 
----
+2. Cấu hình Vị trí Lưu trữ
+   [Chèn ảnh: Thiết lập lưu trữ]
+   - Cấu hình bucket S3
+   - Tổ chức file
+   - Chính sách lưu giữ
 
-#### 🎯 Mục tiêu
+### Triển khai Xử lý Dữ liệu
+[Chèn ảnh: Thiết lập xử lý dữ liệu]
+1. Tạo Script Xử lý
+   - Phân tích kết quả kiểm thử
+   - Tính toán chỉ số
+   - Tạo tổng hợp
+   [Chèn ảnh: Triển khai xử lý]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Thiết lập Pipeline Dữ liệu
+   [Chèn ảnh: Pipeline dữ liệu]
+   - Luồng dữ liệu
+   - Bước chuyển đổi
+   - Định dạng đầu ra
 
----
+### Tạo Báo cáo
+[Chèn ảnh: Tạo báo cáo]
+1. Cấu hình Mẫu
+   - Chỉ số hiệu năng
+   - Phân tích xu hướng
+   - Góc nhìn so sánh
+   [Chèn ảnh: Mẫu báo cáo]
 
-#### 🔧 Các bước thực hiện
+2. Thiết lập Phân phối
+   [Chèn ảnh: Phân phối báo cáo]
+   - Gửi email
+   - Cập nhật bảng điều khiển
+   - Hệ thống thông báo
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] Xuất đã cấu hình
+- [ ] Xử lý hoạt động
+- [ ] Báo cáo đang tạo
+- [ ] Phân phối hoạt động
+- [ ] Lưu trữ có tổ chức
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề xuất phổ biến]
+1. Vấn đề Xuất
+   - Lỗi định dạng
+   - Vấn đề lưu trữ
+   - Vấn đề quyền
 
-##### Bước 2: Tạo project kiểm thử
+2. Vấn đề Xử lý
+   - Hỏng dữ liệu
+   - Lỗi tính toán
+   - Giới hạn tài nguyên
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Vấn đề Báo cáo
+   - Lỗi mẫu
+   - Lỗi phân phối
+   - Vấn đề truy cập
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất xuất]
+1. Quản lý Dữ liệu
+   - Tổ chức rõ ràng
+   - Dọn dẹp thường xuyên
+   - Sao lưu phù hợp
 
-#### 📦 Kết quả đầu ra
+2. Thiết kế Báo cáo
+   - Trình bày rõ ràng
+   - Chỉ số chính
+   - Thông tin có thể hành động
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi thiết lập xuất kết quả, tiếp tục với [Phân tích Hiệu năng](../5.4-analyze-performance/)

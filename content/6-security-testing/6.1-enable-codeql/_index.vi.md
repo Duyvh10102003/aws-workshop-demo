@@ -1,41 +1,104 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Kích hoạt CodeQL"
+date: 2025-07-04
+weight: 1
+chapter: false
+pre: "<b>6.1. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Kích hoạt Phân tích CodeQL
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Thiết lập Môi trường CodeQL
+[Chèn ảnh: Thiết lập CodeQL]
+1. Cấu hình GitHub Repository
+   - Kích hoạt GitHub Actions
+   - Cấu hình cài đặt bảo mật
+   - Thiết lập quyền
+   [Chèn ảnh: Cấu hình GitHub]
 
----
+2. Tạo Workflow CodeQL
+   ```yaml
+   name: "Phân tích CodeQL"
+   
+   on:
+     push:
+       branches: [ main ]
+     pull_request:
+       branches: [ main ]
+     schedule:
+       - cron: '0 0 * * 0'
+   
+   jobs:
+     analyze:
+       runs-on: ubuntu-latest
+       steps:
+         - name: Checkout code
+           uses: actions/checkout@v2
+         
+         - name: Initialize CodeQL
+           uses: github/codeql-action/init@v2
+           with:
+             languages: csharp
+   ```
+   [Chèn ảnh: Cấu hình workflow]
 
-#### 🎯 Mục tiêu
+### Cấu hình Cài đặt Phân tích
+[Chèn ảnh: Cấu hình phân tích]
+1. Thiết lập Bộ Truy vấn
+   - Chọn truy vấn bảo mật
+   - Cấu hình truy vấn tùy chỉnh
+   - Đặt phạm vi phân tích
+   [Chèn ảnh: Cấu hình truy vấn]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Cấu hình Tích hợp Build
+   [Chèn ảnh: Tích hợp build]
+   - Cài đặt build
+   - Kích hoạt phân tích
+   - Xử lý kết quả
 
----
+### Thiết lập Thông báo
+[Chèn ảnh: Thiết lập thông báo]
+1. Cấu hình Cảnh báo
+   - Cảnh báo bảo mật
+   - Thông báo workflow
+   - Thông báo nhóm
+   [Chèn ảnh: Cấu hình cảnh báo]
 
-#### 🔧 Các bước thực hiện
+### Danh sách Xác minh
+- [ ] CodeQL đã kích hoạt
+- [ ] Workflow đã cấu hình
+- [ ] Truy vấn đã chọn
+- [ ] Thông báo đã thiết lập
+- [ ] Tích hợp đã kiểm thử
 
-##### Bước 1: Tạo solution và project chính
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề CodeQL phổ biến]
+1. Vấn đề Thiết lập
+   - Vấn đề quyền
+   - Lỗi cấu hình
+   - Lỗi tích hợp
 
+2. Vấn đề Phân tích
+   - Lỗi build
+   - Lỗi truy vấn
+   - Hạn chế tài nguyên
 
-##### Bước 2: Tạo project kiểm thử
+3. Vấn đề Thông báo
+   - Gửi cảnh báo
+   - Vấn đề cấu hình
+   - Quyền truy cập
 
-##### Bước 3: Viết một test đơn vị đơn giản
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất CodeQL]
+1. Cấu hình
+   - Cập nhật thường xuyên
+   - Tài liệu rõ ràng
+   - Phạm vi phù hợp
 
-##### 4: Chạy thử nghiệm kiểm thử
+2. Quản lý Phân tích
+   - Xem xét thường xuyên
+   - Giám sát hiệu năng
+   - Theo dõi kết quả
 
-#### 📦 Kết quả đầu ra
-
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi kích hoạt CodeQL, tiếp tục với [Xem xét Cảnh báo](../6.2-review-alerts/)

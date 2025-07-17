@@ -1,41 +1,97 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "So sánh Tốc độ"
+date: 2025-07-04
+weight: 4
+chapter: false
+pre: "<b>4.4. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## So sánh Tốc độ Thực thi
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Thiết lập Đo lường Hiệu năng
+[Chèn ảnh: Thiết lập đo lường hiệu năng]
+1. Cấu hình Thu thập Chỉ số
+   - Thời gian thực thi
+   - Sử dụng tài nguyên
+   - Thông lượng kiểm thử
+   [Chèn ảnh: Cấu hình chỉ số]
 
----
+2. Tạo Đo lường Cơ sở
+   [Chèn ảnh: Kiểm thử cơ sở]
+   - Thực thi tuần tự
+   - Hiệu năng đơn luồng
+   - Sử dụng tài nguyên
 
-#### 🎯 Mục tiêu
+### Triển khai Công cụ So sánh
+[Chèn ảnh: Thiết lập công cụ so sánh]
+1. Tạo Script So sánh
+   ```python
+   # So sánh hiệu năng đơn giản
+   def compare_execution_speeds(sequential_data, parallel_data):
+       comparison = {
+           'time_difference': parallel_data['duration'] - sequential_data['duration'],
+           'speedup_factor': sequential_data['duration'] / parallel_data['duration'],
+           'resource_efficiency': calculate_efficiency(sequential_data, parallel_data)
+       }
+       return comparison
+   ```
+   [Chèn ảnh: Thực thi script]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Tạo Báo cáo So sánh
+   [Chèn ảnh: Tạo báo cáo]
+   - Chỉ số hiệu năng
+   - So sánh trực quan
+   - Phân tích xu hướng
 
----
+### Tạo Bảng điều khiển Hiệu năng
+[Chèn ảnh: Bảng điều khiển hiệu năng]
+1. Cấu hình Trực quan hóa
+   - Thời gian thực thi
+   - Sử dụng tài nguyên
+   - Chỉ số hiệu quả
+   [Chèn ảnh: Bố cục bảng điều khiển]
 
-#### 🔧 Các bước thực hiện
+2. Thiết lập Giám sát
+   [Chèn ảnh: Thiết lập giám sát]
+   - Chỉ số thời gian thực
+   - Xu hướng lịch sử
+   - Ngưỡng cảnh báo
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] Thu thập chỉ số hoạt động
+- [ ] Công cụ so sánh đang chạy
+- [ ] Báo cáo đang tạo
+- [ ] Bảng điều khiển có thể truy cập
+- [ ] Giám sát đang hoạt động
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề hiệu năng phổ biến]
+1. Vấn đề Đo lường
+   - Độ chính xác thời gian
+   - Thu thập dữ liệu
+   - Độ tin cậy chỉ số
 
-##### Bước 2: Tạo project kiểm thử
+2. Vấn đề So sánh
+   - Không nhất quán dữ liệu
+   - Lỗi phân tích
+   - Vấn đề báo cáo
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Thách thức Giám sát
+   - Khoảng trống dữ liệu
+   - Độ chính xác cảnh báo
+   - Chi phí tài nguyên
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất so sánh hiệu năng]
+1. Thu thập Dữ liệu
+   - Phương pháp nhất quán
+   - Lấy mẫu thường xuyên
+   - Dữ liệu sạch
 
-#### 📦 Kết quả đầu ra
+2. Quy trình Phân tích
+   - Chỉ số chuẩn
+   - So sánh rõ ràng
+   - Phương pháp có tài liệu
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi so sánh tốc độ thực thi, tiếp tục với [Kiểm thử Hiệu năng](../../5-performance-testing/5.1-write-performance-tests/)

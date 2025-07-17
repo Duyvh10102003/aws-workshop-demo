@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Session Management :: AWS System Manager</title>
+    <title>Automated Testing with AWS CodeBuild :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1752205739" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1752205739" rel="stylesheet">
-    <link href="/css/hybrid.css?1752205739" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1752205739" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1752205739" rel="stylesheet">
-    <link href="/css/auto-complete.css?1752205739" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1752205739" rel="stylesheet">
-    <link href="/css/theme.css?1752205739" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1752205739" rel="stylesheet">
+    <link href="/css/nucleus.css?1752721627" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1752721627" rel="stylesheet">
+    <link href="/css/hybrid.css?1752721627" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1752721627" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1752721627" rel="stylesheet">
+    <link href="/css/auto-complete.css?1752721627" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1752721627" rel="stylesheet">
+    <link href="/css/theme.css?1752721627" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1752721627" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1752205739" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1752721627" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1752205739"></script>
+    <script src="/js/jquery-3.3.1.min.js?1752721627"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1752205739"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1752205739"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1752721627"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1752721627"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1752205739"></script>
+<script type="text/javascript" src="/js/search.js?1752721627"></script>
 
     
   </div>
@@ -112,18 +112,948 @@
  
   
     
-    <li data-nav-id="/vi/2-environment-setup/" title="Các bước chuẩn bị" class="dd-item 
+    <li data-nav-id="/vi/2-environment-setup/" title="Thiết lập Môi trường" class="dd-item 
         
         
         
         ">
       <a href="/vi/2-environment-setup/">
-           <b> 2. </b> Các bước chuẩn bị
+          <b>2. </b>Thiết lập Môi trường
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-environment-setup/2.1-dotnet-app/" title="Thiết lập ứng dụng .NET" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-environment-setup/2.1-dotnet-app/">
+          <b>2.1. </b>Thiết lập ứng dụng .NET
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-environment-setup/2.2-github-repo/" title="Thiết lập GitHub Repository" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-environment-setup/2.2-github-repo/">
+          <b>2.2. </b>Thiết lập GitHub Repository
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-environment-setup/2.3-install-tools/" title="Cài đặt Công cụ Cần thiết" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-environment-setup/2.3-install-tools/">
+          <b>2.3. </b>Cài đặt Công cụ Cần thiết
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-environment-setup/2.4-codebuild-project/" title="Thiết lập Dự án CodeBuild" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-environment-setup/2.4-codebuild-project/">
+          <b>2.4. </b>Thiết lập Dự án CodeBuild
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-environment-setup/2.5-webhook-verify/" title="Xác minh Webhook" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-environment-setup/2.5-webhook-verify/">
+          <b>2.5. </b>Xác minh Webhook
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-automated-unit-test/" title="Kiểm thử Đơn vị Tự động" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-automated-unit-test/">
+          <b>3. </b>Kiểm thử Đơn vị Tự động
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-automated-unit-test/3.1-write-unit-tests/" title="Viết Kiểm thử Đơn vị" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-automated-unit-test/3.1-write-unit-tests/">
+          <b>3.1. </b>Viết Kiểm thử Đơn vị
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-automated-unit-test/3.2-buildspec-setup/" title="Thiết lập BuildSpec" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-automated-unit-test/3.2-buildspec-setup/">
+          <b>3.2. </b>Thiết lập BuildSpec
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-automated-unit-test/3.3-push-trigger/" title="Đẩy và Kích hoạt" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-automated-unit-test/3.3-push-trigger/">
+          <b>3.3. </b>Đẩy và Kích hoạt
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-automated-unit-test/3.4-view-results/" title="Xem Kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-automated-unit-test/3.4-view-results/">
+          <b>3.4. </b>Xem Kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-automated-unit-test/3.5-fix-failures/" title="Sửa Lỗi" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-automated-unit-test/3.5-fix-failures/">
+          <b>3.5. </b>Sửa Lỗi
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-parallel-execution/" title="Thực thi Song song" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-parallel-execution/">
+          <b>4. </b>Thực thi Song song
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-parallel-execution/4.1-multiple-tests/" title="Thiết lập Nhiều Kiểm thử" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-parallel-execution/4.1-multiple-tests/">
+          <b>4.1. </b>Thiết lập Nhiều Kiểm thử
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-parallel-execution/4.2-configure-parallel/" title="Cấu hình Thực thi Song song" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-parallel-execution/4.2-configure-parallel/">
+          <b>4.2. </b>Cấu hình Thực thi Song song
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-parallel-execution/4.3-aggregate-results/" title="Tổng hợp Kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-parallel-execution/4.3-aggregate-results/">
+          <b>4.3. </b>Tổng hợp Kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-parallel-execution/4.4-compare-speed/" title="So sánh Tốc độ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-parallel-execution/4.4-compare-speed/">
+          <b>4.4. </b>So sánh Tốc độ
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-performance-testing/" title="Kiểm thử Hiệu năng" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-performance-testing/">
+          <b>5. </b>Kiểm thử Hiệu năng
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-performance-testing/5.4-analyze-performance/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-performance-testing/5.4-analyze-performance/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-performance-testing/5.1-write-performance-tests/" title="Viết Kiểm thử Hiệu năng" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-performance-testing/5.1-write-performance-tests/">
+          <b>5.1. </b>Viết Kiểm thử Hiệu năng
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-performance-testing/5.2-integrate-into-ci/" title="Tích hợp vào CI/CD" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-performance-testing/5.2-integrate-into-ci/">
+          <b>5.2. </b>Tích hợp vào CI/CD
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-performance-testing/5.3-export-results/" title="Xuất Kết quả" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-performance-testing/5.3-export-results/">
+          <b>5.3. </b>Xuất Kết quả
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-security-testing/" title="Kiểm thử bảo mật với CodeQL" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-security-testing/">
+           <b> 6. </b> Kiểm thử bảo mật với CodeQL
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-security-testing/6.1-enable-codeql/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-security-testing/6.1-enable-codeql/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-security-testing/6.2-review-alerts/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-security-testing/6.2-review-alerts/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-security-testing/6.3-fix-vulnerabilities/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-security-testing/6.3-fix-vulnerabilities/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-security-testing/6.4-disable-if-needed/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-security-testing/6.4-disable-if-needed/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-monitoring-cost/" title="Theo dõi, báo cáo &amp; tối ưu chi phí" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-monitoring-cost/">
+           <b> 7. </b> Theo dõi, báo cáo &amp; tối ưu chi phí
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-monitoring-cost/7.1-cloudwatch-logs/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-monitoring-cost/7.1-cloudwatch-logs/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-monitoring-cost/7.2-analyze-cost/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-monitoring-cost/7.2-analyze-cost/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-monitoring-cost/7.3-optimize-config/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-monitoring-cost/7.3-optimize-config/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/7-monitoring-cost/7.4-estimate-usage/" title="Tạo ứng dụng .NET MVC có kiểm thử " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/7-monitoring-cost/7.4-estimate-usage/">
+           <b> 2.1 </b> Tạo ứng dụng .NET MVC có kiểm thử 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -284,18 +1214,28 @@
 </span>
 
  
-<h1 id="lam-viêc-vơi-amazon-system-manager---session-manager">Làm việc với Amazon System Manager - Session Manager</h1>
+<h1 id="workshop-kiểm-thử-tự-động-với-aws-codebuild-và-thực-thi-song-song">Workshop: Kiểm thử tự động với AWS CodeBuild và thực thi song song</h1>
 <h3 id="tổng-quan">Tổng quan</h3>
-<p>Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về Amazon System Manager - Session Management. Thực hành tạo kết nối đến máy chủ public và máy chủ private trong VPC.</p>
-<p><img src="/images/arc-log.png" alt="ConnectPrivate"></p>
-<h3 id="nội-dung">Nội dung</h3>
+<p>Trong workshop này, bạn sẽ học cách xây dựng một hệ thống kiểm thử tự động hiện đại cho ứng dụng web viết bằng .NET 8 MVC, sử dụng các dịch vụ AWS như <strong>CodeBuild, CloudWatch, và CodeQL</strong>.</p>
+<p>Thông qua từng phần thực hành, bạn sẽ:</p>
+<ul>
+<li>Thiết lập pipeline CI kiểm thử tự động khi push code lên GitHub</li>
+<li>Thực thi kiểm thử song song (parallel execution) để tối ưu thời gian</li>
+<li>Tích hợp kiểm thử hiệu năng và bảo mật (CodeQL)</li>
+<li>Theo dõi logs, phân tích chi phí, và dọn dẹp tài nguyên sau workshop</li>
+<li>Dọn dẹp tài nguyên AWS sau khi thử nghiệm</li>
+</ul>
+<p><img src="/images/aws-test-arch.png" alt=""></p>
+<h3 id="nội-dung-workshop">Nội dung workshop</h3>
 <ol>
-<li><a href="/vi/1-introduce/">Giới thiệu</a></li>
-<li><a href="2-Prerequiste/">Các bước chuẩn bị</a></li>
-<li><a href="3-Accessibilitytoinstance/">Tạo kết nối đến máy chủ EC2</a></li>
-<li><a href="4-s3log/">Quản lý session logs</a></li>
-<li><a href="5-Portfwd/">Port Forwarding</a></li>
-<li><a href="6-cleanup/">Dọn dẹp tài nguyên</a></li>
+<li><a href="1-introduction/">Giới thiệu &amp; mục tiêu</a></li>
+<li><a href="/vi/2-environment-setup/">Chuẩn bị môi trường</a></li>
+<li><a href="/vi/3-automated-unit-test/">Thiết lập kiểm thử tự động</a></li>
+<li><a href="/vi/4-parallel-execution/">Thực thi song song &amp; tổng hợp kết quả</a></li>
+<li><a href="/vi/5-performance-testing/">Kiểm thử hiệu năng</a></li>
+<li><a href="/vi/6-security-testing/">Kiểm thử bảo mật với CodeQL</a></li>
+<li><a href="/vi/7-monitoring-cost/">Theo dõi, báo cáo &amp; tối ưu chi phí</a></li>
+<li><a href="/vi/8-clean-up/">Dọn dẹp tài nguyên</a></li>
 </ol>
 	
   
@@ -354,8 +1294,516 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -396,19 +1844,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1752205739"></script>
-    <script src="/js/perfect-scrollbar.min.js?1752205739"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1752205739"></script>
-    <script src="/js/jquery.sticky.js?1752205739"></script>
-    <script src="/js/featherlight.min.js?1752205739"></script>
-    <script src="/js/highlight.pack.js?1752205739"></script>
+    <script src="/js/clipboard.min.js?1752721628"></script>
+    <script src="/js/perfect-scrollbar.min.js?1752721628"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1752721628"></script>
+    <script src="/js/jquery.sticky.js?1752721628"></script>
+    <script src="/js/featherlight.min.js?1752721628"></script>
+    <script src="/js/highlight.pack.js?1752721628"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1752205739"></script>
-    <script src="/js/learn.js?1752205739"></script>
-    <script src="/js/hugo-learn.js?1752205739"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1752721628"></script>
+    <script src="/js/learn.js?1752721628"></script>
+    <script src="/js/hugo-learn.js?1752721628"></script>
 
-    <link href="/mermaid/mermaid.css?1752205739" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1752205739"></script>
+    <link href="/mermaid/mermaid.css?1752721628" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1752721628"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

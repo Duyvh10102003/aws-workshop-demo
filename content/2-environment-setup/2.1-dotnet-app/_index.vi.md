@@ -1,41 +1,76 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Thiết lập Ứng dụng .NET"
+date: 2025-07-04
+weight: 1
+chapter: false
+pre: "<b>2.1. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Thiết lập Ứng dụng .NET
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Các bước Cài đặt
+[Chèn ảnh: Trang tải .NET SDK]
+1. Tải .NET 8 SDK
+   - Truy cập https://dotnet.microsoft.com/download
+   - Chọn .NET 8 SDK
+   - Chọn hệ điều hành của bạn
+   [Chèn ảnh: Tùy chọn tải xuống với nút được đánh dấu]
 
----
+2. Cài đặt SDK
+   [Chèn ảnh: Các bước trình hướng dẫn cài đặt]
+   - Chạy trình cài đặt
+   - Làm theo hướng dẫn
+   - Chấp nhận tùy chọn mặc định
+   - Đợi hoàn thành
 
-#### 🎯 Mục tiêu
+3. Xác minh Cài đặt
+   [Chèn ảnh: Command prompt với kiểm tra phiên bản]
+   ```bash
+   dotnet --version
+   ```
+   Kết quả mong đợi: 8.0.x
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+### Tạo Dự án Kiểm thử
+[Chèn ảnh: VS Code tạo dự án mới]
+1. Mở Terminal/Command Prompt
+2. Di chuyển đến workspace của bạn
+3. Tạo dự án MVC mới:
+   ```bash
+   dotnet new mvc -n TestAutomationDemo
+   ```
+   [Chèn ảnh: Kết quả tạo dự án]
 
----
+### Cấu trúc Dự án
+[Chèn ảnh: Cấu trúc dự án trong VS Code]
+Dự án của bạn nên bao gồm:
+- Controllers/
+- Models/
+- Views/
+- wwwroot/
+- Program.cs
+- appsettings.json
 
-#### 🔧 Các bước thực hiện
+### Danh sách Xác minh
+- [ ] .NET SDK đã cài đặt thành công
+- [ ] Dự án tạo không có lỗi
+- [ ] Có thể build dự án (`dotnet build`)
+- [ ] Có thể chạy dự án (`dotnet run`)
+- [ ] Có thể truy cập trang chủ (https://localhost:5001)
 
-##### Bước 1: Tạo solution và project chính
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Lỗi phổ biến và giải pháp]
+1. Không tìm thấy SDK
+   - Kiểm tra biến môi trường PATH
+   - Cài đặt lại SDK nếu cần
+   
+2. Cổng đã được sử dụng
+   - Kiểm tra ứng dụng đang chạy
+   - Thay đổi cổng trong launchSettings.json
 
+3. Lỗi Build
+   - Xóa cache NuGet
+   - Khôi phục gói
+   - Kiểm tra phiên bản SDK
 
-##### Bước 2: Tạo project kiểm thử
-
-##### Bước 3: Viết một test đơn vị đơn giản
-
-##### 4: Chạy thử nghiệm kiểm thử
-
-#### 📦 Kết quả đầu ra
-
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi xác minh thiết lập .NET, tiếp tục với [Thiết lập GitHub Repository](../2.2-github-repo/)

@@ -1,41 +1,97 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Cấu hình Thực thi Song song"
+date: 2025-07-04
+weight: 2
+chapter: false
+pre: "<b>4.2. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Cấu hình Thực thi Kiểm thử Song song
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Cấu hình AWS CodeBuild
+[Chèn ảnh: Cấu hình song song CodeBuild]
+1. Cập nhật Dự án Build
+   - Bật build song song
+   - Cấu hình tài nguyên tính toán
+   - Đặt giới hạn đồng thời
+   [Chèn ảnh: Cài đặt build]
 
----
+2. Cấu hình Build Specification
+   [Chèn ảnh: Cấu hình BuildSpec]
+   ```yaml
+   version: 0.2
+   batch:
+     fast-fail: true
+     build-graph:
+       - identifier: UnitTests
+         buildspec: unit.yml
+       - identifier: IntegrationTests
+         buildspec: integration.yml
+   ```
 
-#### 🎯 Mục tiêu
+### Thiết lập Song song hóa Kiểm thử
+[Chèn ảnh: Cài đặt song song kiểm thử]
+1. Cấu hình Trình chạy Kiểm thử
+   - Đặt số lượng kiểm thử song song tối đa
+   - Cấu hình nhóm kiểm thử
+   - Đặt thứ tự thực thi
+   [Chèn ảnh: Cấu hình trình chạy]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Quản lý Tài nguyên
+   [Chèn ảnh: Cài đặt tài nguyên]
+   - Phân bổ bộ nhớ
+   - Sử dụng CPU
+   - Tài nguyên mạng
 
----
+### Cấu hình Môi trường
+[Chèn ảnh: Thiết lập môi trường]
+1. Cấu hình Môi trường Kiểm thử
+   - Môi trường riêng biệt
+   - Cô lập tài nguyên
+   - Tách biệt dữ liệu
+   [Chèn ảnh: Cô lập môi trường]
 
-#### 🔧 Các bước thực hiện
+2. Quản lý Phụ thuộc
+   [Chèn ảnh: Cấu hình phụ thuộc]
+   - Tài nguyên dùng chung
+   - Dịch vụ bên ngoài
+   - Dữ liệu kiểm thử
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] Cấu hình song song hoàn tất
+- [ ] Tài nguyên được phân bổ đúng
+- [ ] Môi trường được cô lập
+- [ ] Phụ thuộc được quản lý
+- [ ] Build thành công
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề song song phổ biến]
+1. Xung đột Tài nguyên
+   - Vấn đề bộ nhớ
+   - Nghẽn CPU
+   - Tranh chấp mạng
 
-##### Bước 2: Tạo project kiểm thử
+2. Vấn đề Môi trường
+   - Lỗi cô lập
+   - Chia sẻ tài nguyên
+   - Xung đột cấu hình
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Vấn đề Build
+   - Vấn đề đồng thời
+   - Vấn đề thời gian
+   - Giới hạn tài nguyên
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất thực thi song song]
+1. Quản lý Tài nguyên
+   - Định cỡ phù hợp
+   - Cân bằng tải
+   - Giám sát tài nguyên
 
-#### 📦 Kết quả đầu ra
+2. Tổ chức Kiểm thử
+   - Kiểm thử độc lập
+   - Thực thi theo nhóm
+   - Phụ thuộc rõ ràng
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi cấu hình thực thi song song, tiếp tục với [Tổng hợp Kết quả](../4.3-aggregate-results/)

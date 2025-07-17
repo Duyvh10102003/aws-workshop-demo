@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Create repository GitHub on AWS System Manager</title>
+    <title>GitHub Repository Setup on AWS System Manager</title>
     <link>//localhost:1313/2-environment-setup/2.2-github-repo/</link>
-    <description>Recent content in Create repository GitHub on AWS System Manager</description>
+    <description>Recent content in GitHub Repository Setup on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>

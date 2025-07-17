@@ -1,47 +1,83 @@
 ---
-title: "Chuẩn bị Môi trường"
-date: 2025-07-11
+title: "Thiết lập Môi trường"
+date: 2025-07-04
 weight: 2
-chapter : false
-pre : " <b> 2. </b> "
+chapter: false
+pre: "<b>2. </b>"
 ---
 
-Trong phần này, bạn sẽ thiết lập nền tảng ban đầu cần thiết để bắt đầu quy trình kiểm thử tự động với AWS. Đây là bước quan trọng nhằm đảm bảo mọi công cụ, mã nguồn, và kết nối đều sẵn sàng trước khi bước vào các giai đoạn kiểm thử phức tạp hơn.
+## Tổng quan về Thiết lập Môi trường
 
-## ✅ Mục tiêu
+Module này hướng dẫn bạn thiết lập môi trường phát triển và kiểm thử cho việc tự động hóa kiểm thử với AWS CodeBuild. Chúng ta sẽ thiết lập tất cả các thành phần cần thiết để tạo một pipeline tích hợp liên tục mạnh mẽ.
 
-- Khởi tạo ứng dụng web viết bằng .NET 8 MVC
-- Tạo và đồng bộ mã nguồn lên GitHub
-- Cài đặt các công cụ hỗ trợ cần thiết như .NET SDK, AWS CLI
-- Thiết lập AWS CodeBuild và kết nối GitHub qua CodeConnections
-- Kiểm tra webhook để đảm bảo pipeline có thể tự động kích hoạt khi đẩy mã
+### Những gì Bạn sẽ Học
 
-## 🧩 Nội dung
+1. Thiết lập Ứng dụng .NET
+   - Tạo dự án .NET 8 MVC mới
+   - Cấu hình cấu trúc ứng dụng cơ bản
+   - Thêm các dependency kiểm thử ban đầu
 
-Bạn sẽ lần lượt thực hiện các bước sau:
+2. Cấu hình GitHub Repository
+   - Tạo và khởi tạo repository
+   - Thiết lập bảo vệ nhánh
+   - Cấu hình quy trình phát triển
 
-1. [Chuẩn bị ứng dụng .NET MVC](2.1-dotnet-app/)  
-   → Tạo một ứng dụng web cơ bản có sẵn một số unit test.
+3. Cài đặt Công cụ Cần thiết
+   - Cài đặt và cấu hình AWS CLI
+   - Thiết lập công cụ phát triển
+   - Cài đặt SDK cần thiết
 
-2. [Tạo repository GitHub](2.2-github-repo/)  
-   → Đẩy source code lên GitHub để làm nguồn kiểm thử.
+4. Thiết lập Dự án CodeBuild
+   - Tạo dự án AWS CodeBuild
+   - Cấu hình đặc tả build
+   - Thiết lập vai trò và quyền IAM
 
-3. [Cài đặt các công cụ cần thiết](2.3-install-tools/)  
-   → Bao gồm .NET SDK, AWS CLI, Git,...
+5. Tích hợp Webhook
+   - Cấu hình webhook GitHub
+   - Kiểm tra kích hoạt tự động
+   - Xác minh pipeline build
 
-4. [Tạo project AWS CodeBuild](2.4-codebuild-project/)  
-   → Kết nối GitHub với AWS qua CodeConnections và định cấu hình build.
+### Yêu cầu Tiên quyết
 
-5. [Kiểm tra webhook GitHub](2.5-webhook-verify/)  
-   → Đảm bảo khi có thay đổi mã thì pipeline tự động khởi chạy.
+Trước khi bắt đầu module này, đảm bảo bạn có:
+- Tài khoản AWS với quyền thích hợp
+- Kiến thức cơ bản về Git và GitHub
+- Hiểu biết về phát triển .NET
+- Quyền truy cập quản trị vào máy phát triển của bạn
 
----
+### Ước tính Thời gian
+- Tổng thời gian Module: ~2 giờ
+- Thời gian mỗi Phần: 20-30 phút
 
-📌 **Gợi ý:**  
-Bạn nên hoàn thành toàn bộ phần này **trước khi tiếp tục phần kiểm thử**, vì các lỗi về môi trường thường là nguyên nhân khiến pipeline CI/CD không hoạt động đúng cách.
+### Cấu trúc Module
 
-> Sau khi hoàn tất, bạn sẽ có một môi trường sẵn sàng để thực hiện kiểm thử tự động với CodeBuild.
+1. [Thiết lập Ứng dụng .NET](2.1-dotnet-app/)
+   - Thiết lập ứng dụng cơ bản
+   - Cấu hình ban đầu
 
----
+2. [Thiết lập GitHub Repository](2.2-github-repo/)
+   - Tạo repository
+   - Cấu hình nhánh
 
-  
+3. [Cài đặt Công cụ Cần thiết](2.3-install-tools/)
+   - Thiết lập môi trường phát triển
+   - Cài đặt công cụ AWS
+
+4. [Tạo Dự án CodeBuild](2.4-codebuild-project/)
+   - Cấu hình AWS CodeBuild
+   - Thiết lập pipeline build
+
+5. [Xác minh Webhook](2.5-webhook-verify/)
+   - Kiểm tra tích hợp
+   - Xác minh tự động hóa
+
+### Kết quả Mong đợi
+
+Đến cuối module này, bạn sẽ có:
+- Một ứng dụng .NET hoạt động
+- Một GitHub repository đã được cấu hình
+- Tất cả công cụ phát triển cần thiết đã được cài đặt
+- Một dự án AWS CodeBuild hoạt động
+- Kích hoạt build tự động thông qua webhook
+
+Hãy bắt đầu với [Thiết lập Ứng dụng .NET](2.1-dotnet-app/)!

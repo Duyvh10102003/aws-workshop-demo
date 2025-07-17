@@ -1,41 +1,95 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Phân tích Hiệu năng"
+date: 2025-07-04
+weight: 4
+chapter: false
+pre: "<b>5.4. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Phân tích Kết quả Kiểm thử Hiệu năng
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Thiết lập Công cụ Phân tích
+[Chèn ảnh: Thiết lập công cụ phân tích]
+1. Cấu hình Môi trường Phân tích
+   - Cài đặt công cụ cần thiết
+   - Thiết lập dependencies
+   - Cấu hình không gian làm việc
+   [Chèn ảnh: Cấu hình môi trường]
 
----
+2. Nhập Dữ liệu Kiểm thử
+   [Chèn ảnh: Quy trình nhập dữ liệu]
+   ```python
+   import pandas as pd
+   import numpy as np
+   
+   def load_test_data(file_path):
+       data = pd.read_json(file_path)
+       return process_test_data(data)
+   ```
 
-#### 🎯 Mục tiêu
+### Thực hiện Phân tích Dữ liệu
+[Chèn ảnh: Quy trình phân tích]
+1. Tính toán Chỉ số Chính
+   - Thời gian phản hồi
+   - Tỷ lệ lỗi
+   - Thông lượng
+   [Chèn ảnh: Tính toán chỉ số]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Tạo Trực quan hóa
+   [Chèn ảnh: Trực quan hóa dữ liệu]
+   - Xu hướng hiệu năng
+   - Mẫu tải
+   - Phân bố lỗi
 
----
+### Tạo Báo cáo Phân tích
+[Chèn ảnh: Tạo báo cáo]
+1. Cấu hình Mẫu Báo cáo
+   - Tổng quan hiệu năng
+   - Phân tích chi tiết
+   - Đề xuất
+   [Chèn ảnh: Mẫu báo cáo]
 
-#### 🔧 Các bước thực hiện
+2. Thiết lập Phân tích Tự động
+   [Chèn ảnh: Thiết lập tự động hóa]
+   - Phân tích theo lịch
+   - Ngưỡng cảnh báo
+   - Phát hiện xu hướng
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] Công cụ phân tích hoạt động
+- [ ] Xử lý dữ liệu chính xác
+- [ ] Trực quan hóa rõ ràng
+- [ ] Báo cáo đang tạo
+- [ ] Tự động hóa đang chạy
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề phân tích phổ biến]
+1. Vấn đề Dữ liệu
+   - Thiếu dữ liệu
+   - Định dạng không hợp lệ
+   - Lỗi xử lý
 
-##### Bước 2: Tạo project kiểm thử
+2. Vấn đề Phân tích
+   - Lỗi tính toán
+   - Vấn đề bộ nhớ
+   - Điểm nghẽn hiệu năng
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Vấn đề Báo cáo
+   - Vấn đề định dạng
+   - Lỗi tạo
+   - Lỗi phân phối
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất phân tích]
+1. Quản lý Dữ liệu
+   - Xác thực thường xuyên
+   - Xử lý sạch
+   - Tài liệu rõ ràng
 
-#### 📦 Kết quả đầu ra
+2. Quy trình Phân tích
+   - Phương pháp chuẩn
+   - Chỉ số nhất quán
+   - Xem xét thường xuyên
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi phân tích hiệu năng, tiếp tục với [Kiểm thử Bảo mật](../../6-security-testing/6.1-enable-codeql/)

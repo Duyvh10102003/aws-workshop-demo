@@ -1,41 +1,90 @@
 ---
-title : "Tạo ứng dụng .NET MVC có kiểm thử "
-date :  2025-07-11 
-weight : 1 
-chapter : false
-pre : " <b> 2.1 </b> "
+title: "Xem Kết quả"
+date: 2025-07-04
+weight: 4
+chapter: false
+pre: "<b>3.4. </b>"
 ---
 
-#### Chuẩn bị ứng dụng .NET MVC
+## Xem Kết quả Kiểm thử
 
-Trong bước này, bạn sẽ tạo một ứng dụng web viết bằng **.NET 8 MVC** có sẵn một số unit test đơn giản để phục vụ các phần kiểm thử tự động sau.
+### Truy cập Kết quả Build
+[Chèn ảnh: Trang kết quả CodeBuild]
+1. Mở Chi tiết Build
+   - Điều hướng đến CodeBuild
+   - Chọn build mới nhất
+   - Xem các giai đoạn build
+   [Chèn ảnh: Trang chi tiết build]
 
----
+2. Truy cập Báo cáo Kiểm thử
+   [Chèn ảnh: Tab báo cáo kiểm thử]
+   - Mở tab Reports
+   - Xem tổng quan kiểm thử
+   - Kiểm tra chi tiết kiểm thử
 
-#### 🎯 Mục tiêu
+### Phân tích Kết quả Kiểm thử
+[Chèn ảnh: Bảng điều khiển kết quả kiểm thử]
+1. Xem xét Thống kê Kiểm thử
+   - Tổng số kiểm thử đã chạy
+   - Số lượng pass/fail
+   - Thời gian kiểm thử
+   [Chèn ảnh: Thống kê kiểm thử]
 
-- Tạo một ứng dụng .NET 8 MVC mới
-- Thêm một project kiểm thử (`Web.Tests`)
-- Viết ít nhất 1 test đơn vị cơ bản
-- Đảm bảo chạy test thành công bằng dòng lệnh
+2. Kiểm tra Báo cáo Độ bao phủ
+   [Chèn ảnh: Báo cáo độ bao phủ]
+   - Chỉ số độ bao phủ mã
+   - Xu hướng độ bao phủ
+   - Vùng chưa được bao phủ
 
----
+### Xem Log Chi tiết
+[Chèn ảnh: Log CloudWatch]
+1. Truy cập CloudWatch Logs
+   - Tìm nhóm log
+   - Chọn luồng log
+   - Xem đầu ra kiểm thử
+   [Chèn ảnh: Chi tiết log]
 
-#### 🔧 Các bước thực hiện
+2. Xem xét Log Build
+   [Chèn ảnh: Chi tiết log build]
+   - Các bước build
+   - Thực thi kiểm thử
+   - Thông báo lỗi
 
-##### Bước 1: Tạo solution và project chính
+### Danh sách Xác minh
+- [ ] Build hoàn thành thành công
+- [ ] Kết quả kiểm thử có thể truy cập
+- [ ] Báo cáo độ bao phủ có sẵn
+- [ ] Log có thể xem
+- [ ] Chỉ số được ghi lại
 
+### Hướng dẫn Xử lý Sự cố
+[Chèn ảnh: Vấn đề xem thường gặp]
+1. Vấn đề Truy cập
+   - Kiểm tra quyền
+   - Xác minh lưu giữ log
+   - Xem xét vai trò IAM
 
-##### Bước 2: Tạo project kiểm thử
+2. Vấn đề Báo cáo
+   - Kiểm tra tạo báo cáo
+   - Xác minh artifacts
+   - Xem xét định dạng
 
-##### Bước 3: Viết một test đơn vị đơn giản
+3. Vấn đề Log
+   - Kiểm tra luồng log
+   - Xác minh gửi log
+   - Xem xét nhóm log
 
-##### 4: Chạy thử nghiệm kiểm thử
+### Thực hành Tốt nhất
+[Chèn ảnh: Thực hành tốt nhất xem kết quả]
+1. Quản lý Kết quả
+   - Giám sát thường xuyên
+   - Phân tích xu hướng
+   - Theo dõi vấn đề
 
-#### 📦 Kết quả đầu ra
+2. Tài liệu hóa
+   - Chụp ảnh kết quả
+   - Ghi chép vấn đề
+   - Theo dõi thay đổi
 
-
-#### 📌 Lưu ý
-Hãy đảm bảo bạn đang sử dụng .NET SDK 8.0
-
-Có thể tạo thêm các test khác để sử dụng trong phần song song và hiệu năng
+### Bước tiếp theo
+Sau khi xem xét kết quả, tiếp tục với [Sửa Lỗi](../3.5-fix-failures/)
