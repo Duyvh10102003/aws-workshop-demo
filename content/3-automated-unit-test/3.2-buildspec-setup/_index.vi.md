@@ -1,93 +1,99 @@
 ---
-title: "Thiết lập BuildSpec"
+title: "Cấu hình Buildspec để chạy Unit Test và sinh báo cáo"
 date: 2025-07-04
 weight: 2
 chapter: false
 pre: "<b>3.2. </b>"
 ---
 
-## Thiết lập BuildSpec cho Tự động hóa Kiểm thử
+Trong bước này, bạn sẽ tạo file `buildspec.yml` để:
 
-### Tạo File BuildSpec
-[Chèn ảnh: Tạo buildspec.yml trong VS Code]
-1. Tạo buildspec.yml
-   - Tạo trong thư mục gốc dự án
-   - Sử dụng cấu trúc cơ bản bên dưới
-   [Chèn ảnh: Cấu trúc buildspec cơ bản]
+- Cài đặt tool tạo báo cáo test
+- Chạy unit test có ghi log kết quả
+- Sinh HTML test report dễ xem
+- Chuẩn bị sẵn cho các bước upload kết quả hoặc phân tích
 
-2. Cấu hình Cơ bản
-   ```yaml
-   version: 0.2
-   
-   phases:
-     install:
-       runtime-versions:
-         dotnet: 8.0
-     
-     build:
-       commands:
-         - dotnet build
-         - dotnet test
-   ```
-   [Chèn ảnh: BuildSpec với phần được đánh dấu]
+## ✅ Mục tiêu
 
-### Cấu hình Cài đặt Kiểm thử
-[Chèn ảnh: Cấu hình cài đặt kiểm thử]
-1. Thêm Tùy chọn Kiểm thử
-   - Logger kiểm thử
-   - Thư mục kết quả
-   - Thu thập độ bao phủ
-   [Chèn ảnh: Tùy chọn cấu hình kiểm thử]
+- Cài đặt `dotnet-reportgenerator-globaltool`
+- Chạy test và xuất log theo định dạng `.trx`
+- Sinh báo cáo HTML dễ đọc
 
-2. Cấu hình Báo cáo
-   [Chèn ảnh: Cấu hình báo cáo]
-   - Định dạng TRX
-   - Báo cáo độ bao phủ
-   - Báo cáo tùy chỉnh
+## 📁 Cấu trúc thư mục
 
-### Thiết lập Artifacts
-[Chèn ảnh: Cấu hình artifacts]
-1. Cấu hình Đầu ra
-   - Kết quả kiểm thử
-   - Báo cáo độ bao phủ
-   - File log
-   [Chèn ảnh: Cài đặt artifacts]
+```plaintext
+YourProject/
+├── src/
+│   └── Web/
+│       └── Web.Tests/
+├── buildspec.yml
+└── TestReport/
+    └── index.html
+```
 
-### Danh sách Xác minh
-- [ ] File BuildSpec đã tạo
-- [ ] Cấu hình kiểm thử đã thêm
-- [ ] Báo cáo đã cấu hình
-- [ ] Artifacts đã thiết lập
-- [ ] Cú pháp đã xác thực
+## 🧾 Nội dung file `buildspec.yml`
 
-### Hướng dẫn Xử lý Sự cố
-[Chèn ảnh: Vấn đề BuildSpec phổ biến]
-1. Lỗi Cú pháp
-   - Kiểm tra định dạng YAML
-   - Xác minh thụt lề
-   - Xác thực cấu hình
+```yaml
+version: 0.2
 
-2. Lỗi Build
-   - Kiểm tra thứ tự phase
-   - Xác minh lệnh
-   - Xem xét môi trường
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+    commands:
+      - echo === Installing reportgenerator tool ===
+      - dotnet tool install -g dotnet-reportgenerator-globaltool
+      - export PATH="$PATH:/root/.dotnet/tools"
 
-3. Vấn đề Báo cáo
-   - Kiểm tra đường dẫn
-   - Xác minh quyền
-   - Xem xét định dạng
+  build:
+    commands:
+      - echo === Restoring dependencies ===
+      - dotnet restore
+      - echo === Building solution ===
+      - dotnet build --no-restore
+      - echo === Running unit tests ===
+      - dotnet test Web.Tests/Web.Tests.csproj --logger "trx;LogFileName=test_results.trx"
+      - echo === Generating HTML test report ===
+      - reportgenerator "-reports:**/test_results.trx" "-targetdir:TestReport" -reporttypes:Html
 
-### Thực hành Tốt nhất
-[Chèn ảnh: Thực hành tốt nhất BuildSpec]
-1. Tổ chức File
-   - Cấu trúc rõ ràng
-   - Thụt lề phù hợp
-   - Tùy chọn có tài liệu
+artifacts:
+  files:
+    - TestReport/**/*
+  discard-paths: no
+```
 
-2. Cấu hình
-   - Biến môi trường
-   - Bước có điều kiện
-   - Xử lý lỗi
+## 💡 Giải thích
 
-### Bước tiếp theo
-Sau khi thiết lập BuildSpec, tiếp tục với [Đẩy và Kích hoạt](../3.3-push-trigger/)
+| Mục | Mô tả |
+|-----|--------|
+| dotnet tool install | Cài đặt tool sinh báo cáo test dưới dạng HTML |
+| dotnet test + --logger | Ghi kết quả test ra file .trx (Test Result XML) |
+| reportgenerator | Tạo báo cáo HTML từ file .trx |
+| artifacts.files | Chỉ định output cần lưu trữ (báo cáo test) |
+
+## 🔄 Các bước thực hiện
+
+1. Tạo file buildspec.yml trong thư mục gốc của dự án
+2. Copy nội dung buildspec từ hướng dẫn
+3. Commit và push lên repository
+4. Kiểm tra build trong CodeBuild
+
+## ✅ Kiểm tra
+
+Sau khi push code, vào AWS CodeBuild và kiểm tra:
+
+1. Build được trigger tự động
+2. Các phase chạy thành công
+3. Artifacts chứa báo cáo test HTML
+4. Mở file TestReport/index.html để xem kết quả chi tiết
+
+{{% notice info %}}
+Thêm ảnh chụp màn hình báo cáo test của bạn tại đây
+{{% /notice %}}
+
+## 📌 Ghi chú
+
+- File .trx chứa thông tin chi tiết về kết quả test
+- Báo cáo HTML giúp dễ dàng xem và phân tích kết quả
+- Artifacts được lưu lại để tham khảo sau này
+- Cấu hình này là nền tảng cho việc tích hợp với các công cụ phân tích khác

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thiết lập BuildSpec on AWS System Manager</title>
+    <title>Cấu hình Buildspec để chạy Unit Test và sinh báo cáo on AWS System Manager</title>
     <link>//localhost:1313/vi/3-automated-unit-test/3.2-buildspec-setup/</link>
-    <description>Recent content in Thiết lập BuildSpec on AWS System Manager</description>
+    <description>Recent content in Cấu hình Buildspec để chạy Unit Test và sinh báo cáo on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>

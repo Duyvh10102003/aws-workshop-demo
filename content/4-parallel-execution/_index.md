@@ -1,78 +1,174 @@
 ---
-title: "Parallel Execution"
+title: "Parallel Test Execution"
 date: 2025-07-04
 weight: 4
 chapter: false
 pre: "<b>4. </b>"
 ---
 
-## Parallel Test Execution Overview
+## Thực thi test song song với AWS CodeBuild
 
-This module focuses on implementing parallel test execution in AWS CodeBuild to optimize test runtime and improve pipeline efficiency. You'll learn how to configure, manage, and monitor parallel test execution in your CI/CD pipeline.
+Trong module này, chúng ta sẽ cấu hình thực thi song song các test case để giảm thời gian chạy test tổng thể.
 
-### What You'll Learn
+### Cấu hình AWS CodeBuild
 
-1. Multiple Test Configuration
-   - Organizing test projects
-   - Test categorization
-   - Test prioritization
-   - Resource planning
+1. Tạo file buildspec.yml:
+```yaml
+version: 0.2
 
-2. Parallel Configuration
-   - CodeBuild parallel setup
-   - Test runner configuration
-   - Resource allocation
-   - Environment isolation
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install
+      
+  build:
+    commands:
+      - echo "Bắt đầu chạy test song song"
+      - |
+        npm run test:components & \
+        npm run test:api & \
+        npm run test:e2e & \
+        wait
+        
+  post_build:
+    commands:
+      - node scripts/merge-test-results.js
 
-3. Result Aggregation
-   - Combining test results
-   - Reporting strategies
-   - Error handling
-   - Status consolidation
+reports:
+  test-reports:
+    files:
+      - 'reports/**/*'
+    file-format: JunitXml
 
-4. Performance Comparison
-   - Measuring improvements
-   - Analyzing bottlenecks
-   - Optimizing execution
-   - Resource utilization
+artifacts:
+  files:
+    - reports/**/*
+    - coverage/**/*
+```
 
-### Prerequisites
+### Cấu hình Script trong package.json
 
-Before starting this module, ensure you have:
-- Completed Module 3 (Automated Unit Testing)
-- Understanding of AWS CodeBuild
-- Familiarity with test execution concepts
-- Basic knowledge of parallel processing
+```json
+{
+  "scripts": {
+    "test:components": "jest --config jest.components.config.js --maxWorkers=2",
+    "test:api": "jest --config jest.api.config.js --maxWorkers=2",
+    "test:e2e": "cypress run --parallel --record --key your-key",
+    "test:all": "npm-run-all --parallel test:*"
+  }
+}
+```
 
-### Time Estimation
-- Total Module Time: ~2 hours
-- Individual Section Time: 30 minutes each
+### Script gộp kết quả test
 
-### Module Structure
+```javascript
+// scripts/merge-test-results.js
+const fs = require('fs');
 
-1. [Multiple Tests Setup](4.1-multiple-tests/)
-   - Test organization
-   - Configuration setup
+async function mergeResults() {
+  const results = {
+    components: require('../reports/component-results.json'),
+    api: require('../reports/api-results.json'),
+    e2e: require('../reports/e2e-results.json')
+  };
 
-2. [Configure Parallel Execution](4.2-configure-parallel/)
-   - Parallel processing setup
-   - Resource management
+  const summary = {
+    totalTests: 0,
+    passed: 0,
+    failed: 0,
+    duration: 0
+  };
 
-3. [Aggregate Results](4.3-aggregate-results/)
-   - Result combination
-   - Report generation
+  Object.values(results).forEach(result => {
+    summary.totalTests += result.totalTests;
+    summary.passed += result.passedTests;
+    summary.failed += result.failedTests;
+    summary.duration += result.duration;
+  });
 
-4. [Compare Speed](4.4-compare-speed/)
-   - Performance analysis
-   - Optimization techniques
+  fs.writeFileSync('reports/summary.json', JSON.stringify(summary, null, 2));
+}
 
-### Expected Outcomes
+mergeResults();
+```
 
-By the end of this module, you will have:
-- Configured parallel test execution
-- Improved test execution speed
-- Implemented result aggregation
-- Optimized resource usage
-- Measured performance improvements
+### Lợi ích của thực thi song song
 
-Let's begin with [Multiple Tests Setup](4.1-multiple-tests/)!
+1. Giảm thời gian chạy test
+   - Chạy nhiều test cùng lúc
+   - Tận dụng tối đa tài nguyên
+
+2. Tối ưu tài nguyên
+   - Sử dụng hiệu quả AWS CodeBuild
+   - Tiết kiệm chi phí
+
+### Các bước thực hiện
+
+1. Tổ chức test theo loại:
+```
+tests/
+├── components/
+│   ├── MovieCard.test.js
+│   └── MovieList.test.js
+├── api/
+│   ├── movieService.test.js
+│   └── authService.test.js
+└── e2e/
+    ├── browse.spec.js
+    └── watch.spec.js
+```
+
+2. Cấu hình Jest cho từng loại test:
+```javascript
+// jest.components.config.js
+module.exports = {
+  testMatch: ['<rootDir>/tests/components/**/*.test.js'],
+  // ... các cấu hình khác
+};
+
+// jest.api.config.js
+module.exports = {
+  testMatch: ['<rootDir>/tests/api/**/*.test.js'],
+  // ... các cấu hình khác
+};
+```
+
+3. Cấu hình Cypress cho E2E test:
+```javascript
+// cypress.config.js
+module.exports = {
+  e2e: {
+    setupNodeEvents(on, config) {},
+    specPattern: 'tests/e2e/**/*.spec.js',
+    supportFile: 'tests/e2e/support/index.js'
+  }
+};
+```
+
+### Giám sát và báo cáo
+
+1. Tích hợp với CloudWatch:
+```yaml
+# buildspec.yml bổ sung
+env:
+  variables:
+    CLOUDWATCH_NAMESPACE: "MovieApp/Tests"
+
+phases:
+  post_build:
+    commands:
+      - aws cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-name TestDuration --value $DURATION
+      - aws cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-name TestsPassed --value $PASSED_TESTS
+```
+
+2. Tạo Dashboard theo dõi:
+- Thời gian chạy test
+- Tỷ lệ test pass/fail
+- Số lượng test thực thi
+
+### Bước tiếp theo
+- Chuyển sang phần Performance Testing
+- Cấu hình thông báo kết quả test
+- Thiết lập giám sát liên tục

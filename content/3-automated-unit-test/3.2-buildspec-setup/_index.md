@@ -1,93 +1,99 @@
 ---
-title: "BuildSpec Setup"
+title: "Configure Buildspec for Unit Tests and Report Generation"
 date: 2025-07-04
 weight: 2
 chapter: false
 pre: "<b>3.2. </b>"
 ---
 
-## Setting up BuildSpec for Test Automation
+In this step, you will create a `buildspec.yml` file to:
 
-### Create BuildSpec File
-[Insert screenshot: Creating buildspec.yml in VS Code]
-1. Create buildspec.yml
-   - Create in project root
-   - Use basic structure below
-   [Insert screenshot: Basic buildspec structure]
+- Install test report generation tools
+- Run unit tests with result logging
+- Generate readable HTML test reports
+- Prepare for result uploading and analysis
 
-2. Basic Configuration
-   ```yaml
-   version: 0.2
-   
-   phases:
-     install:
-       runtime-versions:
-         dotnet: 8.0
-     
-     build:
-       commands:
-         - dotnet build
-         - dotnet test
-   ```
-   [Insert screenshot: BuildSpec with highlights]
+## ✅ Objectives
 
-### Configure Test Settings
-[Insert screenshot: Test settings configuration]
-1. Add Test Options
-   - Test logger
-   - Results directory
-   - Coverage collection
-   [Insert screenshot: Test configuration options]
+- Install `dotnet-reportgenerator-globaltool`
+- Run tests and export logs in `.trx` format
+- Generate readable HTML reports
 
-2. Configure Reports
-   [Insert screenshot: Report configuration]
-   - TRX format
-   - Coverage reports
-   - Custom reports
+## 📁 Directory Structure
 
-### Set Up Artifacts
-[Insert screenshot: Artifacts configuration]
-1. Configure Output
-   - Test results
-   - Coverage reports
-   - Log files
-   [Insert screenshot: Artifacts settings]
+```plaintext
+YourProject/
+├── src/
+│   └── Web/
+│       └── Web.Tests/
+├── buildspec.yml
+└── TestReport/
+    └── index.html
+```
 
-### Verification Checklist
-- [ ] BuildSpec file created
-- [ ] Test configuration added
-- [ ] Reports configured
-- [ ] Artifacts set up
-- [ ] Syntax validated
+## 🧾 Buildspec File Content
 
-### Troubleshooting Guide
-[Insert screenshot: Common BuildSpec issues]
-1. Syntax Errors
-   - Check YAML format
-   - Verify indentation
-   - Validate configuration
+```yaml
+version: 0.2
 
-2. Build Failures
-   - Check phase order
-   - Verify commands
-   - Review environment
+phases:
+  install:
+    runtime-versions:
+      dotnet: 8.0
+    commands:
+      - echo === Installing reportgenerator tool ===
+      - dotnet tool install -g dotnet-reportgenerator-globaltool
+      - export PATH="$PATH:/root/.dotnet/tools"
 
-3. Report Issues
-   - Check paths
-   - Verify permissions
-   - Review formats
+  build:
+    commands:
+      - echo === Restoring dependencies ===
+      - dotnet restore
+      - echo === Building solution ===
+      - dotnet build --no-restore
+      - echo === Running unit tests ===
+      - dotnet test Web.Tests/Web.Tests.csproj --logger "trx;LogFileName=test_results.trx"
+      - echo === Generating HTML test report ===
+      - reportgenerator "-reports:**/test_results.trx" "-targetdir:TestReport" -reporttypes:Html
 
-### Best Practices
-[Insert screenshot: BuildSpec best practices]
-1. File Organization
-   - Clear structure
-   - Proper indentation
-   - Documented options
+artifacts:
+  files:
+    - TestReport/**/*
+  discard-paths: no
+```
 
-2. Configuration
-   - Environment variables
-   - Conditional steps
-   - Error handling
+## 💡 Explanation
 
-### Next Steps
-After setting up BuildSpec, proceed to [Push and Trigger](../3.3-push-trigger/)
+| Section | Description |
+|---------|-------------|
+| dotnet tool install | Installs HTML test report generator tool |
+| dotnet test + --logger | Writes test results to .trx file (Test Result XML) |
+| reportgenerator | Generates HTML report from .trx file |
+| artifacts.files | Specifies outputs to preserve (test reports) |
+
+## 🔄 Implementation Steps
+
+1. Create buildspec.yml in project root
+2. Copy buildspec content from guide
+3. Commit and push to repository
+4. Verify build in CodeBuild
+
+## ✅ Verification
+
+After pushing code, check AWS CodeBuild for:
+
+1. Automatic build trigger
+2. Successful phase completion
+3. Artifacts containing HTML test report
+4. Open TestReport/index.html for detailed results
+
+{{% notice info %}}
+Add your test report screenshot here
+{{% /notice %}}
+
+## 📌 Notes
+
+- .trx files contain detailed test result information
+- HTML reports provide easy result viewing and analysis
+- Artifacts are preserved for future reference
+- This configuration forms the foundation for integration with other analysis tools

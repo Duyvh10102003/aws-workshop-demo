@@ -1,84 +1,93 @@
 ---
-title: "Automated Unit Testing"
+title: "Automated Testing Framework"
 date: 2025-07-04
 weight: 3
 chapter: false
 pre: "<b>3. </b>"
 ---
 
-## Automated Unit Testing Overview
+In this module, we will build an automated testing framework for our movie streaming website using AWS CodeBuild and modern testing tools.
 
-This module focuses on implementing automated unit testing in our CI/CD pipeline using AWS CodeBuild. You'll learn how to write effective unit tests, configure test automation, and integrate test results into your development workflow.
+## 🎯 Objectives
 
-### What You'll Learn
+- Set up automated testing environment with AWS CodeBuild
+- Write and run unit tests for components
+- Generate detailed and readable test reports
+- Automate testing process for new code changes
 
-1. Writing Unit Tests
-   - Creating test projects
-   - Writing effective test cases
-   - Implementing test patterns
-   - Using xUnit framework
+## 📋 Main Content
 
-2. BuildSpec Configuration
-   - Configuring test execution
-   - Setting up test reporting
-   - Managing test dependencies
+1. [Writing First Unit Test](3.1-codebuild-setup/)
+   - Create simple test file
+   - Basic test structure
+   - Simulate test delays
 
-3. Push and Trigger Testing
-   - Automating test execution
-   - Configuring build triggers
-   - Managing test workflows
+2. [Configure Buildspec](3.2-buildspec-setup/)
+   - Create buildspec.yml file
+   - Install reporting tools
+   - Configure output artifacts
 
-4. Viewing Test Results
-   - Analyzing test reports
-   - Interpreting test metrics
-   - Tracking test coverage
+3. [Setup CodeBuild](3.3-codebuild-project/)
+   - Create CodeBuild project
+   - Connect with GitHub
+   - Configure build environment
 
-5. Fixing Test Failures
-   - Debugging failed tests
-   - Implementing fixes
-   - Validating corrections
+4. [Verify Results](3.4-verify-results/)
+   - Run and view build results
+   - Analyze test reports
+   - Handle errors (if any)
 
-### Prerequisites
+## ⚙️ Prerequisites
 
-Before starting this module, ensure you have:
-- Completed Module 2 (Environment Setup)
-- Understanding of C# and .NET testing
-- Familiarity with xUnit framework
-- Access to AWS CodeBuild project
+- Basic understanding of .NET testing
+- AWS CLI installed and configured
+- GitHub account with repository
 
-### Time Estimation
-- Total Module Time: ~2.5 hours
-- Individual Section Time: 30 minutes each
+## ⏱ Estimated Time
 
-### Module Structure
+- Total time: ~2 hours
+- Each section: 25-30 minutes
 
-1. [Writing Unit Tests](3.1-write-unit-tests/)
-   - Test project setup
-   - Test case implementation
+## 📌 Expected Outcomes
 
-2. [BuildSpec Setup](3.2-buildspec-setup/)
-   - Build configuration
-   - Test automation setup
+After completing this module, you will have:
 
-3. [Push and Trigger](3.3-push-trigger/)
-   - Automated execution
-   - Pipeline integration
+1. **Complete Testing Framework**
+   - Automated unit tests
+   - Detailed test reports
+   - GitHub integration
 
-4. [View Results](3.4-view-results/)
-   - Result analysis
-   - Report interpretation
+2. **CI/CD Pipeline**
+   - Automatic testing on code push
+   - Test results storage
+   - Error notifications
 
-5. [Fix Failures](3.5-fix-failures/)
-   - Troubleshooting
-   - Implementation fixes
+3. **Documentation & Reports**
+   - HTML test reports
+   - Detailed build logs
+   - Test coverage statistics
 
-### Expected Outcomes
+## 🛠 Tools Used
 
-By the end of this module, you will have:
-- A comprehensive unit test suite
-- Automated test execution in CI/CD
-- Test result reporting and analysis
-- Experience fixing test failures
-- Improved code quality processes
+- **AWS CodeBuild**: Automated CI/CD service
+- **xUnit**: .NET testing framework
+- **ReportGenerator**: HTML report generation
+- **GitHub**: Source code management
 
-Let's begin with [Writing Unit Tests](3.1-write-unit-tests/)!
+## 💡 Pro Tips
+
+- Read buildspec.yml configuration carefully
+- Test locally before pushing
+- Check logs for errors
+- Organize tests with clear structure
+
+## 🔍 Troubleshooting
+
+- Check AWS access permissions
+- Verify GitHub configuration
+- Review detailed build logs
+- Run tests locally for debugging
+
+{{% notice tip %}}
+Make sure to complete each step before moving to the next one
+{{% /notice %}}
