@@ -58,7 +58,7 @@ Workshop **"Automated Testing Framework"** hướng dẫn xây dựng hệ thố
 
 ### Công cụ
 - [Visual Studio](https://visualstudio.microsoft.com/) hoặc [VS Code](https://code.visualstudio.com/)
-- [.NET 6.0 SDK](https://dotnet.microsoft.com/download)
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download)
 - [AWS CLI](https://aws.amazon.com/cli/)
 - [Git](https://git-scm.com/)
 
