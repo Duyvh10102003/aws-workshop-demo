@@ -25,7 +25,6 @@ In this workshop, you will:
 - Configure parallel test execution
 - Add performance testing
 - Enable security scanning
-- Monitor and optimize costs
 
 ### Time Estimation
 Total workshop time: ~8 hours

@@ -1,32 +1,54 @@
 ---
-title: "Automated Testing with AWS CodeBuild"
-date: 2025-07-12
-weight: 1
-chapter: false
+title: "Automated Testing Framework Workshop"
+date: 2025-07-04
 ---
 
-# Workshop: Automated Testing with AWS CodeBuild and Parallel Execution
+# 🚀 Building an Automated Testing Framework
 
-### Overview
+{{% notice note %}}
+This workshop will guide you through building a complete automated testing system for a movie streaming website using .NET and AWS services.
+{{% /notice %}}
 
-In this workshop, you'll learn how to build a modern automated testing system for a web application built with **.NET 8 MVC**, leveraging AWS services such as **CodeBuild, CloudWatch, and CodeQL**.
+## 🎯 What You'll Learn
 
-Through hands-on sessions, you will:
-- Set up a CI pipeline to trigger tests on every GitHub push
-- Accelerate test execution with parallel execution strategies
-- Integrate performance and security testing (via CodeQL)
-- Monitor logs, analyze test results, and optimize cost
-- Clean up AWS resources after testing
+- Set up CI/CD pipeline with AWS CodeBuild
+- Write and run automated unit tests
+- Optimize performance with parallel testing
+- Monitor and receive email alerts
+- Automate security scanning with CodeQL
 
-![](/images/aws-test-arch.png)
+## 📚 Workshop Content
 
-### Workshop Content
+{{% children style="h3" depth="2" description="true" %}}
 
-1. [Introduction & Objectives](1-introduction/)
-2. [Environment Preparation](2-environment-setup/)
-3. [Unit Test Automation Setup](3-automated-unit-test/)
-4. [Parallel Execution & Result Aggregation](4-parallel-execution/)
-5. [Performance Testing](5-performance-testing/)
-6. [Security Testing with CodeQL](6-security-testing/)
-7. [Monitoring, Reporting & Cost Optimization](7-monitoring-cost/)
-8. [Cleanup & Resource Teardown](8-clean-up/)
+1. [**Introduction**](1-introduction/) - Testing framework overview
+2. [**Environment Setup**](2-environment-setup/) - AWS and tools setup
+3. [**Unit Testing**](3-automated-unit-test/) - Writing tests and configuring CodeBuild
+4. [**Parallel Execution**](4-parallel-execution/) - Running tests in parallel
+5. [**Monitoring & Alerts**](5-monitoring/) - Monitoring and notifications
+6. [**Security Testing**](6-security-testing/) - Security scanning with CodeQL
+7. [**Clean Up**](7-cleanup/) - Resource cleanup
+
+## ⚡ Quick Start
+
+```bash
+# Clone repository
+git clone https://github.com/username/automated-testing-workshop
+
+# Navigate to directory
+cd automated-testing-workshop
+
+# Install dependencies
+dotnet restore
+```
+
+## 🎓 Prerequisites
+
+- Basic knowledge of C# and .NET
+- AWS Account (Free tier)
+- GitHub Account
+- Visual Studio Code or Visual Studio
+
+{{% notice tip %}}
+This workshop is designed to be completed in 2-3 hours. You can split it into multiple sessions.
+{{% /notice %}}

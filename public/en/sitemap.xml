@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
-    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/"
-                />
-  </url><url>
     <loc>//localhost:1313/5-monitoring/5.1-create-sns/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -184,19 +171,6 @@
                 href="//localhost:1313/4-parallel-execution/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.4-verify-results/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.4-verify-results/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.4-verify-results/"
-                />
-  </url><url>
     <loc>//localhost:1313/5-monitoring/5.4-verify/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -208,6 +182,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/5-monitoring/5.4-verify/"
+                />
+  </url><url>
+    <loc>//localhost:1313/3-automated-unit-test/3.4-verify-results/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/3-automated-unit-test/3.4-verify-results/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/3-automated-unit-test/3.4-verify-results/"
                 />
   </url><url>
     <loc>//localhost:1313/5-monitoring/</loc>
@@ -237,6 +224,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/7-cleanup/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -246,6 +234,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/7-cleanup/"
+                />
+  </url><url>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/</loc>

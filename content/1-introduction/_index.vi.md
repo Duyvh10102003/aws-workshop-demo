@@ -25,7 +25,6 @@ Trong workshop này, bạn sẽ:
 - Cấu hình thực thi kiểm thử song song
 - Thêm kiểm thử hiệu năng
 - Kích hoạt quét bảo mật
-- Giám sát và tối ưu chi phí
 
 ### Ước tính Thời gian
 Tổng thời gian workshop: ~8 giờ
