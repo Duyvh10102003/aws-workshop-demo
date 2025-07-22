@@ -119,4 +119,4 @@ aws sts get-caller-identity
 
 ### Next Steps
 
-After installing and configuring all required tools, proceed to [CodeBuild Project Setup](../2.3-codebuild-project/)
+After installing and configuring all required tools, proceed to [Create S3 Bucket](../2.3-create-s3/)

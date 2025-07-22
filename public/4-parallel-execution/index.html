@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Parallel Test Execution :: AWS System Manager</title>
+    <title>Parallel Test Execution with Multiple Test Files :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1753090947" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1753090947" rel="stylesheet">
-    <link href="/css/hybrid.css?1753090947" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1753090947" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1753090947" rel="stylesheet">
-    <link href="/css/auto-complete.css?1753090947" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1753090947" rel="stylesheet">
-    <link href="/css/theme.css?1753090947" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1753090947" rel="stylesheet">
+    <link href="/css/nucleus.css?1753171726" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1753171726" rel="stylesheet">
+    <link href="/css/hybrid.css?1753171726" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1753171726" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1753171726" rel="stylesheet">
+    <link href="/css/auto-complete.css?1753171726" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1753171726" rel="stylesheet">
+    <link href="/css/theme.css?1753171726" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1753171726" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1753090947" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1753171726" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1753090947"></script>
+    <script src="/js/jquery-3.3.1.min.js?1753171726"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1753090947"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1753090947"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1753171726"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1753171726"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1753090947"></script>
+<script type="text/javascript" src="/js/search.js?1753171726"></script>
 
     
   </div>
@@ -199,13 +199,13 @@
  
   
     
-    <li data-nav-id="/2-environment-setup/2.3-create-s3/" title="2.3 - Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/2-environment-setup/2.3-create-s3/" title="Create S3 Bucket" class="dd-item 
         
         
         
         ">
       <a href="/2-environment-setup/2.3-create-s3/">
-          2.3 - Create S3 Bucket
+          <b>2.3. </b>Create S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -384,13 +384,39 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/" title="Parallel Test Execution" class="dd-item 
+    <li data-nav-id="/4-parallel-execution/" title="Parallel Test Execution with Multiple Test Files" class="dd-item 
         
         active
         
         ">
       <a href="/4-parallel-execution/">
-          <b>4. </b>Parallel Test Execution
+          <b>4. </b>Parallel Test Execution with Multiple Test Files
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-monitoring/" title="Test Failure Notifications" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-monitoring/">
+          <b>5. </b>Test Failure Notifications
           
             <i class="fas fa-check read-icon"></i>
           
@@ -415,13 +441,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.1-multiple-tests/" title="Multiple Tests Setup" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.1-create-sns/" title="Create SNS Topic" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.1-multiple-tests/">
-          <b>4.1. </b>Multiple Tests Setup
+      <a href="/5-monitoring/5.1-create-sns/">
+          <b>5.1. </b>Create SNS Topic
           
             <i class="fas fa-check read-icon"></i>
           
@@ -443,13 +469,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.2-configure-parallel/" title="Configure Parallel Execution" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.2-cloudwatch-rule/" title="Create CloudWatch Rule" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.2-configure-parallel/">
-          <b>4.2. </b>Configure Parallel Execution
+      <a href="/5-monitoring/5.2-cloudwatch-rule/">
+          <b>5.2. </b>Create CloudWatch Rule
           
             <i class="fas fa-check read-icon"></i>
           
@@ -471,13 +497,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.3-aggregate-results/" title="Aggregate Results" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.3-connect-rule-sns/" title="Connect Rule to SNS" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.3-aggregate-results/">
-          <b>4.3. </b>Aggregate Results
+      <a href="/5-monitoring/5.3-connect-rule-sns/">
+          <b>5.3. </b>Connect Rule to SNS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -499,13 +525,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.4-compare-speed/" title="Compare Speed" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.4-verify/" title="Verify Setup" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.4-compare-speed/">
-          <b>4.4. </b>Compare Speed
+      <a href="/5-monitoring/5.4-verify/">
+          <b>5.4. </b>Verify Setup
           
             <i class="fas fa-check read-icon"></i>
           
@@ -534,194 +560,13 @@
  
   
     
-    <li data-nav-id="/5-performance-testing/" title="Performance Testing" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/">
-          <b>5. </b>Performance Testing
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.1-write-performance-tests/" title="Write Performance Tests" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.1-write-performance-tests/">
-          <b>5.1. </b>Write Performance Tests
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.2-integrate-into-ci/" title="Integrate into CI/CD" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.2-integrate-into-ci/">
-          <b>5.2. </b>Integrate into CI/CD
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.3-export-results/" title="Export Results" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.3-export-results/">
-          <b>5.3. </b>Export Results
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.4-analyze-performance/" title="Analyze Performance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.4-analyze-performance/">
-          <b>5.4. </b>Analyze Performance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/" title="Security Testing" class="dd-item 
+    <li data-nav-id="/6-security-testing/" title="Automated Security Scanning with CodeQL" class="dd-item 
         
         
         
         ">
       <a href="/6-security-testing/">
-          <b>6. </b>Security Testing
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/6.1-enable-codeql/" title="Enable CodeQL" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-security-testing/6.1-enable-codeql/">
-          <b>6.1. </b>Enable CodeQL
+          <b>6. </b>Automated Security Scanning with CodeQL
           
             <i class="fas fa-check read-icon"></i>
           
@@ -732,10 +577,8 @@
   
  
 
-            
           
-            
-            
+          
 
 
 
@@ -743,290 +586,18 @@
  
   
     
-    <li data-nav-id="/6-security-testing/6.2-review-alerts/" title="Review Alerts" class="dd-item 
+    <li data-nav-id="/7-cleanup/" title="7 - Resource Cleanup" class="dd-item 
         
         
         
         ">
-      <a href="/6-security-testing/6.2-review-alerts/">
-          <b>6.2. </b>Review Alerts
+      <a href="/7-cleanup/">
+          7 - Resource Cleanup
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/6.3-fix-vulnerabilities/" title="Fix Vulnerabilities" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-security-testing/6.3-fix-vulnerabilities/">
-          <b>6.3. </b>Fix Vulnerabilities
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/6.4-disable-if-needed/" title="Configure Settings" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-security-testing/6.4-disable-if-needed/">
-          <b>6.4. </b>Configure Settings
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/" title="Monitoring Cost" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/">
-          <b>7. </b>Monitoring Cost
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.1-cloudwatch-logs/" title="CloudWatch Logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.1-cloudwatch-logs/">
-          <b>7.1. </b>CloudWatch Logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.2-analyze-cost/" title="Analyze Cost" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.2-analyze-cost/">
-          <b>7.2. </b>Analyze Cost
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.3-optimize-config/" title="Optimize Config" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.3-optimize-config/">
-          <b>7.3. </b>Optimize Config
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.4-estimate-usage/" title="Estimate Usage" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.4-estimate-usage/">
-          <b>7.4. </b>Estimate Usage
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/8-clean-up/" title="Clean Up Resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/8-clean-up/">
-          <b>8. </b>Clean Up Resources
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/8-clean-up/cleanup/" title="Cleanup Instructions" class="dd-item ">
-        <a href="/8-clean-up/cleanup/">
-        <b>8. </b>Cleanup Instructions
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -1170,7 +741,7 @@
             
           
           
-            <a href='/'>Automated Testing with AWS CodeBuild</a> > Parallel Test Execution
+            <a href='/'>Automated Testing with AWS CodeBuild</a> > Parallel Test Execution with Multiple Test Files
           
         
           
@@ -1183,17 +754,17 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#thực-thi-test-song-song-với-aws-codebuild">Thực thi test song song với AWS CodeBuild</a>
+    <li><a href="#-objectives">🎯 Objectives</a></li>
+    <li><a href="#-test-file-organization-example">🧪 Test File Organization Example</a>
       <ul>
-        <li><a href="#cấu-hình-aws-codebuild">Cấu hình AWS CodeBuild</a></li>
-        <li><a href="#cấu-hình-script-trong-packagejson">Cấu hình Script trong package.json</a></li>
-        <li><a href="#script-gộp-kết-quả-test">Script gộp kết quả test</a></li>
-        <li><a href="#lợi-ích-của-thực-thi-song-song">Lợi ích của thực thi song song</a></li>
-        <li><a href="#các-bước-thực-hiện">Các bước thực hiện</a></li>
-        <li><a href="#giám-sát-và-báo-cáo">Giám sát và báo cáo</a></li>
-        <li><a href="#bước-tiếp-theo">Bước tiếp theo</a></li>
+        <li><a href="#webtestsviewtestscs"><code>Web.Tests/ViewTests.cs</code></a></li>
+        <li><a href="#webtestsperformancetestscs"><code>Web.Tests/PerformanceTests.cs</code></a></li>
       </ul>
     </li>
+    <li><a href="#-buildspec-requires-no-changes">⚙️ Buildspec Requires No Changes</a></li>
+    <li><a href="#-advanced-tip-running-tests-in-parallel-with-multiple-codebuilds">📦 Advanced Tip: Running Tests in Parallel with Multiple CodeBuilds</a></li>
+    <li><a href="#-verifying-results">✅ Verifying Results</a></li>
+    <li><a href="#-additional-tips">🧠 Additional Tips</a></li>
   </ul>
 </nav>
     </div>
@@ -1211,7 +782,7 @@
           
             <h1>
               
-              Parallel Test Execution
+              Parallel Test Execution with Multiple Test Files
             </h1>
           
 
@@ -1219,166 +790,102 @@
 
 
 
-	<h2 id="thực-thi-test-song-song-với-aws-codebuild">Thực thi test song song với AWS CodeBuild</h2>
-<p>Trong module này, chúng ta sẽ cấu hình thực thi song song các test case để giảm thời gian chạy test tổng thể.</p>
-<h3 id="cấu-hình-aws-codebuild">Cấu hình AWS CodeBuild</h3>
-<ol>
-<li>Tạo file buildspec.yml:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#ae81ff">0.2</span>
+	<p>In this section, you will learn how to split tests into multiple files for independent testing and speed up the CI process through parallel execution. This is particularly useful when the number of tests increases or test execution time becomes lengthy.</p>
+<hr>
+<h2 id="-objectives">🎯 Objectives</h2>
+<ul>
+<li>Separate tests by functionality (<code>ViewTests</code>, <code>PerformanceTests</code>, etc.)</li>
+<li>Support parallel execution to optimize testing time</li>
+<li>Verify CI triggering capability with split tests</li>
+</ul>
+<hr>
+<h2 id="-test-file-organization-example">🧪 Test File Organization Example</h2>
+<h3 id="webtestsviewtestscs"><code>Web.Tests/ViewTests.cs</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Threading;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Xunit;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">phases</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">install</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runtime-versions</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">nodejs</span>: <span style="color:#ae81ff">18</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">commands</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">npm install</span>
-</span></span><span style="display:flex;"><span>      
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">commands</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">echo &#34;Bắt đầu chạy test song song&#34;</span>
-</span></span><span style="display:flex;"><span>      - |<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        npm run test:components &amp; \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        npm run test:api &amp; \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        npm run test:e2e &amp; \
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        wait
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        </span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">post_build</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">commands</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">node scripts/merge-test-results.js</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">reports</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">test-reports</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">files</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#39;reports/**/*&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">file-format</span>: <span style="color:#ae81ff">JunitXml</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">artifacts</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">files</span>:
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">reports/**/*</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">coverage/**/*</span>
-</span></span></code></pre></div><h3 id="cấu-hình-script-trong-packagejson">Cấu hình Script trong package.json</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;scripts&#34;</span>: {
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;test:components&#34;</span>: <span style="color:#e6db74">&#34;jest --config jest.components.config.js --maxWorkers=2&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;test:api&#34;</span>: <span style="color:#e6db74">&#34;jest --config jest.api.config.js --maxWorkers=2&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;test:e2e&#34;</span>: <span style="color:#e6db74">&#34;cypress run --parallel --record --key your-key&#34;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;test:all&#34;</span>: <span style="color:#e6db74">&#34;npm-run-all --parallel test:*&#34;</span>
-</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> Web.Tests
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ViewTests</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [Fact]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Fake_View_Test1()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Thread.Sleep(<span style="color:#ae81ff">1000</span>); <span style="color:#75715e">// simulate 1-second test</span>
+</span></span><span style="display:flex;"><span>            Assert.True(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [Fact]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Fake_View_Test2()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Thread.Sleep(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>            Assert.True(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h3 id="script-gộp-kết-quả-test">Script gộp kết quả test</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// scripts/merge-test-results.js
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>);
+</span></span></code></pre></div><p><img src="/images/4-parallel-execution/view-tests-vscode.png" alt="VS Code ViewTests"></p>
+<h3 id="webtestsperformancetestscs"><code>Web.Tests/PerformanceTests.cs</code></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Threading;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Xunit;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mergeResults</span>() {
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">results</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../reports/component-results.json&#39;</span>),
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">api</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../reports/api-results.json&#39;</span>),
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">e2e</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;../reports/e2e-results.json&#39;</span>)
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">summary</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">totalTests</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">passed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">failed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">duration</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>  };
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  Object.<span style="color:#a6e22e">values</span>(<span style="color:#a6e22e">results</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">result</span> =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">summary</span>.<span style="color:#a6e22e">totalTests</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">totalTests</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">summary</span>.<span style="color:#a6e22e">passed</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">passedTests</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">summary</span>.<span style="color:#a6e22e">failed</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">failedTests</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">summary</span>.<span style="color:#a6e22e">duration</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">duration</span>;
-</span></span><span style="display:flex;"><span>  });
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">writeFileSync</span>(<span style="color:#e6db74">&#39;reports/summary.json&#39;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">summary</span>, <span style="color:#66d9ef">null</span>, <span style="color:#ae81ff">2</span>));
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> Web.Tests
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PerformanceTests</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [Fact]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Fake_Performance_Test1()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Thread.Sleep(<span style="color:#ae81ff">1000</span>); <span style="color:#75715e">// simulate time-consuming test</span>
+</span></span><span style="display:flex;"><span>            Assert.True(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [Fact]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Fake_Performance_Test2()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Thread.Sleep(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>            Assert.True(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mergeResults</span>();
-</span></span></code></pre></div><h3 id="lợi-ích-của-thực-thi-song-song">Lợi ích của thực thi song song</h3>
-<ol>
-<li>
-<p>Giảm thời gian chạy test</p>
+</span></span></code></pre></div><p><img src="/images/4-parallel-execution/performance-test-results.png" alt="Performance Test Results"></p>
+<h2 id="-buildspec-requires-no-changes">⚙️ Buildspec Requires No Changes</h2>
+<p>Since dotnet test automatically detects and runs all test files in Web.Tests, you don&rsquo;t need to modify the buildspec.yml file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#ae81ff">dotnet test Web.Tests/Web.Tests.csproj --logger &#34;trx;LogFileName=test_results.trx&#34;</span>
+</span></span></code></pre></div><h2 id="-advanced-tip-running-tests-in-parallel-with-multiple-codebuilds">📦 Advanced Tip: Running Tests in Parallel with Multiple CodeBuilds</h2>
+<p>For large test suites, you can split them across multiple CodeBuilds by creating multiple projects or dividing test steps in buildspec.yml.</p>
+<p>You can also use dotnet test &ndash;filter to select specific tests by Category, Class, MethodName, etc.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#ae81ff">dotnet test Web.Tests/Web.Tests.csproj --filter &#34;FullyQualifiedName~PerformanceTests&#34;</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#ae81ff">dotnet test Web.Tests/Web.Tests.csproj --filter &#34;FullyQualifiedName~ViewTests&#34;</span>
+</span></span></code></pre></div><h2 id="-verifying-results">✅ Verifying Results</h2>
 <ul>
-<li>Chạy nhiều test cùng lúc</li>
-<li>Tận dụng tối đa tài nguyên</li>
+<li>After pushing code, CodeBuild will automatically run all tests</li>
 </ul>
-</li>
-<li>
-<p>Tối ưu tài nguyên</p>
+<p><img src="/images/4-parallel-execution/test-results.png" alt="Test Results"></p>
 <ul>
-<li>Sử dụng hiệu quả AWS CodeBuild</li>
-<li>Tiết kiệm chi phí</li>
+<li>Open Build history in CodeBuild to view results of each build</li>
 </ul>
-</li>
-</ol>
-<h3 id="các-bước-thực-hiện">Các bước thực hiện</h3>
-<ol>
-<li>Tổ chức test theo loại:</li>
-</ol>
-<pre tabindex="0"><code>tests/
-├── components/
-│   ├── MovieCard.test.js
-│   └── MovieList.test.js
-├── api/
-│   ├── movieService.test.js
-│   └── authService.test.js
-└── e2e/
-    ├── browse.spec.js
-    └── watch.spec.js
-</code></pre><ol start="2">
-<li>Cấu hình Jest cho từng loại test:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// jest.components.config.js
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">testMatch</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;&lt;rootDir&gt;/tests/components/**/*.test.js&#39;</span>],
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ... các cấu hình khác
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">// jest.api.config.js
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">testMatch</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;&lt;rootDir&gt;/tests/api/**/*.test.js&#39;</span>],
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ... các cấu hình khác
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
-</span></span></code></pre></div><ol start="3">
-<li>Cấu hình Cypress cho E2E test:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// cypress.config.js
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">e2e</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">setupNodeEvents</span>(<span style="color:#a6e22e">on</span>, <span style="color:#a6e22e">config</span>) {},
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">specPattern</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;tests/e2e/**/*.spec.js&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">supportFile</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;tests/e2e/support/index.js&#39;</span>
-</span></span><span style="display:flex;"><span>  }
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><h3 id="giám-sát-và-báo-cáo">Giám sát và báo cáo</h3>
-<ol>
-<li>Tích hợp với CloudWatch:</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># buildspec.yml bổ sung</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">env</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">variables</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">CLOUDWATCH_NAMESPACE</span>: <span style="color:#e6db74">&#34;MovieApp/Tests&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">phases</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">post_build</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">commands</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">aws cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-name TestDuration --value $DURATION</span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">aws cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-name TestsPassed --value $PASSED_TESTS</span>
-</span></span></code></pre></div><ol start="2">
-<li>Tạo Dashboard theo dõi:</li>
-</ol>
+<p><img src="/images/4-parallel-execution/test-results2.png" alt="Test Results"></p>
 <ul>
-<li>Thời gian chạy test</li>
-<li>Tỷ lệ test pass/fail</li>
-<li>Số lượng test thực thi</li>
+<li>Check test report:
+<strong>CodeBuild</strong> → <strong>Build projects</strong> → <strong>Build history</strong> → <strong>ci-dotnet-unittest</strong> → <strong>[Select latest build]</strong> → <strong>Reports</strong> → <strong>[Select latest report]</strong></li>
 </ul>
-<h3 id="bước-tiếp-theo">Bước tiếp theo</h3>
+<p><img src="/images/4-parallel-execution/test-results3.png" alt="Test Results"></p>
+<h2 id="-additional-tips">🧠 Additional Tips</h2>
+<p>For thread-level parallel testing, you can configure xUnit parallelism:</p>
 <ul>
-<li>Chuyển sang phần Performance Testing</li>
-<li>Cấu hình thông báo kết quả test</li>
-<li>Thiết lập giám sát liên tục</li>
+<li>Use dotnet test &ndash;parallel</li>
+<li>Or configure in xunit.runner.json</li>
 </ul>
+
+<div class="notices tip" ><p>For further optimization, you can:</p>
+<ul>
+<li>Group related tests into collections</li>
+<li>Use AWS CodeBuild matrix builds</li>
+<li>Configure test retry for flaky tests</li>
+</ul>
+</div>
+
 
 
 
@@ -1592,24 +1099,6 @@
 
                     
                     
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
                     
 
                     
@@ -1621,220 +1110,8 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1926,6 +1203,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -1938,9 +1218,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -1957,7 +1234,7 @@
 			<a class="nav nav-prev" href="/3-automated-unit-test/3.4-verify-results/" title="Verify Automatic Test Results on Code Push"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/4-parallel-execution/4.1-multiple-tests/" title="Multiple Tests Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/5-monitoring/" title="Test Failure Notifications" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1967,19 +1244,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1753090947"></script>
-    <script src="/js/perfect-scrollbar.min.js?1753090947"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1753090947"></script>
-    <script src="/js/jquery.sticky.js?1753090947"></script>
-    <script src="/js/featherlight.min.js?1753090947"></script>
-    <script src="/js/highlight.pack.js?1753090947"></script>
+    <script src="/js/clipboard.min.js?1753171726"></script>
+    <script src="/js/perfect-scrollbar.min.js?1753171726"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1753171726"></script>
+    <script src="/js/jquery.sticky.js?1753171726"></script>
+    <script src="/js/featherlight.min.js?1753171726"></script>
+    <script src="/js/highlight.pack.js?1753171726"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1753090947"></script>
-    <script src="/js/learn.js?1753090947"></script>
-    <script src="/js/hugo-learn.js?1753090947"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1753171726"></script>
+    <script src="/js/learn.js?1753171726"></script>
+    <script src="/js/hugo-learn.js?1753171726"></script>
 
-    <link href="/mermaid/mermaid.css?1753090947" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1753090947"></script>
+    <link href="/mermaid/mermaid.css?1753171726" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1753171726"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

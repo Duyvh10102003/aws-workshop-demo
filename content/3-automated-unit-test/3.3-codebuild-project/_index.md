@@ -13,7 +13,7 @@ In this section, you will create a CodeBuild project to automatically run unit t
 ## 🎯 Objectives
 
 - Create a project in AWS CodeBuild
-- **Connect GitHub with AWS (OAuth or PAT)**
+- Connect GitHub with AWS
 - Configure build environment
 - Run `buildspec.yml` from repository
 - (Optional) Store test reports in Amazon S3

@@ -1,5 +1,5 @@
 ---
-title: "Cấu hình Buildspec để chạy Unit Test và sinh báo cáo"
+title: "Cấu hình Buildspec "
 date: 2025-07-04
 weight: 2
 chapter: false
@@ -23,9 +23,7 @@ Trong bước này, bạn sẽ tạo file `buildspec.yml` để:
 
 ```plaintext
 YourProject/
-├── src/
-│   └── Web/
-│       └── Web.Tests/
+├── Web.Tests/
 ├── buildspec.yml
 └── TestReport/
     └── index.html
@@ -77,19 +75,6 @@ artifacts:
 2. Copy nội dung buildspec từ hướng dẫn
 3. Commit và push lên repository
 4. Kiểm tra build trong CodeBuild
-
-## ✅ Kiểm tra
-
-Sau khi push code, vào AWS CodeBuild và kiểm tra:
-
-1. Build được trigger tự động
-2. Các phase chạy thành công
-3. Artifacts chứa báo cáo test HTML
-4. Mở file TestReport/index.html để xem kết quả chi tiết
-
-{{% notice info %}}
-Thêm ảnh chụp màn hình báo cáo test của bạn tại đây
-{{% /notice %}}
 
 ## 📌 Ghi chú
 

@@ -1,5 +1,5 @@
 ---
-title: "Configure Buildspec for Unit Tests and Report Generation"
+title: "Configure Buildspec "
 date: 2025-07-04
 weight: 2
 chapter: false
@@ -23,9 +23,7 @@ In this step, you will create a `buildspec.yml` file to:
 
 ```plaintext
 YourProject/
-├── src/
-│   └── Web/
-│       └── Web.Tests/
+├── Web.Tests/
 ├── buildspec.yml
 └── TestReport/
     └── index.html
@@ -77,19 +75,6 @@ artifacts:
 2. Copy buildspec content from guide
 3. Commit and push to repository
 4. Verify build in CodeBuild
-
-## ✅ Verification
-
-After pushing code, check AWS CodeBuild for:
-
-1. Automatic build trigger
-2. Successful phase completion
-3. Artifacts containing HTML test report
-4. Open TestReport/index.html for detailed results
-
-{{% notice info %}}
-Add your test report screenshot here
-{{% /notice %}}
 
 ## 📌 Notes
 

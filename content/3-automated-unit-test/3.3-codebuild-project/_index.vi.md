@@ -13,7 +13,7 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 ## 🎯 Mục tiêu
 
 - Tạo project trong AWS CodeBuild
-- **Kết nối GitHub với AWS (OAuth hoặc PAT)**
+- Kết nối GitHub với AWS
 - Cấu hình môi trường chạy build
 - Chạy `buildspec.yml` đã thiết lập từ repo
 - (Tuỳ chọn) Lưu báo cáo test lên Amazon S3

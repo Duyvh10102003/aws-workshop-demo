@@ -12,21 +12,21 @@
     <title>Setting up CodeBuild to Run Unit Tests :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1753090947" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1753090947" rel="stylesheet">
-    <link href="/css/hybrid.css?1753090947" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1753090947" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1753090947" rel="stylesheet">
-    <link href="/css/auto-complete.css?1753090947" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1753090947" rel="stylesheet">
-    <link href="/css/theme.css?1753090947" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1753090947" rel="stylesheet">
+    <link href="/css/nucleus.css?1753172470" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1753172470" rel="stylesheet">
+    <link href="/css/hybrid.css?1753172470" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1753172470" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1753172470" rel="stylesheet">
+    <link href="/css/auto-complete.css?1753172470" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1753172470" rel="stylesheet">
+    <link href="/css/theme.css?1753172470" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1753172470" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1753090947" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1753172470" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1753090947"></script>
+    <script src="/js/jquery-3.3.1.min.js?1753172470"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1753090947"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1753090947"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1753172470"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1753172470"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1753090947"></script>
+<script type="text/javascript" src="/js/search.js?1753172470"></script>
 
     
   </div>
@@ -199,13 +199,13 @@
  
   
     
-    <li data-nav-id="/2-environment-setup/2.3-create-s3/" title="2.3 - Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/2-environment-setup/2.3-create-s3/" title="Create S3 Bucket" class="dd-item 
         
         
         
         ">
       <a href="/2-environment-setup/2.3-create-s3/">
-          2.3 - Create S3 Bucket
+          <b>2.3. </b>Create S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -293,13 +293,13 @@
  
   
     
-    <li data-nav-id="/3-automated-unit-test/3.2-buildspec-setup/" title="Configure Buildspec for Unit Tests and Report Generation" class="dd-item 
+    <li data-nav-id="/3-automated-unit-test/3.2-buildspec-setup/" title="Configure Buildspec " class="dd-item 
         
         
         
         ">
       <a href="/3-automated-unit-test/3.2-buildspec-setup/">
-          <b>3.2. </b>Configure Buildspec for Unit Tests and Report Generation
+          <b>3.2. </b>Configure Buildspec 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -384,13 +384,39 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/" title="Parallel Test Execution" class="dd-item 
+    <li data-nav-id="/4-parallel-execution/" title="Parallel Test Execution with Multiple Test Files" class="dd-item 
         
         
         
         ">
       <a href="/4-parallel-execution/">
-          <b>4. </b>Parallel Test Execution
+          <b>4. </b>Parallel Test Execution with Multiple Test Files
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-monitoring/" title="Test Failure Notifications" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-monitoring/">
+          <b>5. </b>Test Failure Notifications
           
             <i class="fas fa-check read-icon"></i>
           
@@ -415,13 +441,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.1-multiple-tests/" title="Multiple Tests Setup" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.1-create-sns/" title="Create SNS Topic and Subscribe Email" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.1-multiple-tests/">
-          <b>4.1. </b>Multiple Tests Setup
+      <a href="/5-monitoring/5.1-create-sns/">
+          <b>5.1. </b>Create SNS Topic and Subscribe Email
           
             <i class="fas fa-check read-icon"></i>
           
@@ -443,13 +469,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.2-configure-parallel/" title="Configure Parallel Execution" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.2-cloudwatch-rule/" title="Create CloudWatch Rule" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.2-configure-parallel/">
-          <b>4.2. </b>Configure Parallel Execution
+      <a href="/5-monitoring/5.2-cloudwatch-rule/">
+          <b>5.2. </b>Create CloudWatch Rule
           
             <i class="fas fa-check read-icon"></i>
           
@@ -471,13 +497,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.3-aggregate-results/" title="Aggregate Results" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.3-connect-rule-sns/" title="Connect Rule to SNS" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.3-aggregate-results/">
-          <b>4.3. </b>Aggregate Results
+      <a href="/5-monitoring/5.3-connect-rule-sns/">
+          <b>5.3. </b>Connect Rule to SNS
           
             <i class="fas fa-check read-icon"></i>
           
@@ -499,13 +525,13 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/4.4-compare-speed/" title="Compare Speed" class="dd-item 
+    <li data-nav-id="/5-monitoring/5.4-verify/" title="Verify Alert System Operation" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/4.4-compare-speed/">
-          <b>4.4. </b>Compare Speed
+      <a href="/5-monitoring/5.4-verify/">
+          <b>5.4. </b>Verify Alert System Operation
           
             <i class="fas fa-check read-icon"></i>
           
@@ -534,194 +560,13 @@
  
   
     
-    <li data-nav-id="/5-performance-testing/" title="Performance Testing" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/">
-          <b>5. </b>Performance Testing
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.1-write-performance-tests/" title="Write Performance Tests" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.1-write-performance-tests/">
-          <b>5.1. </b>Write Performance Tests
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.2-integrate-into-ci/" title="Integrate into CI/CD" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.2-integrate-into-ci/">
-          <b>5.2. </b>Integrate into CI/CD
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.3-export-results/" title="Export Results" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.3-export-results/">
-          <b>5.3. </b>Export Results
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-performance-testing/5.4-analyze-performance/" title="Analyze Performance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-performance-testing/5.4-analyze-performance/">
-          <b>5.4. </b>Analyze Performance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/" title="Security Testing" class="dd-item 
+    <li data-nav-id="/6-security-testing/" title="Automated Security Scanning with CodeQL" class="dd-item 
         
         
         
         ">
       <a href="/6-security-testing/">
-          <b>6. </b>Security Testing
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/6.1-enable-codeql/" title="Enable CodeQL" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-security-testing/6.1-enable-codeql/">
-          <b>6.1. </b>Enable CodeQL
+          <b>6. </b>Automated Security Scanning with CodeQL
           
             <i class="fas fa-check read-icon"></i>
           
@@ -732,10 +577,8 @@
   
  
 
-            
           
-            
-            
+          
 
 
 
@@ -743,290 +586,18 @@
  
   
     
-    <li data-nav-id="/6-security-testing/6.2-review-alerts/" title="Review Alerts" class="dd-item 
+    <li data-nav-id="/7-cleanup/" title="Resource Cleanup" class="dd-item 
         
         
         
         ">
-      <a href="/6-security-testing/6.2-review-alerts/">
-          <b>6.2. </b>Review Alerts
+      <a href="/7-cleanup/">
+          <b>7. </b>Resource Cleanup
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/6.3-fix-vulnerabilities/" title="Fix Vulnerabilities" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-security-testing/6.3-fix-vulnerabilities/">
-          <b>6.3. </b>Fix Vulnerabilities
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-security-testing/6.4-disable-if-needed/" title="Configure Settings" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-security-testing/6.4-disable-if-needed/">
-          <b>6.4. </b>Configure Settings
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/" title="Monitoring Cost" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/">
-          <b>7. </b>Monitoring Cost
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.1-cloudwatch-logs/" title="CloudWatch Logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.1-cloudwatch-logs/">
-          <b>7.1. </b>CloudWatch Logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.2-analyze-cost/" title="Analyze Cost" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.2-analyze-cost/">
-          <b>7.2. </b>Analyze Cost
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.3-optimize-config/" title="Optimize Config" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.3-optimize-config/">
-          <b>7.3. </b>Optimize Config
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/7-monitoring-cost/7.4-estimate-usage/" title="Estimate Usage" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/7-monitoring-cost/7.4-estimate-usage/">
-          <b>7.4. </b>Estimate Usage
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/8-clean-up/" title="Clean Up Resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/8-clean-up/">
-          <b>8. </b>Clean Up Resources
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/8-clean-up/cleanup/" title="Cleanup Instructions" class="dd-item ">
-        <a href="/8-clean-up/cleanup/">
-        <b>8. </b>Cleanup Instructions
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
               
     </li>
   
@@ -1232,7 +803,7 @@
 <h2 id="-objectives">🎯 Objectives</h2>
 <ul>
 <li>Create a project in AWS CodeBuild</li>
-<li><strong>Connect GitHub with AWS (OAuth or PAT)</strong></li>
+<li>Connect GitHub with AWS</li>
 <li>Configure build environment</li>
 <li>Run <code>buildspec.yml</code> from repository</li>
 <li>(Optional) Store test reports in Amazon S3</li>
@@ -1563,238 +1134,8 @@
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -1894,6 +1235,9 @@
                     
 
                     
+            
+        
+                    
                         
             
             
@@ -1906,9 +1250,6 @@
                     
                     
 
-                    
-            
-        
                     
             
         
@@ -1922,7 +1263,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-automated-unit-test/3.2-buildspec-setup/" title="Configure Buildspec for Unit Tests and Report Generation"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-automated-unit-test/3.2-buildspec-setup/" title="Configure Buildspec "> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/3-automated-unit-test/3.4-verify-results/" title="Verify Automatic Test Results on Code Push" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1935,19 +1276,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1753090947"></script>
-    <script src="/js/perfect-scrollbar.min.js?1753090947"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1753090947"></script>
-    <script src="/js/jquery.sticky.js?1753090947"></script>
-    <script src="/js/featherlight.min.js?1753090947"></script>
-    <script src="/js/highlight.pack.js?1753090947"></script>
+    <script src="/js/clipboard.min.js?1753172470"></script>
+    <script src="/js/perfect-scrollbar.min.js?1753172470"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1753172470"></script>
+    <script src="/js/jquery.sticky.js?1753172470"></script>
+    <script src="/js/featherlight.min.js?1753172470"></script>
+    <script src="/js/highlight.pack.js?1753172470"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1753090947"></script>
-    <script src="/js/learn.js?1753090947"></script>
-    <script src="/js/hugo-learn.js?1753090947"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1753172470"></script>
+    <script src="/js/learn.js?1753172470"></script>
+    <script src="/js/hugo-learn.js?1753172470"></script>
 
-    <link href="/mermaid/mermaid.css?1753090947" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1753090947"></script>
+    <link href="/mermaid/mermaid.css?1753172470" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1753172470"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

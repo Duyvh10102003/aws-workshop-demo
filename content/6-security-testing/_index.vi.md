@@ -1,78 +1,82 @@
 ---
-title: "Kiểm thử Bảo mật"
+title: "Tự động quét bảo mật với CodeQL"
 date: 2025-07-04
 weight: 6
 chapter: false
 pre: "<b>6. </b>"
 ---
 
-## Tổng quan về Kiểm thử Bảo mật
+Bạn sẽ cấu hình GitHub Actions để tự động **kiểm tra lỗi bảo mật trong source code .NET**. Tất cả hoàn toàn tự động, chạy mỗi khi bạn **push code hoặc mở Pull Request**.
 
-Module này tập trung vào việc triển khai kiểm thử bảo mật trong pipeline CI/CD sử dụng AWS CodeBuild và CodeQL. Bạn sẽ học cách xác định lỗ hổng bảo mật, phân tích mã nguồn để tìm các vấn đề bảo mật tiềm ẩn và triển khai các thực hành bảo mật tốt nhất.
+---
 
-### Những gì Bạn sẽ Học
+## 🎯 Mục tiêu
 
-1. Kích hoạt Phân tích CodeQL
-   - Thiết lập cấu hình
-   - Hỗ trợ ngôn ngữ
-   - Lựa chọn truy vấn
-   - Thiết lập tích hợp
+- Bật sẵn workflow "CodeQL" trong GitHub
+- Không cần code gì thêm
+- Kiểm tra lỗi bảo mật trực tiếp trên GitHub
 
-2. Xem xét Cảnh báo Bảo mật
-   - Phân tích cảnh báo
-   - Mức độ nghiêm trọng
-   - Xử lý cảnh báo sai
-   - Ưu tiên xử lý
+---
 
-3. Sửa Vấn đề Bảo mật
-   - Khắc phục lỗ hổng
-   - Cải thiện mã nguồn
-   - Mẫu bảo mật
-   - Thực hành tốt nhất
+## 🔧 Các bước cấu hình
 
-4. Cấu hình Cài đặt Bảo mật
-   - Cấu hình cảnh báo
-   - Lập lịch quét
-   - Kiểm soát truy cập
-   - Thiết lập báo cáo
+### 1️⃣ Mở tab **Actions** trên GitHub
 
-### Yêu cầu Tiên quyết
+- Truy cập trang repo của bạn
+- Nhấn vào tab **"Actions"** (nằm trên thanh menu ngang)
 
-Trước khi bắt đầu module này, đảm bảo bạn có:
-- Hoàn thành Module 5 (Kiểm thử Hiệu năng)
-- Hiểu biết về khái niệm bảo mật
-- Quyền truy cập GitHub repository
-- Cấu hình AWS CodeBuild
+![Open Actions Tab](/images/6-security-testing/open-actions.png)
+![Select CodeQL](/images/6-security-testing/open-actions2.png)
 
-### Ước tính Thời gian
-- Tổng thời gian Module: ~2.5 giờ
-- Thời gian mỗi Phần: 35-40 phút
+---
 
-### Cấu trúc Module
+### 2️⃣ Bật workflow sẵn có tên là **"CodeQL Analysis"**
 
-1. [Kích hoạt CodeQL](6.1-enable-codeql/)
-   - Thiết lập cấu hình
-   - Thiết lập tích hợp
+- Tìm mục **"Security → Code scanning → CodeQL Analysis"**
+- Nhấn **"Configure"**
+![Select CodeQL](/images/6-security-testing/select-codeql.png)
 
-2. [Xem xét Cảnh báo](6.2-review-alerts/)
-   - Phân tích cảnh báo
-   - Ưu tiên vấn đề
 
-3. [Sửa Lỗ hổng](6.3-fix-vulnerabilities/)
-   - Khắc phục vấn đề
-   - Cải thiện bảo mật
+---
 
-4. [Cấu hình Cài đặt](6.4-disable-if-needed/)
-   - Cấu hình bảo mật
-   - Quản lý quét
+### 3️⃣ Nhấn **Start commit**
 
-### Kết quả Mong đợi
+- Giữ nguyên file như mặc định
+- Nhấn nút **"Start commit" → Commit directly to main**
+- GitHub sẽ tự tạo file `.github/workflows/codeql.yml` cho bạn
 
-Đến cuối module này, bạn sẽ có:
-- Cấu hình phân tích CodeQL
-- Triển khai quét bảo mật
-- Xem xét cảnh báo bảo mật
-- Sửa lỗ hổng bảo mật
-- Quản lý cài đặt bảo mật
+![Start Commit](/images/6-security-testing/start-commit.png)
+![Start Commit](/images/6-security-testing/start-commit2.png)
 
-Hãy bắt đầu với [Kích hoạt CodeQL](6.1-enable-codeql/)!
+---
+
+### 4️⃣ Chờ workflow chạy
+
+- Vào lại tab **Actions**, thấy workflow "CodeQL" đang chạy
+- Mất khoảng 1–2 phút để phân tích
+
+![Workflow Running](/images/6-security-testing/workflow-running.png)
+
+---
+
+### 5️⃣ Xem kết quả bảo mật
+
+- Vào tab **"Security" > "Code scanning alerts"**
+- Nếu có lỗi bảo mật trong code (như SQL injection, lỗi null, hardcoded password, ...), GitHub sẽ liệt kê chi tiết tại đây
+
+![Security Alerts](/images/6-security-testing/security-alerts.png)
+
+---
+
+## 🧠 Mẹo thêm
+
+- CodeQL tự hiểu repo là C#/.NET, bạn không cần khai báo thêm
+- Có thể bật CodeQL cho tất cả các nhánh (sửa phần `branches:` trong `codeql.yml`)
+- Muốn quét định kỳ (dù không push)? CodeQL hỗ trợ `schedule`
+
+---
+
+## 📘 Tài liệu thêm
+
+- [Code scanning alerts](https://docs.github.com/en/code-security/code-scanning)
+- [CodeQL GitHub Action](https://github.com/github/codeql-action)

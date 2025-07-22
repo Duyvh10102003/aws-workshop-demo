@@ -1,7 +1,9 @@
 ---
-title: "2.3 - Create S3 Bucket"
+title: "Create S3 Bucket"
+date: 2025-07-04
 weight: 3
 chapter: false
+pre: "<b>2.3. </b>"
 ---
 
 # 🪣 Create S3 Bucket

@@ -1,174 +1,132 @@
 ---
-title: "Parallel Test Execution"
+title: "Parallel Test Execution with Multiple Test Files"
 date: 2025-07-04
 weight: 4
 chapter: false
 pre: "<b>4. </b>"
 ---
 
-## Thực thi test song song với AWS CodeBuild
+In this section, you will learn how to split tests into multiple files for independent testing and speed up the CI process through parallel execution. This is particularly useful when the number of tests increases or test execution time becomes lengthy.
 
-Trong module này, chúng ta sẽ cấu hình thực thi song song các test case để giảm thời gian chạy test tổng thể.
+---
 
-### Cấu hình AWS CodeBuild
+## 🎯 Objectives
 
-1. Tạo file buildspec.yml:
-```yaml
-version: 0.2
+- Separate tests by functionality (`ViewTests`, `PerformanceTests`, etc.)
+- Support parallel execution to optimize testing time
+- Verify CI triggering capability with split tests
 
-phases:
-  install:
-    runtime-versions:
-      nodejs: 18
-    commands:
-      - npm install
-      
-  build:
-    commands:
-      - echo "Bắt đầu chạy test song song"
-      - |
-        npm run test:components & \
-        npm run test:api & \
-        npm run test:e2e & \
-        wait
-        
-  post_build:
-    commands:
-      - node scripts/merge-test-results.js
+---
 
-reports:
-  test-reports:
-    files:
-      - 'reports/**/*'
-    file-format: JunitXml
+## 🧪 Test File Organization Example
 
-artifacts:
-  files:
-    - reports/**/*
-    - coverage/**/*
-```
+### `Web.Tests/ViewTests.cs`
 
-### Cấu hình Script trong package.json
+```csharp
+using System.Threading;
+using Xunit;
 
-```json
+namespace Web.Tests
 {
-  "scripts": {
-    "test:components": "jest --config jest.components.config.js --maxWorkers=2",
-    "test:api": "jest --config jest.api.config.js --maxWorkers=2",
-    "test:e2e": "cypress run --parallel --record --key your-key",
-    "test:all": "npm-run-all --parallel test:*"
-  }
+    public class ViewTests
+    {
+        [Fact]
+        public void Fake_View_Test1()
+        {
+            Thread.Sleep(1000); // simulate 1-second test
+            Assert.True(true);
+        }
+
+        [Fact]
+        public void Fake_View_Test2()
+        {
+            Thread.Sleep(1000);
+            Assert.True(true);
+        }
+    }
 }
 ```
 
-### Script gộp kết quả test
+![VS Code ViewTests](/images/4-parallel-execution/view-tests-vscode.png)
+<!-- Need image: Screenshot VS Code showing ViewTests.cs with syntax highlighting -->
 
-```javascript
-// scripts/merge-test-results.js
-const fs = require('fs');
+### `Web.Tests/PerformanceTests.cs`
 
-async function mergeResults() {
-  const results = {
-    components: require('../reports/component-results.json'),
-    api: require('../reports/api-results.json'),
-    e2e: require('../reports/e2e-results.json')
-  };
+```csharp
+using System.Threading;
+using Xunit;
 
-  const summary = {
-    totalTests: 0,
-    passed: 0,
-    failed: 0,
-    duration: 0
-  };
+namespace Web.Tests
+{
+    public class PerformanceTests
+    {
+        [Fact]
+        public void Fake_Performance_Test1()
+        {
+            Thread.Sleep(1000); // simulate time-consuming test
+            Assert.True(true);
+        }
 
-  Object.values(results).forEach(result => {
-    summary.totalTests += result.totalTests;
-    summary.passed += result.passedTests;
-    summary.failed += result.failedTests;
-    summary.duration += result.duration;
-  });
-
-  fs.writeFileSync('reports/summary.json', JSON.stringify(summary, null, 2));
+        [Fact]
+        public void Fake_Performance_Test2()
+        {
+            Thread.Sleep(1000);
+            Assert.True(true);
+        }
+    }
 }
-
-mergeResults();
 ```
 
-### Lợi ích của thực thi song song
+![Performance Test Results](/images/4-parallel-execution/performance-test-results.png)
+<!-- Need image: Screenshot of performance test results -->
 
-1. Giảm thời gian chạy test
-   - Chạy nhiều test cùng lúc
-   - Tận dụng tối đa tài nguyên
+## ⚙️ Buildspec Requires No Changes
 
-2. Tối ưu tài nguyên
-   - Sử dụng hiệu quả AWS CodeBuild
-   - Tiết kiệm chi phí
+Since dotnet test automatically detects and runs all test files in Web.Tests, you don't need to modify the buildspec.yml file.
 
-### Các bước thực hiện
-
-1. Tổ chức test theo loại:
-```
-tests/
-├── components/
-│   ├── MovieCard.test.js
-│   └── MovieList.test.js
-├── api/
-│   ├── movieService.test.js
-│   └── authService.test.js
-└── e2e/
-    ├── browse.spec.js
-    └── watch.spec.js
-```
-
-2. Cấu hình Jest cho từng loại test:
-```javascript
-// jest.components.config.js
-module.exports = {
-  testMatch: ['<rootDir>/tests/components/**/*.test.js'],
-  // ... các cấu hình khác
-};
-
-// jest.api.config.js
-module.exports = {
-  testMatch: ['<rootDir>/tests/api/**/*.test.js'],
-  // ... các cấu hình khác
-};
-```
-
-3. Cấu hình Cypress cho E2E test:
-```javascript
-// cypress.config.js
-module.exports = {
-  e2e: {
-    setupNodeEvents(on, config) {},
-    specPattern: 'tests/e2e/**/*.spec.js',
-    supportFile: 'tests/e2e/support/index.js'
-  }
-};
-```
-
-### Giám sát và báo cáo
-
-1. Tích hợp với CloudWatch:
 ```yaml
-# buildspec.yml bổ sung
-env:
-  variables:
-    CLOUDWATCH_NAMESPACE: "MovieApp/Tests"
-
-phases:
-  post_build:
-    commands:
-      - aws cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-name TestDuration --value $DURATION
-      - aws cloudwatch put-metric-data --namespace ${CLOUDWATCH_NAMESPACE} --metric-name TestsPassed --value $PASSED_TESTS
+- dotnet test Web.Tests/Web.Tests.csproj --logger "trx;LogFileName=test_results.trx"
 ```
 
-2. Tạo Dashboard theo dõi:
-- Thời gian chạy test
-- Tỷ lệ test pass/fail
-- Số lượng test thực thi
+<!-- Need image: Screenshot of CodeBuild configuration -->
 
-### Bước tiếp theo
-- Chuyển sang phần Performance Testing
-- Cấu hình thông báo kết quả test
-- Thiết lập giám sát liên tục
+## 📦 Advanced Tip: Running Tests in Parallel with Multiple CodeBuilds
+
+For large test suites, you can split them across multiple CodeBuilds by creating multiple projects or dividing test steps in buildspec.yml.
+
+You can also use dotnet test --filter to select specific tests by Category, Class, MethodName, etc.
+
+Example:
+
+```yaml
+- dotnet test Web.Tests/Web.Tests.csproj --filter "FullyQualifiedName~PerformanceTests"
+- dotnet test Web.Tests/Web.Tests.csproj --filter "FullyQualifiedName~ViewTests"
+```
+
+## ✅ Verifying Results
+
+- After pushing code, CodeBuild will automatically run all tests
+
+![Test Results](/images/4-parallel-execution/test-results.png)
+
+- Open Build history in CodeBuild to view results of each build
+
+![Test Results](/images/4-parallel-execution/test-results2.png)
+
+- Check test report:
+**CodeBuild** → **Build projects** → **Build history** → **ci-dotnet-unittest** → **[Select latest build]** → **Reports** → **[Select latest report]**
+
+![Test Results](/images/4-parallel-execution/test-results3.png)
+
+## 🧠 Additional Tips
+
+For thread-level parallel testing, you can configure xUnit parallelism:
+- Use dotnet test --parallel 
+- Or configure in xunit.runner.json
+
+{{% notice tip %}}
+For further optimization, you can:
+- Group related tests into collections
+- Use AWS CodeBuild matrix builds
+- Configure test retry for flaky tests
+{{% /notice %}}

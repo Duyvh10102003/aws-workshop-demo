@@ -15,43 +15,17 @@
                 href="//localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-monitoring-cost/7.1-cloudwatch-logs/</loc>
+    <loc>//localhost:1313/5-monitoring/5.1-create-sns/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-monitoring-cost/7.1-cloudwatch-logs/"
+                href="//localhost:1313/vi/5-monitoring/5.1-create-sns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-monitoring-cost/7.1-cloudwatch-logs/"
-                />
-  </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.1-codebuild-setup/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.1-codebuild-setup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.1-codebuild-setup/"
-                />
-  </url><url>
-    <loc>//localhost:1313/6-security-testing/6.1-enable-codeql/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-security-testing/6.1-enable-codeql/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-security-testing/6.1-enable-codeql/"
+                href="//localhost:1313/5-monitoring/5.1-create-sns/"
                 />
   </url><url>
     <loc>//localhost:1313/1-introduction/</loc>
@@ -67,19 +41,6 @@
                 href="//localhost:1313/1-introduction/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-parallel-execution/4.1-multiple-tests/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-parallel-execution/4.1-multiple-tests/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-parallel-execution/4.1-multiple-tests/"
-                />
-  </url><url>
     <loc>//localhost:1313/2-environment-setup/2.1-website-setup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -93,43 +54,17 @@
                 href="//localhost:1313/2-environment-setup/2.1-website-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-performance-testing/5.1-write-performance-tests/</loc>
+    <loc>//localhost:1313/3-automated-unit-test/3.1-codebuild-setup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-performance-testing/5.1-write-performance-tests/"
+                href="//localhost:1313/vi/3-automated-unit-test/3.1-codebuild-setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-performance-testing/5.1-write-performance-tests/"
-                />
-  </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.1-write-unit-tests/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.1-write-unit-tests/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.1-write-unit-tests/"
-                />
-  </url><url>
-    <loc>//localhost:1313/7-monitoring-cost/7.2-analyze-cost/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-monitoring-cost/7.2-analyze-cost/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-monitoring-cost/7.2-analyze-cost/"
+                href="//localhost:1313/3-automated-unit-test/3.1-codebuild-setup/"
                 />
   </url><url>
     <loc>//localhost:1313/3-automated-unit-test/3.2-buildspec-setup/</loc>
@@ -145,17 +80,17 @@
                 href="//localhost:1313/3-automated-unit-test/3.2-buildspec-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/4-parallel-execution/4.2-configure-parallel/</loc>
+    <loc>//localhost:1313/5-monitoring/5.2-cloudwatch-rule/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-parallel-execution/4.2-configure-parallel/"
+                href="//localhost:1313/vi/5-monitoring/5.2-cloudwatch-rule/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-parallel-execution/4.2-configure-parallel/"
+                href="//localhost:1313/5-monitoring/5.2-cloudwatch-rule/"
                 />
   </url><url>
     <loc>//localhost:1313/2-environment-setup/</loc>
@@ -171,19 +106,6 @@
                 href="//localhost:1313/2-environment-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-performance-testing/5.2-integrate-into-ci/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-performance-testing/5.2-integrate-into-ci/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-performance-testing/5.2-integrate-into-ci/"
-                />
-  </url><url>
     <loc>//localhost:1313/2-environment-setup/2.2-install-tools/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -195,45 +117,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/2-environment-setup/2.2-install-tools/"
-                />
-  </url><url>
-    <loc>//localhost:1313/6-security-testing/6.2-review-alerts/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-security-testing/6.2-review-alerts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-security-testing/6.2-review-alerts/"
-                />
-  </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.2-test-framework/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.2-test-framework/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.2-test-framework/"
-                />
-  </url><url>
-    <loc>//localhost:1313/4-parallel-execution/4.3-aggregate-results/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-parallel-execution/4.3-aggregate-results/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-parallel-execution/4.3-aggregate-results/"
                 />
   </url><url>
     <loc>//localhost:1313/3-automated-unit-test/</loc>
@@ -249,121 +132,43 @@
                 href="//localhost:1313/3-automated-unit-test/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-performance-testing/5.3-export-results/</loc>
+    <loc>//localhost:1313/5-monitoring/5.3-connect-rule-sns/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-performance-testing/5.3-export-results/"
+                href="//localhost:1313/vi/5-monitoring/5.3-connect-rule-sns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-performance-testing/5.3-export-results/"
+                href="//localhost:1313/5-monitoring/5.3-connect-rule-sns/"
                 />
   </url><url>
-    <loc>//localhost:1313/6-security-testing/6.3-fix-vulnerabilities/</loc>
+    <loc>//localhost:1313/2-environment-setup/2.3-create-s3/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-security-testing/6.3-fix-vulnerabilities/"
+                href="//localhost:1313/vi/2-environment-setup/2.3-create-s3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-security-testing/6.3-fix-vulnerabilities/"
+                href="//localhost:1313/2-environment-setup/2.3-create-s3/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-monitoring-cost/7.3-optimize-config/</loc>
+    <loc>//localhost:1313/3-automated-unit-test/3.3-codebuild-project/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-monitoring-cost/7.3-optimize-config/"
+                href="//localhost:1313/vi/3-automated-unit-test/3.3-codebuild-project/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-monitoring-cost/7.3-optimize-config/"
-                />
-  </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.3-push-trigger/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.3-push-trigger/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.3-push-trigger/"
-                />
-  </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.3-test-configuration/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.3-test-configuration/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.3-test-configuration/"
-                />
-  </url><url>
-    <loc>//localhost:1313/5-performance-testing/5.4-analyze-performance/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/5-performance-testing/5.4-analyze-performance/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/5-performance-testing/5.4-analyze-performance/"
-                />
-  </url><url>
-    <loc>//localhost:1313/4-parallel-execution/4.4-compare-speed/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/4-parallel-execution/4.4-compare-speed/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/4-parallel-execution/4.4-compare-speed/"
-                />
-  </url><url>
-    <loc>//localhost:1313/6-security-testing/6.4-disable-if-needed/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/6-security-testing/6.4-disable-if-needed/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/6-security-testing/6.4-disable-if-needed/"
-                />
-  </url><url>
-    <loc>//localhost:1313/7-monitoring-cost/7.4-estimate-usage/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/7-monitoring-cost/7.4-estimate-usage/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/7-monitoring-cost/7.4-estimate-usage/"
+                href="//localhost:1313/3-automated-unit-test/3.3-codebuild-project/"
                 />
   </url><url>
     <loc>//localhost:1313/4-parallel-execution/</loc>
@@ -379,43 +184,43 @@
                 href="//localhost:1313/4-parallel-execution/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.4-view-results/</loc>
+    <loc>//localhost:1313/3-automated-unit-test/3.4-verify-results/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.4-view-results/"
+                href="//localhost:1313/vi/3-automated-unit-test/3.4-verify-results/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.4-view-results/"
+                href="//localhost:1313/3-automated-unit-test/3.4-verify-results/"
                 />
   </url><url>
-    <loc>//localhost:1313/3-automated-unit-test/3.5-fix-failures/</loc>
+    <loc>//localhost:1313/5-monitoring/5.4-verify/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.5-fix-failures/"
+                href="//localhost:1313/vi/5-monitoring/5.4-verify/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.5-fix-failures/"
+                href="//localhost:1313/5-monitoring/5.4-verify/"
                 />
   </url><url>
-    <loc>//localhost:1313/5-performance-testing/</loc>
+    <loc>//localhost:1313/5-monitoring/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-performance-testing/"
+                href="//localhost:1313/vi/5-monitoring/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-performance-testing/"
+                href="//localhost:1313/5-monitoring/"
                 />
   </url><url>
     <loc>//localhost:1313/6-security-testing/</loc>
@@ -431,43 +236,16 @@
                 href="//localhost:1313/6-security-testing/"
                 />
   </url><url>
-    <loc>//localhost:1313/7-monitoring-cost/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
+    <loc>//localhost:1313/7-cleanup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-monitoring-cost/"
+                href="//localhost:1313/vi/7-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-monitoring-cost/"
-                />
-  </url><url>
-    <loc>//localhost:1313/8-clean-up/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-clean-up/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-clean-up/"
-                />
-  </url><url>
-    <loc>//localhost:1313/8-clean-up/cleanup/</loc>
-    <lastmod>2025-07-04T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/8-clean-up/cleanup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/8-clean-up/cleanup/"
+                href="//localhost:1313/7-cleanup/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/</loc>

@@ -119,4 +119,4 @@ aws sts get-caller-identity
 
 ### Bước Tiếp Theo
 
-Sau khi cài đặt và cấu hình tất cả công cụ cần thiết, tiếp tục với phần [Thiết Lập Dự Án CodeBuild](../2.3-codebuild-project/)
+Sau khi cài đặt và cấu hình tất cả công cụ cần thiết, tiếp tục với phần [Tạo S3 Bucket](../2.3-create-s3/)

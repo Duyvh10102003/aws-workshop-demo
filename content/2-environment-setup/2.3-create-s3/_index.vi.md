@@ -1,10 +1,10 @@
 ---
-title: "2.3 - Tạo S3 Bucket"
+title: "Tạo S3 Bucket"
+date: 2025-07-04
 weight: 3
 chapter: false
+pre: "<b>2.3. </b>"
 ---
-
-# 🪣 Tạo S3 Bucket
 
 Trong phần này, bạn sẽ tạo một S3 bucket để lưu trữ báo cáo test từ AWS CodeBuild.
 

@@ -1,78 +1,94 @@
 ---
-title: "Security Testing"
+title: "Automated Security Scanning with CodeQL"
 date: 2025-07-04
 weight: 6
 chapter: false
 pre: "<b>6. </b>"
 ---
 
-## Security Testing Overview
+You'll configure GitHub Actions to automatically **check for security vulnerabilities in your .NET source code**. Everything runs automatically when you **push code or open a Pull Request**.
 
-This module focuses on implementing security testing in your CI/CD pipeline using AWS CodeBuild and CodeQL. You'll learn how to identify security vulnerabilities, analyze code for potential security issues, and implement security best practices.
+---
 
-### What You'll Learn
+## 🎯 Objectives
 
-1. Enable CodeQL Analysis
-   - Setup configuration
-   - Language support
-   - Query selection
-   - Integration setup
+- Enable the built-in "CodeQL" workflow in GitHub
+- No additional coding required
+- Check security issues directly on GitHub
 
-2. Review Security Alerts
-   - Alert analysis
-   - Severity levels
-   - False positive handling
-   - Prioritization
+---
 
-3. Fix Security Issues
-   - Vulnerability remediation
-   - Code improvements
-   - Security patterns
-   - Best practices
+## 🔧 Configuration Steps
 
-4. Configure Security Settings
-   - Alert configuration
-   - Scan scheduling
-   - Access control
-   - Reporting setup
+### 1️⃣ Open **Actions** tab on GitHub
 
-### Prerequisites
+- Access your repository page
+- Click the **"Actions"** tab (in the top menu bar)
 
-Before starting this module, ensure you have:
-- Completed Module 5 (Performance Testing)
-- Understanding of security concepts
-- GitHub repository access
-- AWS CodeBuild configuration
+![Open Actions Tab](/images/6-security-testing/open-actions.png)
+![Select CodeQL](/images/6-security-testing/open-actions2.png)
 
-### Time Estimation
-- Total Module Time: ~2.5 hours
-- Individual Section Time: 35-40 minutes each
+---
 
-### Module Structure
+### 2️⃣ Enable the **"CodeQL Analysis"** workflow
 
-1. [Enable CodeQL](6.1-enable-codeql/)
-   - Setup configuration
-   - Integration setup
+- Find **"Security → Code scanning → CodeQL Analysis"**
+- Click **"Set up this workflow"**
 
-2. [Review Alerts](6.2-review-alerts/)
-   - Alert analysis
-   - Issue prioritization
+![Select CodeQL](/images/6-security-testing/select-codeql.png)
 
-3. [Fix Vulnerabilities](6.3-fix-vulnerabilities/)
-   - Issue remediation
-   - Security improvements
+---
 
-4. [Configure Settings](6.4-disable-if-needed/)
-   - Security configuration
-   - Scan management
+### 3️⃣ Click **Start commit**
 
-### Expected Outcomes
+- Keep the file as default
+- Click **"Commit changes" → Commit directly to main**
+- GitHub will create `.github/workflows/codeql.yml` for you
 
-By the end of this module, you will have:
-- Configured CodeQL analysis
-- Implemented security scanning
-- Reviewed security alerts
-- Fixed security vulnerabilities
-- Managed security settings
+![Start Commit](/images/6-security-testing/start-commit.png)
+![Start Commit](/images/6-security-testing/start-commit2.png)
 
-Let's begin with [Enable CodeQL](6.1-enable-codeql/)!
+---
+
+### 4️⃣ Wait for workflow to run
+
+- Go back to **Actions** tab, see "CodeQL" workflow running
+- Takes about 1-2 minutes to analyze
+
+![Workflow Running](/images/6-security-testing/workflow-running.png)
+
+---
+
+### 5️⃣ View security results
+
+- Go to **"Security" > "Code scanning alerts"**
+- If there are security issues in the code (like SQL injection, null errors, hardcoded passwords, ...), GitHub will list them here
+
+![Security Alerts](/images/6-security-testing/security-alerts.png)
+
+---
+
+## ✅ Summary
+
+| Step | Description |
+|------|------------|
+| 1 | Open Actions tab in GitHub |
+| 2 | Select "CodeQL Analysis" workflow |
+| 3 | Click "Start commit" to enable |
+| 4 | Workflow runs after push |
+| 5 | Check Security tab for alerts |
+
+---
+
+## 🧠 Additional Tips
+
+- CodeQL automatically detects C#/.NET repos, no extra configuration needed
+- Can enable CodeQL for all branches (modify `branches:` in `codeql.yml`)
+- Want periodic scans (even without pushes)? CodeQL supports `schedule`
+
+---
+
+## 📘 Further Reading
+
+- [Code scanning alerts](https://docs.github.com/en/code-security/code-scanning)
+- [CodeQL GitHub Action](https://github.com/github/codeql-action)
