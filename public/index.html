@@ -12,21 +12,21 @@
     <title>Automated Testing Framework Workshop :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1753172983" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1753172983" rel="stylesheet">
-    <link href="/css/hybrid.css?1753172983" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1753172983" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1753172983" rel="stylesheet">
-    <link href="/css/auto-complete.css?1753172983" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1753172983" rel="stylesheet">
-    <link href="/css/theme.css?1753172983" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1753172983" rel="stylesheet">
+    <link href="/css/nucleus.css?1753174086" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1753174086" rel="stylesheet">
+    <link href="/css/hybrid.css?1753174086" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1753174086" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1753174086" rel="stylesheet">
+    <link href="/css/auto-complete.css?1753174086" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1753174086" rel="stylesheet">
+    <link href="/css/theme.css?1753174086" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1753174086" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1753172983" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1753174086" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1753172983"></script>
+    <script src="/js/jquery-3.3.1.min.js?1753174086"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1753172983"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1753172983"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1753174086"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1753174086"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1753172983"></script>
+<script type="text/javascript" src="/js/search.js?1753174086"></script>
 
     
   </div>
@@ -732,18 +732,40 @@
 </span>
 
  
-<h3 id="overview">Overview</h3>
-<p>In this workshop, you will learn how to build an automated testing framework for .NET applications, integrated with AWS services.</p>
-<h3 id="main-content">Main Content</h3>
+<h1 id="-building-an-automated-testing-framework">🚀 Building an Automated Testing Framework</h1>
+
+<div class="notices note" ><p>This workshop will guide you through building a complete automated testing system for a movie streaming website using .NET and AWS services.</p>
+</div>
+
+<h2 id="-what-youll-learn">🎯 What You&rsquo;ll Learn</h2>
+<ul>
+<li>Set up CI/CD pipeline with AWS CodeBuild</li>
+<li>Write and run automated unit tests</li>
+<li>Optimize performance with parallel testing</li>
+<li>Monitor and receive email alerts</li>
+<li>Automate security scanning with CodeQL</li>
+</ul>
+<h2 id="-workshop-content">📚 Workshop Content</h2>
 <ol>
-<li><a href="/1-introduction/">Introduction</a></li>
-<li><a href="/2-environment-setup/">Environment Setup</a></li>
-<li><a href="/3-automated-unit-test/">Unit Testing</a></li>
-<li><a href="/4-parallel-execution/">Parallel Execution</a></li>
-<li><a href="/5-monitoring/">Monitoring &amp; Alerts</a></li>
-<li><a href="/6-security-testing/">Security Testing</a></li>
-<li><a href="/7-cleanup/">Clean Up</a></li>
+<li><a href="/1-introduction/"><strong>Introduction</strong></a> - Testing framework overview</li>
+<li><a href="/2-environment-setup/"><strong>Environment Setup</strong></a> - AWS and tools setup</li>
+<li><a href="/3-automated-unit-test/"><strong>Unit Testing</strong></a> - Writing tests and configuring CodeBuild</li>
+<li><a href="/4-parallel-execution/"><strong>Parallel Execution</strong></a> - Running tests in parallel</li>
+<li><a href="/5-monitoring/"><strong>Monitoring &amp; Alerts</strong></a> - Monitoring and notifications</li>
+<li><a href="/6-security-testing/"><strong>Security Testing</strong></a> - Security scanning with CodeQL</li>
+<li><a href="/7-cleanup/"><strong>Clean Up</strong></a> - Resource cleanup</li>
 </ol>
+<h2 id="-prerequisites">🎓 Prerequisites</h2>
+<ul>
+<li>Basic knowledge of C# and .NET</li>
+<li>AWS Account (Free tier)</li>
+<li>GitHub Account</li>
+<li>Visual Studio Code or Visual Studio</li>
+</ul>
+
+<div class="notices tip" ><p>This workshop is designed to be completed in 2-3 hours. You can split it into multiple sessions.</p>
+</div>
+
 	
   
         
@@ -1078,8 +1100,6 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/7-cleanup/" title="Resource Cleanup"> <i class="fa fa-chevron-left"></i></a>
-		
 		
 			<a class="nav nav-next" href="/1-introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
@@ -1091,19 +1111,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1753172983"></script>
-    <script src="/js/perfect-scrollbar.min.js?1753172983"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1753172983"></script>
-    <script src="/js/jquery.sticky.js?1753172983"></script>
-    <script src="/js/featherlight.min.js?1753172983"></script>
-    <script src="/js/highlight.pack.js?1753172983"></script>
+    <script src="/js/clipboard.min.js?1753174086"></script>
+    <script src="/js/perfect-scrollbar.min.js?1753174086"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1753174086"></script>
+    <script src="/js/jquery.sticky.js?1753174086"></script>
+    <script src="/js/featherlight.min.js?1753174086"></script>
+    <script src="/js/highlight.pack.js?1753174086"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1753172983"></script>
-    <script src="/js/learn.js?1753172983"></script>
-    <script src="/js/hugo-learn.js?1753172983"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1753174086"></script>
+    <script src="/js/learn.js?1753174086"></script>
+    <script src="/js/hugo-learn.js?1753174086"></script>
 
-    <link href="/mermaid/mermaid.css?1753172983" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1753172983"></script>
+    <link href="/mermaid/mermaid.css?1753174086" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1753174086"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

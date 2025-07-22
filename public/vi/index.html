@@ -12,21 +12,21 @@
     <title>Workshop Automated Testing Framework :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1753172879" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1753172879" rel="stylesheet">
-    <link href="/css/hybrid.css?1753172879" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1753172879" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1753172879" rel="stylesheet">
-    <link href="/css/auto-complete.css?1753172879" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1753172879" rel="stylesheet">
-    <link href="/css/theme.css?1753172879" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1753172879" rel="stylesheet">
+    <link href="/css/nucleus.css?1753174086" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1753174086" rel="stylesheet">
+    <link href="/css/hybrid.css?1753174086" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1753174086" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1753174086" rel="stylesheet">
+    <link href="/css/auto-complete.css?1753174086" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1753174086" rel="stylesheet">
+    <link href="/css/theme.css?1753174086" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1753174086" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1753172879" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1753174086" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1753172879"></script>
+    <script src="/js/jquery-3.3.1.min.js?1753174086"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1753172879"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1753172879"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1753174086"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1753174086"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1753172879"></script>
+<script type="text/javascript" src="/js/search.js?1753174086"></script>
 
     
   </div>
@@ -732,18 +732,40 @@
 </span>
 
  
-<h3 id="tổng-quan">Tổng quan</h3>
-<p>Trong workshop này, bạn sẽ học cách xây dựng một framework kiểm thử tự động cho ứng dụng .NET, tích hợp với các dịch vụ AWS.</p>
-<h3 id="nội-dung-chính">Nội dung chính</h3>
+<h1 id="-xây-dựng-framework-kiểm-thử-tự-động">🚀 Xây dựng Framework Kiểm thử Tự động</h1>
+
+<div class="notices note" ><p>Workshop này sẽ giúp bạn xây dựng một hệ thống kiểm thử tự động hoàn chỉnh cho website xem phim, sử dụng .NET và các dịch vụ AWS.</p>
+</div>
+
+<h2 id="-bạn-sẽ-học-được-gì">🎯 Bạn sẽ học được gì?</h2>
+<ul>
+<li>Thiết lập pipeline CI/CD với AWS CodeBuild</li>
+<li>Viết và chạy unit test tự động</li>
+<li>Tối ưu hiệu năng với parallel testing</li>
+<li>Giám sát và nhận cảnh báo qua email</li>
+<li>Quét lỗi bảo mật tự động với CodeQL</li>
+</ul>
+<h2 id="-nội-dung-workshop">📚 Nội dung Workshop</h2>
 <ol>
-<li><a href="/vi/1-introduction/">Giới thiệu</a></li>
-<li><a href="/vi/2-environment-setup/">Chuẩn bị môi trường</a></li>
-<li><a href="/vi/3-automated-unit-test/">Unit Testing</a></li>
-<li><a href="/vi/4-parallel-execution/">Parallel Execution</a></li>
-<li><a href="/vi/5-monitoring/">Monitoring &amp; Alerts</a></li>
-<li><a href="/vi/6-security-testing/">Security Testing</a></li>
-<li><a href="/vi/7-cleanup/">Clean Up</a></li>
+<li><a href="/vi/1-introduction/"><strong>Giới thiệu</strong></a> - Tổng quan về testing framework</li>
+<li><a href="/vi/2-environment-setup/"><strong>Chuẩn bị môi trường</strong></a> - Setup AWS và tools cần thiết</li>
+<li><a href="/vi/3-automated-unit-test/"><strong>Unit Testing</strong></a> - Viết test và cấu hình CodeBuild</li>
+<li><a href="/vi/4-parallel-execution/"><strong>Parallel Execution</strong></a> - Chạy test song song</li>
+<li><a href="/vi/5-monitoring/"><strong>Monitoring &amp; Alerts</strong></a> - Theo dõi và cảnh báo</li>
+<li><a href="/vi/6-security-testing/"><strong>Security Testing</strong></a> - Quét bảo mật với CodeQL</li>
+<li><a href="/vi/7-cleanup/"><strong>Clean Up</strong></a> - Dọn dẹp tài nguyên</li>
 </ol>
+<h2 id="-yêu-cầu">🎓 Yêu cầu</h2>
+<ul>
+<li>Kiến thức cơ bản về C# và .NET</li>
+<li>Tài khoản AWS (Free tier)</li>
+<li>Tài khoản GitHub</li>
+<li>Visual Studio Code hoặc Visual Studio</li>
+</ul>
+
+<div class="notices tip" ><p>Workshop này được thiết kế để hoàn thành trong 2-3 giờ. Bạn có thể chia nhỏ thành nhiều phiên học.</p>
+</div>
+
 	
   
         
@@ -1089,19 +1111,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1753172879"></script>
-    <script src="/js/perfect-scrollbar.min.js?1753172879"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1753172879"></script>
-    <script src="/js/jquery.sticky.js?1753172879"></script>
-    <script src="/js/featherlight.min.js?1753172879"></script>
-    <script src="/js/highlight.pack.js?1753172879"></script>
+    <script src="/js/clipboard.min.js?1753174086"></script>
+    <script src="/js/perfect-scrollbar.min.js?1753174086"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1753174086"></script>
+    <script src="/js/jquery.sticky.js?1753174086"></script>
+    <script src="/js/featherlight.min.js?1753174086"></script>
+    <script src="/js/highlight.pack.js?1753174086"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1753172879"></script>
-    <script src="/js/learn.js?1753172879"></script>
-    <script src="/js/hugo-learn.js?1753172879"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1753174086"></script>
+    <script src="/js/learn.js?1753174086"></script>
+    <script src="/js/hugo-learn.js?1753174086"></script>
 
-    <link href="/mermaid/mermaid.css?1753172879" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1753172879"></script>
+    <link href="/mermaid/mermaid.css?1753174086" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1753174086"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -130,7 +130,7 @@
 	"title": "Automated Testing Framework Workshop",
 	"tags": [],
 	"description": "",
-	"content": "Overview In this workshop, you will learn how to build an automated testing framework for .NET applications, integrated with AWS services.\nMain Content Introduction Environment Setup Unit Testing Parallel Execution Monitoring \u0026amp; Alerts Security Testing Clean Up "
+	"content": "🚀 Building an Automated Testing Framework This workshop will guide you through building a complete automated testing system for a movie streaming website using .NET and AWS services.\n🎯 What You\u0026rsquo;ll Learn Set up CI/CD pipeline with AWS CodeBuild Write and run automated unit tests Optimize performance with parallel testing Monitor and receive email alerts Automate security scanning with CodeQL 📚 Workshop Content Introduction - Testing framework overview Environment Setup - AWS and tools setup Unit Testing - Writing tests and configuring CodeBuild Parallel Execution - Running tests in parallel Monitoring \u0026amp; Alerts - Monitoring and notifications Security Testing - Security scanning with CodeQL Clean Up - Resource cleanup 🎓 Prerequisites Basic knowledge of C# and .NET AWS Account (Free tier) GitHub Account Visual Studio Code or Visual Studio This workshop is designed to be completed in 2-3 hours. You can split it into multiple sessions.\n"
 },
 {
 	"uri": "//localhost:1313/categories/",
