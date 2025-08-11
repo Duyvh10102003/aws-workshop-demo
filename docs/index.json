@@ -1,0 +1,148 @@
+[
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/5-monitoring/5.1-create-sns/",
+	"title": "Create SNS Topic and Subscribe Email",
+	"tags": [],
+	"description": "",
+	"content": "Create SNS Topic Access Amazon SNS Console\nClick Create topic Fill in topic details:\nType: Standard Name: test-failure-alerts Display name: Test Failure Alerts Click Create topic Save the generated Topic ARN:\narn:aws:sns:region:account-id:test-failure-alerts Subscribe Email for Notifications In the topic screen, select Create subscription Configure subscription:\nProtocol: Email Endpoint: Enter your email Click Create subscription\nCheck your email and confirm subscription Make sure to confirm your email subscription by clicking the link in the confirmation email. Without confirmation, you won\u0026rsquo;t receive notifications.\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/1-introduction/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Workshop Overview: Modern Test Automation with AWS CodeBuild \u0026amp; Parallel Execution Architecture Overview Prerequisites AWS Account with administrative access GitHub account Basic knowledge of .NET development Visual Studio Code or preferred IDE AWS CLI installed locally What You\u0026rsquo;ll Build In this workshop, you will:\nSet up a complete CI/CD pipeline for test automation Implement automated unit testing Configure parallel test execution Add performance testing Enable security scanning Time Estimation Total workshop time: ~8 hours\nEnvironment Setup: 1 hour Automated Testing: 2 hours Parallel Execution: 1.5 hours Performance Testing: 1.5 hours Security Testing: 1 hour Cost Monitoring: 0.5 hour Clean Up: 0.5 hour Cost Estimation Estimated AWS costs for completing this workshop:\nCodeBuild: ~$1-2 CloudWatch: ~$1 S3 Storage: \u0026lt; $1 Total: ~$3-4 Let\u0026rsquo;s begin with Environment Setup!\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/2-environment-setup/2.1-website-setup/",
+	"title": "Website Setup",
+	"tags": [],
+	"description": "",
+	"content": "Website Setup Options You have two options for setting up the website for this workshop:\nOption A: Using the Sample Movie Website Fork the sample movie website repository:\nGo to https://github.com/Duyvh10102003/WebsiteXemPhim Click the \u0026ldquo;Fork\u0026rdquo; button in the top-right corner Select your GitHub account as the destination Clone your forked repository:\ngit clone https://github.com/[YOUR-USERNAME]/WebsiteXemPhim.git cd WebsiteXemPhim Switch to the HoangDuy branch:\ngit checkout HoangDuy Option B: Using Your Own Website If you prefer to use your own website, follow these steps:\nCreate a new GitHub repository:\nGo to https://github.com/new Name your repository Choose public or private visibility Initialize with a README if desired Push your website code:\ngit init git add . git commit -m \u0026#34;Initial commit\u0026#34; git branch -M main git remote add origin https://github.com/[YOUR-USERNAME]/[YOUR-REPO].git git push -u origin main Important Notes Ensure your website code is in the root directory of the repository The repository must be accessible to AWS CodeBuild If using a private repository, additional AWS CodeBuild configuration will be required Next Steps After completing either option, proceed to Required Tools Installation\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/3-automated-unit-test/3.1-codebuild-setup/",
+	"title": "Writing First Unit Test",
+	"tags": [],
+	"description": "",
+	"content": "In this section, you will create a simple test file to ensure the CI/CD system can run unit tests correctly.\n✅ Objectives Create a simple test file using xUnit Simulate test delays for performance testing Verify correctness and performance for future parallel execution 📁 File Structure Create file at: Web.Tests/LuotXemTests.cs\nusing System.Threading; using Xunit; namespace Web.Tests { public class LuotXemTests { [Fact] public void Fake_LuotXem_Test1() { Thread.Sleep(1000); // simulate 1 second test duration Assert.True(true); } [Fact] public void Fake_LuotXem_Test2() { Thread.Sleep(1000); Assert.True(true); } } } 🖼 Implementation Steps Add your actual screenshot of the test file in Visual Studio here\n✅ Verification Run the following command in the root directory to verify the tests:\ndotnet test Expected output:\nPassed! - Failed: 0, Passed: 2, Skipped: 0 Add your actual screenshot of the test results here\n📌 Notes The Thread.Sleep() calls are used to simulate test processing time. You\u0026rsquo;ll see significant improvements when applying Parallel Execution (section 4).\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/3-automated-unit-test/3.2-buildspec-setup/",
+	"title": "Configure Buildspec ",
+	"tags": [],
+	"description": "",
+	"content": "In this step, you will create a buildspec.yml file to:\nInstall test report generation tools Run unit tests with result logging Generate readable HTML test reports Prepare for result uploading and analysis ✅ Objectives Install dotnet-reportgenerator-globaltool Run tests and export logs in .trx format Generate readable HTML reports 📁 Directory Structure YourProject/ ├── Web.Tests/ ├── buildspec.yml └── TestReport/ └── index.html 🧾 Buildspec File Content version: 0.2 phases: install: runtime-versions: dotnet: 8.0 commands: - echo === Installing reportgenerator tool === - dotnet tool install -g dotnet-reportgenerator-globaltool - export PATH=\u0026#34;$PATH:/root/.dotnet/tools\u0026#34; build: commands: - echo === Restoring dependencies === - dotnet restore - echo === Building solution === - dotnet build --no-restore - echo === Running unit tests === - dotnet test Web.Tests/Web.Tests.csproj --logger \u0026#34;trx;LogFileName=test_results.trx\u0026#34; - echo === Generating HTML test report === - reportgenerator \u0026#34;-reports:**/test_results.trx\u0026#34; \u0026#34;-targetdir:TestReport\u0026#34; -reporttypes:Html artifacts: files: - TestReport/**/* discard-paths: no 💡 Explanation Section Description dotnet tool install Installs HTML test report generator tool dotnet test + \u0026ndash;logger Writes test results to .trx file (Test Result XML) reportgenerator Generates HTML report from .trx file artifacts.files Specifies outputs to preserve (test reports) 🔄 Implementation Steps Create buildspec.yml in project root Copy buildspec content from guide Commit and push to repository Verify build in CodeBuild 📌 Notes .trx files contain detailed test result information HTML reports provide easy result viewing and analysis Artifacts are preserved for future reference This configuration forms the foundation for integration with other analysis tools "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/5-monitoring/5.2-cloudwatch-rule/",
+	"title": "Create CloudWatch Rule",
+	"tags": [],
+	"description": "",
+	"content": "Create EventBridge Rule Access Amazon EventBridge Console\nClick Create rule Configure rule:\nName: codebuild-failure-rule Description: Monitor CodeBuild test failures In the Event pattern section, select:\nService: CodeBuild Event type: CodeBuild Build State Change Click Next "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/2-environment-setup/",
+	"title": "Environment Setup",
+	"tags": [],
+	"description": "",
+	"content": "Overview This module guides you through setting up your development environment. You can either use our sample movie website or deploy your own website for testing.\nWhat You\u0026rsquo;ll Learn Website Setup Options\nOption A: Using the provided sample movie website Option B: Deploying your own website to GitHub Required Tools Installation\nAWS CLI installation and configuration Development tools setup Required SDK installations Prerequisites Before starting this module, ensure you have:\nAWS Account with appropriate permissions GitHub account Basic knowledge of Git and GitHub Administrative access to your development machine Time Estimation Total Module Time: ~30 minutes Individual Section Time: 10-15 minutes each Module Structure Website Setup\nUsing sample movie website OR deploying your own website Required Tools Installation\nDevelopment environment setup AWS tools installation Expected Outcomes By the end of this module, you will have:\nA working website repository on GitHub All necessary development tools installed AWS CLI configured and ready to use Let\u0026rsquo;s begin with Website Setup!\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/2-environment-setup/2.2-install-tools/",
+	"title": "Required Tools Installation",
+	"tags": [],
+	"description": "",
+	"content": "Required Tools Installation To proceed with automated testing using AWS CodeBuild, you\u0026rsquo;ll need to install and configure several tools.\n1. AWS CLI Installation For Windows: Download the AWS CLI MSI installer:\nVisit: https://aws.amazon.com/cli/ Download the Windows x64 installer Run the installer:\nDouble-click the downloaded file Follow the installation wizard Verify installation by opening Command Prompt and running: aws --version For Linux: curl \u0026#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip\u0026#34; -o \u0026#34;awscliv2.zip\u0026#34; unzip awscliv2.zip sudo ./aws/install For macOS: brew install awscli 2. Configure AWS CLI Get your AWS credentials:\nAccess Key ID Secret Access Key Default region (e.g., us-east-1) Run configuration:\naws configure Enter your credentials when prompted:\nAWS Access Key ID: [Your Access Key] AWS Secret Access Key: [Your Secret Key] Default region name: [Your Region] Default output format: json 3. Git Installation (if not already installed) For Windows: Download from: https://git-scm.com/download/win Run the installer with default options For Linux: sudo apt-get update sudo apt-get install git For macOS: brew install git 4. Visual Studio Code (Optional but Recommended) Download VS Code:\nVisit: https://code.visualstudio.com/ Choose your platform version Install recommended extensions:\nAWS Toolkit C# Dev Kit Git Extension Pack Verification Steps Verify AWS CLI: aws --version Verify Git: git --version Test AWS Configuration: aws sts get-caller-identity Troubleshooting AWS CLI Issues:\nEnsure your AWS credentials are correct Check if your IAM user has appropriate permissions Verify your default region is set correctly Git Issues:\nMake sure Git is in your system\u0026rsquo;s PATH Configure Git with your credentials: git config --global user.name \u0026#34;Your Name\u0026#34; git config --global user.email \u0026#34;your.email@example.com\u0026#34; Next Steps After installing and configuring all required tools, proceed to Create S3 Bucket\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/3-automated-unit-test/",
+	"title": "Automated Testing Framework",
+	"tags": [],
+	"description": "",
+	"content": "In this module, we will build an automated testing framework for our movie streaming website using AWS CodeBuild and modern testing tools.\n🎯 Objectives Set up automated testing environment with AWS CodeBuild Write and run unit tests for components Generate detailed and readable test reports Automate testing process for new code changes 📋 Main Content Writing First Unit Test\nCreate simple test file Basic test structure Simulate test delays Configure Buildspec\nCreate buildspec.yml file Install reporting tools Configure output artifacts Setup CodeBuild\nCreate CodeBuild project Connect with GitHub Configure build environment Verify Results\nRun and view build results Analyze test reports Handle errors (if any) ⚙️ Prerequisites Basic understanding of .NET testing AWS CLI installed and configured GitHub account with repository ⏱ Estimated Time Total time: ~2 hours Each section: 25-30 minutes 📌 Expected Outcomes After completing this module, you will have:\nComplete Testing Framework\nAutomated unit tests Detailed test reports GitHub integration CI/CD Pipeline\nAutomatic testing on code push Test results storage Error notifications Documentation \u0026amp; Reports\nHTML test reports Detailed build logs Test coverage statistics 🛠 Tools Used AWS CodeBuild: Automated CI/CD service xUnit: .NET testing framework ReportGenerator: HTML report generation GitHub: Source code management 💡 Pro Tips Read buildspec.yml configuration carefully Test locally before pushing Check logs for errors Organize tests with clear structure 🔍 Troubleshooting Check AWS access permissions Verify GitHub configuration Review detailed build logs Run tests locally for debugging Make sure to complete each step before moving to the next one\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/5-monitoring/5.3-connect-rule-sns/",
+	"title": "Connect Rule to SNS",
+	"tags": [],
+	"description": "",
+	"content": "Add SNS Target Configure target:\nTarget type: SNS topic Topic: test-failure-alerts Click Next: Review and click Create Rule You have successfully created the CloudWatch Rule: "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/2-environment-setup/2.3-create-s3/",
+	"title": "Create S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "🪣 Create S3 Bucket In this section, you will create an S3 bucket to store test reports from AWS CodeBuild.\n🔧 Implementation Steps 1️⃣ Access Amazon S3 Log in to AWS Console Find and select S3 service 2️⃣ Create Bucket Click Create bucket Enter bucket name: dotnet-unit-test-report Keep other settings as default Click Create bucket 3️⃣ Verify New bucket appears in the list Bucket status shows \u0026ldquo;Created\u0026rdquo; 📝 Notes This bucket will be used to store test reports from CodeBuild Bucket name must be globally unique Default settings are sufficient for workshop purposes "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/3-automated-unit-test/3.3-codebuild-project/",
+	"title": "Setting up CodeBuild to Run Unit Tests",
+	"tags": [],
+	"description": "",
+	"content": "In this section, you will create a CodeBuild project to automatically run unit tests from your GitHub source code, using the buildspec.yml file configured in the previous step.\n🎯 Objectives Create a project in AWS CodeBuild Connect GitHub with AWS Configure build environment Run buildspec.yml from repository (Optional) Store test reports in Amazon S3 🔧 Implementation Steps 1️⃣ Access AWS CodeBuild Open: https://console.aws.amazon.com/codebuild/home Click Create build project 2️⃣ Enter Project Information Project name: ci-dotnet-unittest Description: Run unit tests and generate HTML report 3️⃣ Configure Source In the Source section, select Source provider as GitHub (Version 2) and select Manage account credentials if you haven\u0026rsquo;t connected GitHub yet. Click create a new GitHub connection to start creating connection A new window will open. Enter a name for the connection: Select Install a new app to connect to your GitHub Enter your GitHub password to connect After successful connection, you\u0026rsquo;ll see a confirmation message Return to the Manage default source credential page, select the connection you just created Back to CodeBuild page, select the connected repository and choose your project\u0026rsquo;s main branch (usually main or master) In Primary source webhook events section, ✅ Check \u0026ldquo;Rebuild every time a code change is pushed to this repository\u0026rdquo; 4️⃣ Setup Build Environment Provisioning model: On-demand Environment image: Managed image Compute: EC2 Running mode: Container Operating System: Amazon Linux Runtime: Standard Image: aws/codebuild/amazonlinux-x86_64-standard:5.0 5️⃣ Buildspec file Buildspec: select Use a buildspec file Ensure your repo has buildspec.yml in the root directory 6️⃣ (Optional) Artifact for Reports If you want to store HTML test reports: Artifacts type: Amazon S3 S3 bucket: select previously created bucket 7️⃣ Create Project Click Create build project After creation: You can select Start build to test Or push code to GitHub for webhook to run automatically 💡 Pro Tips If your repo lacks a buildspec.yml, you can use \u0026ldquo;Insert build commands\u0026rdquo;, but it\u0026rsquo;s not recommended After project creation, AWS will run tests automatically on \u0026ldquo;Start build\u0026rdquo; or push (if webhook enabled) With GitHub version 2, repos appear in a dropdown. PAT requires manual token entry "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/4-parallel-execution/",
+	"title": "Parallel Test Execution with Multiple Test Files",
+	"tags": [],
+	"description": "",
+	"content": "In this section, you will learn how to split tests into multiple files for independent testing and speed up the CI process through parallel execution. This is particularly useful when the number of tests increases or test execution time becomes lengthy.\n🎯 Objectives Separate tests by functionality (ViewTests, PerformanceTests, etc.) Support parallel execution to optimize testing time Verify CI triggering capability with split tests 🧪 Test File Organization Example Web.Tests/ViewTests.cs using System.Threading; using Xunit; namespace Web.Tests { public class ViewTests { [Fact] public void Fake_View_Test1() { Thread.Sleep(1000); // simulate 1-second test Assert.True(true); } [Fact] public void Fake_View_Test2() { Thread.Sleep(1000); Assert.True(true); } } } Web.Tests/PerformanceTests.cs using System.Threading; using Xunit; namespace Web.Tests { public class PerformanceTests { [Fact] public void Fake_Performance_Test1() { Thread.Sleep(1000); // simulate time-consuming test Assert.True(true); } [Fact] public void Fake_Performance_Test2() { Thread.Sleep(1000); Assert.True(true); } } } ⚙️ Buildspec Requires No Changes Since dotnet test automatically detects and runs all test files in Web.Tests, you don\u0026rsquo;t need to modify the buildspec.yml file.\n- dotnet test Web.Tests/Web.Tests.csproj --logger \u0026#34;trx;LogFileName=test_results.trx\u0026#34; 📦 Advanced Tip: Running Tests in Parallel with Multiple CodeBuilds For large test suites, you can split them across multiple CodeBuilds by creating multiple projects or dividing test steps in buildspec.yml.\nYou can also use dotnet test \u0026ndash;filter to select specific tests by Category, Class, MethodName, etc.\nExample:\n- dotnet test Web.Tests/Web.Tests.csproj --filter \u0026#34;FullyQualifiedName~PerformanceTests\u0026#34; - dotnet test Web.Tests/Web.Tests.csproj --filter \u0026#34;FullyQualifiedName~ViewTests\u0026#34; ✅ Verifying Results After pushing code, CodeBuild will automatically run all tests Open Build history in CodeBuild to view results of each build Check test report: CodeBuild → Build projects → Build history → ci-dotnet-unittest → [Select latest build] → Reports → [Select latest report] 🧠 Additional Tips For thread-level parallel testing, you can configure xUnit parallelism:\nUse dotnet test \u0026ndash;parallel Or configure in xunit.runner.json For further optimization, you can:\nGroup related tests into collections Use AWS CodeBuild matrix builds Configure test retry for flaky tests "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/5-monitoring/5.4-verify/",
+	"title": "Verify Alert System Operation",
+	"tags": [],
+	"description": "",
+	"content": "Create Failing Test Case Add a failing test case to your project: [Fact] public void Test_Should_Fail() { Assert.True(false); // This test will always fail } Commit and push code: git add . git commit -m \u0026#34;test: add failing test to verify notifications\u0026#34; git push Monitor Process Access CodeBuild console to watch the build Wait for build failure Check your email After confirming the system works, don\u0026rsquo;t forget to fix the test case to avoid affecting the actual pipeline.\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/3-automated-unit-test/3.4-verify-results/",
+	"title": "Verify Automatic Test Results on Code Push",
+	"tags": [],
+	"description": "",
+	"content": "In this section, you will push code to GitHub and observe automatic test results from AWS CodeBuild.\n🎯 Objectives Push code to GitHub repository Watch CodeBuild run tests automatically Check test results and reports 🔧 Implementation Steps 1️⃣ Push Code to GitHub git add . git commit -m \u0026#34;Test trigger CodeBuild from GitHub\u0026#34; git push origin main 2️⃣ Monitor Automatic Build Go to AWS CodeBuild console Select project ci-dotnet-unittest Observe new build being automatically created 3️⃣ View Build Details In the Build details tab, you can monitor:\nPhase details: Steps being executed Build logs: Detailed test process logs Environment variables: Environment variables in use 4️⃣ Check Test Results in CloudWatch Go to CloudWatch Logs Find CodeBuild Log group View detailed logs of the recent build In the logs, look for:\nRunning tests... Passed! - Failed: 0, Passed: 2, Skipped: 0 Test Run Successful. 5️⃣ View Test Report in S3 Go to configured S3 bucket Find TestReport directory Download and open index.html 💡 Pro Tips Monitor build status:\nBookmark build history page Enable email notifications Install AWS CLI for status checks Effective debugging:\n# View latest build logs aws codebuild batch-get-builds --ids \u0026lt;build-id\u0026gt; Time optimization:\nPush meaningful code Run tests locally first Verify buildspec syntax 📝 Notes Automatic builds only run on configured branch pushes Each push creates a new build Logs are stored in CloudWatch HTML reports update after each build Always check build status before leaving your computer\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/5-monitoring/",
+	"title": "Test Failure Notifications",
+	"tags": [],
+	"description": "",
+	"content": "In this section, you\u0026rsquo;ll learn how to set up automatic notifications for test failures using Amazon CloudWatch for monitoring and Amazon SNS for notifications.\n🎯 Objectives Create automatic notifications (email, SMS\u0026hellip;) when a build fails Use Amazon CloudWatch to monitor build status Use Amazon SNS (Simple Notification Service) to send alerts Help managers/devs know immediately when test errors occur 🧱 Implementation Steps Step Brief Description 5.1 Create SNS topic \u0026amp; subscribe email for notifications 5.2 Create CloudWatch Rule to catch errors from CodeBuild 5.3 Connect Rule → SNS topic to send alerts 5.4 Test with failed build and verify email reception 🌐 Architecture Overview CodeBuild executes tests CloudWatch monitors build status When a build failure is detected, CloudWatch Rule is triggered Rule sends notification to SNS Topic SNS sends email to subscribed addresses Create SNS Topic and Subscribe Email\rCreate CloudWatch Rule\rConnect Rule to SNS\rVerify Alert System Operation\r"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/6-security-testing/",
+	"title": "Automated Security Scanning with CodeQL",
+	"tags": [],
+	"description": "",
+	"content": "You\u0026rsquo;ll configure GitHub Actions to automatically check for security vulnerabilities in your .NET source code. Everything runs automatically when you push code or open a Pull Request.\n🎯 Objectives Enable the built-in \u0026ldquo;CodeQL\u0026rdquo; workflow in GitHub No additional coding required Check security issues directly on GitHub 🔧 Configuration Steps 1️⃣ Open Actions tab on GitHub Access your repository page Click the \u0026ldquo;Actions\u0026rdquo; tab (in the top menu bar) 2️⃣ Enable the \u0026ldquo;CodeQL Analysis\u0026rdquo; workflow Find \u0026ldquo;Security → Code scanning → CodeQL Analysis\u0026rdquo; Click \u0026ldquo;Set up this workflow\u0026rdquo; 3️⃣ Click Start commit Keep the file as default Click \u0026ldquo;Commit changes\u0026rdquo; → Commit directly to main GitHub will create .github/workflows/codeql.yml for you 4️⃣ Wait for workflow to run Go back to Actions tab, see \u0026ldquo;CodeQL\u0026rdquo; workflow running Takes about 1-2 minutes to analyze 5️⃣ View security results Go to \u0026ldquo;Security\u0026rdquo; \u0026gt; \u0026ldquo;Code scanning alerts\u0026rdquo; If there are security issues in the code (like SQL injection, null errors, hardcoded passwords, \u0026hellip;), GitHub will list them here ✅ Summary Step Description 1 Open Actions tab in GitHub 2 Select \u0026ldquo;CodeQL Analysis\u0026rdquo; workflow 3 Click \u0026ldquo;Start commit\u0026rdquo; to enable 4 Workflow runs after push 5 Check Security tab for alerts 🧠 Additional Tips CodeQL automatically detects C#/.NET repos, no extra configuration needed Can enable CodeQL for all branches (modify branches: in codeql.yml) Want periodic scans (even without pushes)? CodeQL supports schedule 📘 Further Reading Code scanning alerts CodeQL GitHub Action "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/7-cleanup/",
+	"title": "Resource Cleanup",
+	"tags": [],
+	"description": "",
+	"content": "To avoid unnecessary charges, we need to delete all resources created during this workshop.\n🔧 Implementation Steps 1️⃣ Delete CodeBuild Project Access AWS CodeBuild Console Select project ci-dotnet-unittest Choose Delete from Actions menu 2️⃣ Delete CloudWatch Rule Open Amazon EventBridge Console Find rule codebuild-failure-rule Select rule and click Delete 3️⃣ Delete SNS Topic Access Amazon SNS Console Select topic test-failure-alerts Click Delete 4️⃣ Delete S3 Bucket Open Amazon S3 Console Find bucket containing CodeBuild artifacts Select bucket and click Empty Then click Delete ✅ Verification Ensure the following resources are deleted:\nService Resource to Delete CodeBuild Project ci-dotnet-unittest CloudWatch Rule codebuild-failure-rule SNS Topic test-failure-alerts S3 Artifacts bucket 🧠 Tips Use AWS CLI for quick deletion of multiple resources: # Delete CodeBuild project aws codebuild delete-project --name ci-dotnet-unittest # Delete CloudWatch rule aws events delete-rule --name codebuild-failure-rule # Delete SNS topic aws sns delete-topic --topic-arn arn:aws:sns:region:account-id:test-failure-alerts # Delete S3 bucket (must empty first) aws s3 rm s3://your-bucket-name --recursive aws s3 rb s3://your-bucket-name ⚠️ Important Notes Ensure you\u0026rsquo;re deleting the correct workshop resources Double-check before deletion Some dependent resources need to be deleted in order Keep GitHub source code if you want to reference later "
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/",
+	"title": "Automated Testing Framework Workshop",
+	"tags": [],
+	"description": "",
+	"content": "🚀 Building an Automated Testing Framework This workshop will guide you through building a complete automated testing system for a movie streaming website using .NET and AWS services.\n🎯 What You\u0026rsquo;ll Learn Set up CI/CD pipeline with AWS CodeBuild Write and run automated unit tests Optimize performance with parallel testing Monitor and receive email alerts Automate security scanning with CodeQL 📚 Workshop Content Introduction - Testing framework overview Environment Setup - AWS and tools setup Unit Testing - Writing tests and configuring CodeBuild Parallel Execution - Running tests in parallel Monitoring \u0026amp; Alerts - Monitoring and notifications Security Testing - Security scanning with CodeQL Clean Up - Resource cleanup 🎓 Prerequisites Basic knowledge of C# and .NET AWS Account (Free tier) GitHub Account Visual Studio Code or Visual Studio This workshop is designed to be completed in 2-3 hours. You can split it into multiple sessions.\n"
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://duyvh10102003.github.io/aws-workshop-demo/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

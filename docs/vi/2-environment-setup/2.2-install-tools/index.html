@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="vi" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.147.9">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/aws-workshop-demo/images/favicon.png" type="image/png">
+
+    <title>Cài Đặt Công Cụ Cần Thiết :: AWS System Manager</title>
+
+    
+    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    
+    
+
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/aws-workshop-demo/vi/2-environment-setup/2.2-install-tools/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+
+
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/duyvh10102003.github.io\/aws-workshop-demo\/\/vi";
+    
+</script>
+
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/1-introduction/" title="Giới thiệu" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/1-introduction/">
+          <b>1. </b>Giới thiệu
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/2-environment-setup/" title="Thiết Lập Môi Trường" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/2-environment-setup/">
+          <b>2. </b>Thiết Lập Môi Trường
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/2-environment-setup/2.1-website-setup/" title="Thiết lập Website" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/2-environment-setup/2.1-website-setup/">
+          <b>2.1. </b>Thiết lập Website
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/2-environment-setup/2.2-install-tools/" title="Cài Đặt Công Cụ Cần Thiết" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/aws-workshop-demo/vi/2-environment-setup/2.2-install-tools/">
+          <b>2.2. </b>Cài Đặt Công Cụ Cần Thiết
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/" title="Tạo S3 Bucket" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/">
+          <b>2.3. </b>Tạo S3 Bucket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/3-automated-unit-test/" title="Framework Testing Tự Động" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/3-automated-unit-test/">
+          <b>3. </b>Framework Testing Tự Động
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/3-automated-unit-test/3.1-codebuild-setup/" title="Viết Unit Test đầu tiên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/3-automated-unit-test/3.1-codebuild-setup/">
+          <b>3.1. </b>Viết Unit Test đầu tiên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/3-automated-unit-test/3.2-buildspec-setup/" title="Cấu hình Buildspec " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/3-automated-unit-test/3.2-buildspec-setup/">
+          <b>3.2. </b>Cấu hình Buildspec 
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/3-automated-unit-test/3.3-codebuild-project/" title="Thiết lập CodeBuild để chạy Unit Test" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/3-automated-unit-test/3.3-codebuild-project/">
+          <b>3.3. </b>Thiết lập CodeBuild để chạy Unit Test
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/3-automated-unit-test/3.4-verify-results/" title="Kiểm tra kết quả Test tự động khi Push code" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/3-automated-unit-test/3.4-verify-results/">
+          <b>3.4. </b>Kiểm tra kết quả Test tự động khi Push code
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/4-parallel-execution/" title="Tối ưu kiểm thử song song với nhiều file test" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/4-parallel-execution/">
+          <b>4. </b>Tối ưu kiểm thử song song với nhiều file test
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/5-monitoring/" title="Gửi cảnh báo khi test thất bại" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/5-monitoring/">
+          <b>5. </b>Gửi cảnh báo khi test thất bại
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/5-monitoring/5.1-create-sns/" title="Tạo SNS Topic và đăng ký email" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/5-monitoring/5.1-create-sns/">
+          <b>5.1. </b>Tạo SNS Topic và đăng ký email
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/5-monitoring/5.2-cloudwatch-rule/" title="Tạo CloudWatch Rule" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/5-monitoring/5.2-cloudwatch-rule/">
+          <b>5.2. </b>Tạo CloudWatch Rule
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/5-monitoring/5.3-connect-rule-sns/" title="Kết nối Rule với SNS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/5-monitoring/5.3-connect-rule-sns/">
+          <b>5.3. </b>Kết nối Rule với SNS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/5-monitoring/5.4-verify/" title="Kiểm tra hoạt động cảnh báo" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/5-monitoring/5.4-verify/">
+          <b>5.4. </b>Kiểm tra hoạt động cảnh báo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/6-security-testing/" title="Tự động quét bảo mật với CodeQL" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/6-security-testing/">
+          <b>6. </b>Tự động quét bảo mật với CodeQL
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/aws-workshop-demo/vi/7-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/aws-workshop-demo/vi/7-cleanup/">
+          <b>7. </b>Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="https://duyvh10102003.github.io/aws-workshop-demo/2-environment-setup/2.2-install-tools/">English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="https://duyvh10102003.github.io/aws-workshop-demo/vi/2-environment-setup/2.2-install-tools/" selected>Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>30-01-2022</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+               
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/aws-workshop-demo/vi/'>Workshop Automated Testing Framework</a> > <a href='/aws-workshop-demo/vi/2-environment-setup/'>Thiết Lập Môi Trường</a> > Cài Đặt Công Cụ Cần Thiết
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#cài-đặt-công-cụ-cần-thiết">Cài Đặt Công Cụ Cần Thiết</a>
+      <ul>
+        <li><a href="#1-cài-đặt-aws-cli">1. Cài Đặt AWS CLI</a></li>
+        <li><a href="#2-cấu-hình-aws-cli">2. Cấu Hình AWS CLI</a></li>
+        <li><a href="#3-cài-đặt-git-nếu-chưa-có">3. Cài Đặt Git (nếu chưa có)</a></li>
+        <li><a href="#4-visual-studio-code-tùy-chọn-nhưng-khuyến-nghị">4. Visual Studio Code (Tùy chọn nhưng khuyến nghị)</a></li>
+        <li><a href="#các-bước-xác-minh">Các Bước Xác Minh</a></li>
+        <li><a href="#xử-lý-sự-cố">Xử Lý Sự Cố</a></li>
+        <li><a href="#bước-tiếp-theo">Bước Tiếp Theo</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Cài Đặt Công Cụ Cần Thiết
+            </h1>
+          
+
+        
+
+
+
+	<h2 id="cài-đặt-công-cụ-cần-thiết">Cài Đặt Công Cụ Cần Thiết</h2>
+<p>Để tiến hành kiểm thử tự động bằng AWS CodeBuild, bạn cần cài đặt và cấu hình một số công cụ.</p>
+<h3 id="1-cài-đặt-aws-cli">1. Cài Đặt AWS CLI</h3>
+<h4 id="cho-windows">Cho Windows:</h4>
+<ol>
+<li>
+<p>Tải trình cài đặt AWS CLI MSI:</p>
+<ul>
+<li>Truy cập: <a href="https://aws.amazon.com/cli/">https://aws.amazon.com/cli/</a></li>
+<li>Tải xuống bản cài đặt Windows x64</li>
+</ul>
+</li>
+<li>
+<p>Chạy trình cài đặt:</p>
+<ul>
+<li>Nhấp đúp vào file đã tải</li>
+<li>Làm theo hướng dẫn cài đặt</li>
+<li>Kiểm tra cài đặt bằng cách mở Command Prompt và chạy:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws --version
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h4 id="cho-linux">Cho Linux:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl <span style="color:#e6db74">&#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&#34;</span> -o <span style="color:#e6db74">&#34;awscliv2.zip&#34;</span>
+</span></span><span style="display:flex;"><span>unzip awscliv2.zip
+</span></span><span style="display:flex;"><span>sudo ./aws/install
+</span></span></code></pre></div><h4 id="cho-macos">Cho macOS:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install awscli
+</span></span></code></pre></div><h3 id="2-cấu-hình-aws-cli">2. Cấu Hình AWS CLI</h3>
+<ol>
+<li>
+<p>Lấy thông tin xác thực AWS:</p>
+<ul>
+<li>Access Key ID</li>
+<li>Secret Access Key</li>
+<li>Vùng mặc định (ví dụ: us-east-1)</li>
+</ul>
+</li>
+<li>
+<p>Chạy cấu hình:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws configure
+</span></span></code></pre></div></li>
+<li>
+<p>Nhập thông tin xác thực khi được yêu cầu:</p>
+<pre tabindex="0"><code>AWS Access Key ID: [Access Key của bạn]
+AWS Secret Access Key: [Secret Key của bạn]
+Default region name: [Vùng của bạn]
+Default output format: json
+</code></pre></li>
+</ol>
+<h3 id="3-cài-đặt-git-nếu-chưa-có">3. Cài Đặt Git (nếu chưa có)</h3>
+<h4 id="cho-windows-1">Cho Windows:</h4>
+<ul>
+<li>Tải từ: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></li>
+<li>Chạy trình cài đặt với tùy chọn mặc định</li>
+</ul>
+<h4 id="cho-linux-1">Cho Linux:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install git
+</span></span></code></pre></div><h4 id="cho-macos-1">Cho macOS:</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
+</span></span></code></pre></div><h3 id="4-visual-studio-code-tùy-chọn-nhưng-khuyến-nghị">4. Visual Studio Code (Tùy chọn nhưng khuyến nghị)</h3>
+<ol>
+<li>
+<p>Tải VS Code:</p>
+<ul>
+<li>Truy cập: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></li>
+<li>Chọn phiên bản cho nền tảng của bạn</li>
+</ul>
+</li>
+<li>
+<p>Cài đặt các tiện ích mở rộng được khuyến nghị:</p>
+<ul>
+<li>AWS Toolkit</li>
+<li>C# Dev Kit</li>
+<li>Git Extension Pack</li>
+</ul>
+</li>
+</ol>
+<h3 id="các-bước-xác-minh">Các Bước Xác Minh</h3>
+<ol>
+<li>Kiểm tra AWS CLI:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws --version
+</span></span></code></pre></div><ol start="2">
+<li>Kiểm tra Git:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git --version
+</span></span></code></pre></div><ol start="3">
+<li>Kiểm tra cấu hình AWS:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>aws sts get-caller-identity
+</span></span></code></pre></div><h3 id="xử-lý-sự-cố">Xử Lý Sự Cố</h3>
+<ol>
+<li>
+<p>Vấn đề với AWS CLI:</p>
+<ul>
+<li>Đảm bảo thông tin xác thực AWS chính xác</li>
+<li>Kiểm tra quyền của người dùng IAM</li>
+<li>Xác minh vùng mặc định được cài đặt đúng</li>
+</ul>
+</li>
+<li>
+<p>Vấn đề với Git:</p>
+<ul>
+<li>Đảm bảo Git nằm trong PATH của hệ thống</li>
+<li>Cấu hình Git với thông tin của bạn:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git config --global user.name <span style="color:#e6db74">&#34;Tên Của Bạn&#34;</span>
+</span></span><span style="display:flex;"><span>git config --global user.email <span style="color:#e6db74">&#34;email.cua.ban@example.com&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h3 id="bước-tiếp-theo">Bước Tiếp Theo</h3>
+<p>Sau khi cài đặt và cấu hình tất cả công cụ cần thiết, tiếp tục với phần <a href="/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/">Tạo S3 Bucket</a></p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/aws-workshop-demo/vi/2-environment-setup/2.1-website-setup/" title="Thiết lập Website"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/" title="Tạo S3 Bucket" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

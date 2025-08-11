@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Verify Automatic Test Results on Code Push on AWS System Manager</title>
-    <link>//localhost:1313/3-automated-unit-test/3.4-verify-results/</link>
+    <link>http://localhost:1313/aws-workshop-demo/3-automated-unit-test/3.4-verify-results/</link>
     <description>Recent content in Verify Automatic Test Results on Code Push on AWS System Manager</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="//localhost:1313/3-automated-unit-test/3.4-verify-results/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/aws-workshop-demo/3-automated-unit-test/3.4-verify-results/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

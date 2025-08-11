@@ -2,275 +2,275 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/vi/1-introduction/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/1-introduction/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/1-introduction/"
+                href="http://localhost:1313/aws-workshop-demo/1-introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/1-introduction/"
+                href="http://localhost:1313/aws-workshop-demo/vi/1-introduction/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-monitoring/5.1-create-sns/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.1-create-sns/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-monitoring/5.1-create-sns/"
+                href="http://localhost:1313/aws-workshop-demo/5-monitoring/5.1-create-sns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-monitoring/5.1-create-sns/"
+                href="http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.1-create-sns/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-environment-setup/2.1-website-setup/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.1-website-setup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-environment-setup/2.1-website-setup/"
+                href="http://localhost:1313/aws-workshop-demo/2-environment-setup/2.1-website-setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-environment-setup/2.1-website-setup/"
+                href="http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.1-website-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-automated-unit-test/3.1-codebuild-setup/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.1-codebuild-setup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.1-codebuild-setup/"
+                href="http://localhost:1313/aws-workshop-demo/3-automated-unit-test/3.1-codebuild-setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.1-codebuild-setup/"
+                href="http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.1-codebuild-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-environment-setup/2.2-install-tools/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.2-install-tools/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-environment-setup/2.2-install-tools/"
+                href="http://localhost:1313/aws-workshop-demo/2-environment-setup/2.2-install-tools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-environment-setup/2.2-install-tools/"
+                href="http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.2-install-tools/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-automated-unit-test/3.2-buildspec-setup/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.2-buildspec-setup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.2-buildspec-setup/"
+                href="http://localhost:1313/aws-workshop-demo/3-automated-unit-test/3.2-buildspec-setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.2-buildspec-setup/"
+                href="http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.2-buildspec-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-monitoring/5.2-cloudwatch-rule/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.2-cloudwatch-rule/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-monitoring/5.2-cloudwatch-rule/"
+                href="http://localhost:1313/aws-workshop-demo/5-monitoring/5.2-cloudwatch-rule/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-monitoring/5.2-cloudwatch-rule/"
+                href="http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.2-cloudwatch-rule/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-environment-setup/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-environment-setup/"
+                href="http://localhost:1313/aws-workshop-demo/2-environment-setup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-environment-setup/"
+                href="http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-automated-unit-test/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/"
+                href="http://localhost:1313/aws-workshop-demo/3-automated-unit-test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/"
+                href="http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-monitoring/5.3-connect-rule-sns/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.3-connect-rule-sns/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-monitoring/5.3-connect-rule-sns/"
+                href="http://localhost:1313/aws-workshop-demo/5-monitoring/5.3-connect-rule-sns/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-monitoring/5.3-connect-rule-sns/"
+                href="http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.3-connect-rule-sns/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-environment-setup/2.3-create-s3/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/2-environment-setup/2.3-create-s3/"
+                href="http://localhost:1313/aws-workshop-demo/2-environment-setup/2.3-create-s3/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/2-environment-setup/2.3-create-s3/"
+                href="http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-automated-unit-test/3.3-codebuild-project/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.3-codebuild-project/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.3-codebuild-project/"
+                href="http://localhost:1313/aws-workshop-demo/3-automated-unit-test/3.3-codebuild-project/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.3-codebuild-project/"
+                href="http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.3-codebuild-project/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-monitoring/5.4-verify/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.4-verify/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-monitoring/5.4-verify/"
+                href="http://localhost:1313/aws-workshop-demo/5-monitoring/5.4-verify/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-monitoring/5.4-verify/"
+                href="http://localhost:1313/aws-workshop-demo/vi/5-monitoring/5.4-verify/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/3-automated-unit-test/3.4-verify-results/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.4-verify-results/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/3-automated-unit-test/3.4-verify-results/"
+                href="http://localhost:1313/aws-workshop-demo/3-automated-unit-test/3.4-verify-results/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/3-automated-unit-test/3.4-verify-results/"
+                href="http://localhost:1313/aws-workshop-demo/vi/3-automated-unit-test/3.4-verify-results/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/4-parallel-execution/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/4-parallel-execution/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/4-parallel-execution/"
+                href="http://localhost:1313/aws-workshop-demo/4-parallel-execution/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/4-parallel-execution/"
+                href="http://localhost:1313/aws-workshop-demo/vi/4-parallel-execution/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/5-monitoring/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/5-monitoring/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/5-monitoring/"
+                href="http://localhost:1313/aws-workshop-demo/5-monitoring/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/5-monitoring/"
+                href="http://localhost:1313/aws-workshop-demo/vi/5-monitoring/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/6-security-testing/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/6-security-testing/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/6-security-testing/"
+                href="http://localhost:1313/aws-workshop-demo/6-security-testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/6-security-testing/"
+                href="http://localhost:1313/aws-workshop-demo/vi/6-security-testing/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/7-cleanup/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/7-cleanup/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/7-cleanup/"
+                href="http://localhost:1313/aws-workshop-demo/7-cleanup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/7-cleanup/"
+                href="http://localhost:1313/aws-workshop-demo/vi/7-cleanup/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/</loc>
     <lastmod>2025-07-04T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/"
+                href="http://localhost:1313/aws-workshop-demo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/"
+                href="http://localhost:1313/aws-workshop-demo/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/categories/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/categories/"
+                href="http://localhost:1313/aws-workshop-demo/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/categories/"
+                href="http://localhost:1313/aws-workshop-demo/vi/categories/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/tags/</loc>
+    <loc>http://localhost:1313/aws-workshop-demo/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="//localhost:1313/tags/"
+                href="http://localhost:1313/aws-workshop-demo/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="//localhost:1313/vi/tags/"
+                href="http://localhost:1313/aws-workshop-demo/vi/tags/"
                 />
   </url>
 </urlset>

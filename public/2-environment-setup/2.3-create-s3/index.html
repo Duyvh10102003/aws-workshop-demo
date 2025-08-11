@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head><script src="/aws-workshop-demo/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=aws-workshop-demo/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.147.9">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
-    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="/aws-workshop-demo/images/favicon.png" type="image/png">
 
     <title>Create S3 Bucket :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1753174003" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1753174003" rel="stylesheet">
-    <link href="/css/hybrid.css?1753174003" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1753174003" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1753174003" rel="stylesheet">
-    <link href="/css/auto-complete.css?1753174003" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1753174003" rel="stylesheet">
-    <link href="/css/theme.css?1753174003" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1753174003" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754893799" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893799" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1753174003" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893799" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1753174003"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893799"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/2-environment-setup/2.3-create-s3/">
+  <body class="" data-url="/aws-workshop-demo/2-environment-setup/2.3-create-s3/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -58,17 +58,17 @@
 </div>
 
 
-<script type="text/javascript" src="/js/lunr.min.js?1753174003"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1753174003"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893799"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893799"></script>
 
 
 <script type="text/javascript">
     
-        var baseurl = "\/\/localhost:1313\/";
+        var baseurl = "http:\/\/localhost:1313\/aws-workshop-demo\/";
     
 </script>
 
-<script type="text/javascript" src="/js/search.js?1753174003"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893799"></script>
 
     
   </div>
@@ -86,12 +86,12 @@
  
   
     
-    <li data-nav-id="/1-introduction/" title="Introduction" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/1-introduction/" title="Introduction" class="dd-item 
         
         
         
         ">
-      <a href="/1-introduction/">
+      <a href="/aws-workshop-demo/1-introduction/">
           <b>1. </b>Introduction
           
             <i class="fas fa-check read-icon"></i>
@@ -112,12 +112,12 @@
  
   
     
-    <li data-nav-id="/2-environment-setup/" title="Environment Setup" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/2-environment-setup/" title="Environment Setup" class="dd-item 
         parent
         
         
         ">
-      <a href="/2-environment-setup/">
+      <a href="/aws-workshop-demo/2-environment-setup/">
           <b>2. </b>Environment Setup
           
             <i class="fas fa-check read-icon"></i>
@@ -143,12 +143,12 @@
  
   
     
-    <li data-nav-id="/2-environment-setup/2.1-website-setup/" title="Website Setup" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/2-environment-setup/2.1-website-setup/" title="Website Setup" class="dd-item 
         
         
         
         ">
-      <a href="/2-environment-setup/2.1-website-setup/">
+      <a href="/aws-workshop-demo/2-environment-setup/2.1-website-setup/">
           <b>2.1. </b>Website Setup
           
             <i class="fas fa-check read-icon"></i>
@@ -171,12 +171,12 @@
  
   
     
-    <li data-nav-id="/2-environment-setup/2.2-install-tools/" title="Required Tools Installation" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/2-environment-setup/2.2-install-tools/" title="Required Tools Installation" class="dd-item 
         
         
         
         ">
-      <a href="/2-environment-setup/2.2-install-tools/">
+      <a href="/aws-workshop-demo/2-environment-setup/2.2-install-tools/">
           <b>2.2. </b>Required Tools Installation
           
             <i class="fas fa-check read-icon"></i>
@@ -199,12 +199,12 @@
  
   
     
-    <li data-nav-id="/2-environment-setup/2.3-create-s3/" title="Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/2-environment-setup/2.3-create-s3/" title="Create S3 Bucket" class="dd-item 
         
         active
         
         ">
-      <a href="/2-environment-setup/2.3-create-s3/">
+      <a href="/aws-workshop-demo/2-environment-setup/2.3-create-s3/">
           <b>2.3. </b>Create S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
@@ -234,12 +234,12 @@
  
   
     
-    <li data-nav-id="/3-automated-unit-test/" title="Automated Testing Framework" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/3-automated-unit-test/" title="Automated Testing Framework" class="dd-item 
         
         
         
         ">
-      <a href="/3-automated-unit-test/">
+      <a href="/aws-workshop-demo/3-automated-unit-test/">
           <b>3. </b>Automated Testing Framework
           
             <i class="fas fa-check read-icon"></i>
@@ -265,12 +265,12 @@
  
   
     
-    <li data-nav-id="/3-automated-unit-test/3.1-codebuild-setup/" title="Writing First Unit Test" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/3-automated-unit-test/3.1-codebuild-setup/" title="Writing First Unit Test" class="dd-item 
         
         
         
         ">
-      <a href="/3-automated-unit-test/3.1-codebuild-setup/">
+      <a href="/aws-workshop-demo/3-automated-unit-test/3.1-codebuild-setup/">
           <b>3.1. </b>Writing First Unit Test
           
             <i class="fas fa-check read-icon"></i>
@@ -293,12 +293,12 @@
  
   
     
-    <li data-nav-id="/3-automated-unit-test/3.2-buildspec-setup/" title="Configure Buildspec " class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/3-automated-unit-test/3.2-buildspec-setup/" title="Configure Buildspec " class="dd-item 
         
         
         
         ">
-      <a href="/3-automated-unit-test/3.2-buildspec-setup/">
+      <a href="/aws-workshop-demo/3-automated-unit-test/3.2-buildspec-setup/">
           <b>3.2. </b>Configure Buildspec 
           
             <i class="fas fa-check read-icon"></i>
@@ -321,12 +321,12 @@
  
   
     
-    <li data-nav-id="/3-automated-unit-test/3.3-codebuild-project/" title="Setting up CodeBuild to Run Unit Tests" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/3-automated-unit-test/3.3-codebuild-project/" title="Setting up CodeBuild to Run Unit Tests" class="dd-item 
         
         
         
         ">
-      <a href="/3-automated-unit-test/3.3-codebuild-project/">
+      <a href="/aws-workshop-demo/3-automated-unit-test/3.3-codebuild-project/">
           <b>3.3. </b>Setting up CodeBuild to Run Unit Tests
           
             <i class="fas fa-check read-icon"></i>
@@ -349,12 +349,12 @@
  
   
     
-    <li data-nav-id="/3-automated-unit-test/3.4-verify-results/" title="Verify Automatic Test Results on Code Push" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/3-automated-unit-test/3.4-verify-results/" title="Verify Automatic Test Results on Code Push" class="dd-item 
         
         
         
         ">
-      <a href="/3-automated-unit-test/3.4-verify-results/">
+      <a href="/aws-workshop-demo/3-automated-unit-test/3.4-verify-results/">
           <b>3.4. </b>Verify Automatic Test Results on Code Push
           
             <i class="fas fa-check read-icon"></i>
@@ -384,12 +384,12 @@
  
   
     
-    <li data-nav-id="/4-parallel-execution/" title="Parallel Test Execution with Multiple Test Files" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/4-parallel-execution/" title="Parallel Test Execution with Multiple Test Files" class="dd-item 
         
         
         
         ">
-      <a href="/4-parallel-execution/">
+      <a href="/aws-workshop-demo/4-parallel-execution/">
           <b>4. </b>Parallel Test Execution with Multiple Test Files
           
             <i class="fas fa-check read-icon"></i>
@@ -410,12 +410,12 @@
  
   
     
-    <li data-nav-id="/5-monitoring/" title="Test Failure Notifications" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/5-monitoring/" title="Test Failure Notifications" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitoring/">
+      <a href="/aws-workshop-demo/5-monitoring/">
           <b>5. </b>Test Failure Notifications
           
             <i class="fas fa-check read-icon"></i>
@@ -441,12 +441,12 @@
  
   
     
-    <li data-nav-id="/5-monitoring/5.1-create-sns/" title="Create SNS Topic and Subscribe Email" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/5-monitoring/5.1-create-sns/" title="Create SNS Topic and Subscribe Email" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitoring/5.1-create-sns/">
+      <a href="/aws-workshop-demo/5-monitoring/5.1-create-sns/">
           <b>5.1. </b>Create SNS Topic and Subscribe Email
           
             <i class="fas fa-check read-icon"></i>
@@ -469,12 +469,12 @@
  
   
     
-    <li data-nav-id="/5-monitoring/5.2-cloudwatch-rule/" title="Create CloudWatch Rule" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/5-monitoring/5.2-cloudwatch-rule/" title="Create CloudWatch Rule" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitoring/5.2-cloudwatch-rule/">
+      <a href="/aws-workshop-demo/5-monitoring/5.2-cloudwatch-rule/">
           <b>5.2. </b>Create CloudWatch Rule
           
             <i class="fas fa-check read-icon"></i>
@@ -497,12 +497,12 @@
  
   
     
-    <li data-nav-id="/5-monitoring/5.3-connect-rule-sns/" title="Connect Rule to SNS" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/5-monitoring/5.3-connect-rule-sns/" title="Connect Rule to SNS" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitoring/5.3-connect-rule-sns/">
+      <a href="/aws-workshop-demo/5-monitoring/5.3-connect-rule-sns/">
           <b>5.3. </b>Connect Rule to SNS
           
             <i class="fas fa-check read-icon"></i>
@@ -525,12 +525,12 @@
  
   
     
-    <li data-nav-id="/5-monitoring/5.4-verify/" title="Verify Alert System Operation" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/5-monitoring/5.4-verify/" title="Verify Alert System Operation" class="dd-item 
         
         
         
         ">
-      <a href="/5-monitoring/5.4-verify/">
+      <a href="/aws-workshop-demo/5-monitoring/5.4-verify/">
           <b>5.4. </b>Verify Alert System Operation
           
             <i class="fas fa-check read-icon"></i>
@@ -560,12 +560,12 @@
  
   
     
-    <li data-nav-id="/6-security-testing/" title="Automated Security Scanning with CodeQL" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/6-security-testing/" title="Automated Security Scanning with CodeQL" class="dd-item 
         
         
         
         ">
-      <a href="/6-security-testing/">
+      <a href="/aws-workshop-demo/6-security-testing/">
           <b>6. </b>Automated Security Scanning with CodeQL
           
             <i class="fas fa-check read-icon"></i>
@@ -586,12 +586,12 @@
  
   
     
-    <li data-nav-id="/7-cleanup/" title="Resource Cleanup" class="dd-item 
+    <li data-nav-id="/aws-workshop-demo/7-cleanup/" title="Resource Cleanup" class="dd-item 
         
         
         
         ">
-      <a href="/7-cleanup/">
+      <a href="/aws-workshop-demo/7-cleanup/">
           <b>7. </b>Resource Cleanup
           
             <i class="fas fa-check read-icon"></i>
@@ -639,7 +639,7 @@
                   
                     
                     
-                      <option id="en" value="//localhost:1313/2-environment-setup/2.3-create-s3/" selected>English</option>
+                      <option id="en" value="http://localhost:1313/aws-workshop-demo/2-environment-setup/2.3-create-s3/" selected>English</option>
                     
                   
               
@@ -653,7 +653,7 @@
                   
                     
                     
-                      <option id="vi" value="//localhost:1313/vi/2-environment-setup/2.3-create-s3/">Tiếng Việt</option>
+                      <option id="vi" value="http://localhost:1313/aws-workshop-demo/vi/2-environment-setup/2.3-create-s3/">Tiếng Việt</option>
                     
                   
               
@@ -745,7 +745,7 @@
             
           
           
-            <a href='/'>Automated Testing Framework Workshop</a> > <a href='/2-environment-setup/'>Environment Setup</a> > Create S3 Bucket
+            <a href='/aws-workshop-demo/'>Automated Testing Framework Workshop</a> > <a href='/aws-workshop-demo/2-environment-setup/'>Environment Setup</a> > Create S3 Bucket
           
         
           
@@ -1174,10 +1174,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-environment-setup/2.2-install-tools/" title="Required Tools Installation"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/aws-workshop-demo/2-environment-setup/2.2-install-tools/" title="Required Tools Installation"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/3-automated-unit-test/" title="Automated Testing Framework" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/aws-workshop-demo/3-automated-unit-test/" title="Automated Testing Framework" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1187,19 +1187,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1753174003"></script>
-    <script src="/js/perfect-scrollbar.min.js?1753174003"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1753174003"></script>
-    <script src="/js/jquery.sticky.js?1753174003"></script>
-    <script src="/js/featherlight.min.js?1753174003"></script>
-    <script src="/js/highlight.pack.js?1753174003"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893799"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1753174003"></script>
-    <script src="/js/learn.js?1753174003"></script>
-    <script src="/js/hugo-learn.js?1753174003"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754893799"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893799"></script>
 
-    <link href="/mermaid/mermaid.css?1753174003" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1753174003"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893799" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893799"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
