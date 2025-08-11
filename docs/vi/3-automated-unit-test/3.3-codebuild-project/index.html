@@ -12,21 +12,21 @@
     <title>Thiết lập CodeBuild để chạy Unit Test :: AWS System Manager</title>
 
     
-    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754894977" rel="stylesheet">
     
-    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754894977" rel="stylesheet">
     
     
 
-    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754894977"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
-<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754894977"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754894977"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754894977"></script>
 
     
   </div>
@@ -815,55 +815,55 @@
 <li>Mở trang: <a href="https://console.aws.amazon.com/codebuild/home">https://console.aws.amazon.com/codebuild/home</a></li>
 <li>Nhấn <strong>Create build project</strong></li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="2-nhập-thông-tin-project">2️⃣ Nhập thông tin Project</h3>
 <ul>
 <li><strong>Project name</strong>: <code>ci-dotnet-unittest</code></li>
 <li><strong>Description</strong>: <code>Chạy unit test và sinh báo cáo HTML</code></li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="3-cấu-hình-nguồn-source">3️⃣ Cấu hình nguồn (Source)</h3>
 <ol>
 <li>Trong phần <strong>Source</strong>, chọn <strong>Source provider</strong> là <strong>GitHub (Version 2)</strong> và chọn <strong>Manage account credentials</strong> nếu bạn chưa kết nối GitHub.</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/Source.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Source.png" alt="CodeBuilder"></p>
 <ol start="2">
 <li>Nhấn <strong>create a new GitHub connection</strong> để bắt đầu tạo kết nối</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png" alt="CodeBuilder"></p>
 <ol start="3">
 <li>Một cửa sổ mới sẽ mở ra. Nhập tên cho connection:</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png" alt="CodeBuilder"></p>
 <ol start="4">
 <li>Chọn <strong>Install a new app</strong> để kết nối tới GitHub của bạn</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png" alt="CodeBuilder"></p>
 <ol start="5">
 <li>Nhập mật khẩu GitHub để kết nối</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png" alt="CodeBuilder"></p>
 <ol start="6">
 <li>Sau khi kết nối thành công, bạn sẽ thấy thông báo xác nhận</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png" alt="CodeBuilder"></p>
 <ol start="7">
 <li>Quay lại trang <strong>Manage default source credential</strong>, chọn connection vừa tạo</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png" alt="CodeBuilder"></p>
 <ol start="8">
 <li>Quay lại trang CodeBuild, chọn repository vừa kết nối và chọn branch chính của dự án (thường là <code>main</code> hoặc <code>master</code>)</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png" alt="CodeBuilder"></p>
 <ol start="9">
 <li>Trong phần <strong>Primary source webhook events</strong>, chọn ✅ Tick vào &ldquo;Rebuild every time a code change is pushed to this repository&rdquo;</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/webhook.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/webhook.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="4-thiết-lập-môi-trường-build">4️⃣ Thiết lập môi trường build</h3>
 <ul>
@@ -875,14 +875,14 @@
 <li><strong>Runtime</strong>: <code>Standard</code></li>
 <li><strong>Image</strong>: <code>aws/codebuild/amazonlinux-x86_64-standard:5.0</code></li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/environment.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/environment.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="5-buildspec-file">5️⃣ Buildspec file</h3>
 <ul>
 <li><strong>Buildspec</strong>: chọn <code>Use a buildspec file</code></li>
 <li>Đảm bảo repo của bạn có file <code>buildspec.yml</code> ở thư mục gốc</li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="6-tuỳ-chọn-artifact-để-lưu-báo-cáo">6️⃣ (Tuỳ chọn) Artifact để lưu báo cáo</h3>
 <ul>
@@ -893,7 +893,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/S3.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/S3.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="7-tạo-project">7️⃣ Tạo project</h3>
 <ul>
@@ -902,11 +902,11 @@
 <ul>
 <li>Có thể chọn <strong>Start build</strong> để chạy thử</li>
 <li>Hoặc push code lên GitHub để webhook tự động chạy
-<img src="/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png" alt="CodeBuilder"></li>
+<img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png" alt="CodeBuilder"></li>
 </ul>
 </li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png" alt="CodeBuilder"></p>
 <hr>
 <h2 id="-mẹo-thêm">🧠 Mẹo thêm</h2>
 <ul>
@@ -1276,19 +1276,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754894977"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754894977"></script>
 
-    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
-    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754894977" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754894977"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

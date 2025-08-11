@@ -12,21 +12,21 @@
     <title>Writing First Unit Test :: AWS System Manager</title>
 
     
-    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754894977" rel="stylesheet">
     
-    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754894977" rel="stylesheet">
     
     
 
-    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754894977"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
-<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754894977"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754894977"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754894977"></script>
 
     
   </div>
@@ -762,7 +762,6 @@
   <ul>
     <li><a href="#-objectives">✅ Objectives</a></li>
     <li><a href="#-file-structure">📁 File Structure</a></li>
-    <li><a href="#-implementation-steps">🖼 Implementation Steps</a></li>
     <li><a href="#-verification">✅ Verification</a></li>
     <li><a href="#-notes">📌 Notes</a></li>
   </ul>
@@ -799,6 +798,7 @@
 </ul>
 <h2 id="-file-structure">📁 File Structure</h2>
 <p>Create file at: <code>Web.Tests/LuotXemTests.cs</code></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.1-codebuild-setup/codeUnitTestLuotXem.png" alt="UnitTest"></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Threading;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Xunit;
 </span></span><span style="display:flex;"><span>
@@ -821,20 +821,12 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="-implementation-steps">🖼 Implementation Steps</h2>
-
-<div class="notices info" ><p>Add your actual screenshot of the test file in Visual Studio here</p>
-</div>
-
-<h2 id="-verification">✅ Verification</h2>
+</span></span></code></pre></div><h2 id="-verification">✅ Verification</h2>
 <p>Run the following command in the root directory to verify the tests:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dotnet test
 </span></span></code></pre></div><p>Expected output:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">Passed!  - Failed: 0, Passed: 2, Skipped</span>: <span style="color:#ae81ff">0</span>
-</span></span></code></pre></div>
-<div class="notices info" ><p>Add your actual screenshot of the test results here</p>
-</div>
-
+</span></span></code></pre></div><p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.1-codebuild-setup/TestLuotXem.png" alt="UnitTest"></p>
 <h2 id="-notes">📌 Notes</h2>
 <p>The Thread.Sleep() calls are used to simulate test processing time. You&rsquo;ll see significant improvements when applying Parallel Execution (section 4).</p>
 
@@ -1196,19 +1188,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754894977"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754894977"></script>
 
-    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
-    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754894977" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754894977"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

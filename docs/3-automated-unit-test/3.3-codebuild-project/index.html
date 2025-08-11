@@ -12,21 +12,21 @@
     <title>Setting up CodeBuild to Run Unit Tests :: AWS System Manager</title>
 
     
-    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754894977" rel="stylesheet">
     
-    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754894977" rel="stylesheet">
     
     
 
-    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754894977"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
-<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754894977"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754894977"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754894977"></script>
 
     
   </div>
@@ -815,55 +815,55 @@
 <li>Open: <a href="https://console.aws.amazon.com/codebuild/home">https://console.aws.amazon.com/codebuild/home</a></li>
 <li>Click <strong>Create build project</strong></li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="2-enter-project-information">2️⃣ Enter Project Information</h3>
 <ul>
 <li><strong>Project name</strong>: <code>ci-dotnet-unittest</code></li>
 <li><strong>Description</strong>: <code>Run unit tests and generate HTML report</code></li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="3-configure-source">3️⃣ Configure Source</h3>
 <ol>
 <li>In the <strong>Source</strong> section, select <strong>Source provider</strong> as <strong>GitHub (Version 2)</strong> and select <strong>Manage account credentials</strong> if you haven&rsquo;t connected GitHub yet.</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/Source.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Source.png" alt="CodeBuilder"></p>
 <ol start="2">
 <li>Click <strong>create a new GitHub connection</strong> to start creating connection</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png" alt="CodeBuilder"></p>
 <ol start="3">
 <li>A new window will open. Enter a name for the connection:</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png" alt="CodeBuilder"></p>
 <ol start="4">
 <li>Select <strong>Install a new app</strong> to connect to your GitHub</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png" alt="CodeBuilder"></p>
 <ol start="5">
 <li>Enter your GitHub password to connect</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png" alt="CodeBuilder"></p>
 <ol start="6">
 <li>After successful connection, you&rsquo;ll see a confirmation message</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png" alt="CodeBuilder"></p>
 <ol start="7">
 <li>Return to the <strong>Manage default source credential</strong> page, select the connection you just created</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png" alt="CodeBuilder"></p>
 <ol start="8">
 <li>Back to CodeBuild page, select the connected repository and choose your project&rsquo;s main branch (usually <code>main</code> or <code>master</code>)</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png" alt="CodeBuilder"></p>
 <ol start="9">
 <li>In <strong>Primary source webhook events</strong> section, ✅ Check &ldquo;Rebuild every time a code change is pushed to this repository&rdquo;</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/webhook.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/webhook.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="4-setup-build-environment">4️⃣ Setup Build Environment</h3>
 <ul>
@@ -875,14 +875,14 @@
 <li><strong>Runtime</strong>: <code>Standard</code></li>
 <li><strong>Image</strong>: <code>aws/codebuild/amazonlinux-x86_64-standard:5.0</code></li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/environment.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/environment.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="5-buildspec-file">5️⃣ Buildspec file</h3>
 <ul>
 <li><strong>Buildspec</strong>: select <code>Use a buildspec file</code></li>
 <li>Ensure your repo has <code>buildspec.yml</code> in the root directory</li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="6-optional-artifact-for-reports">6️⃣ (Optional) Artifact for Reports</h3>
 <ul>
@@ -893,7 +893,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/S3.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/S3.png" alt="CodeBuilder"></p>
 <hr>
 <h3 id="7-create-project">7️⃣ Create Project</h3>
 <ul>
@@ -905,8 +905,8 @@
 </ul>
 </li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png" alt="CodeBuilder"></p>
-<p><img src="/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png" alt="CodeBuilder"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png" alt="CodeBuilder"></p>
 <hr>
 <h2 id="-pro-tips">💡 Pro Tips</h2>
 <ul>
@@ -1276,19 +1276,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754894977"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754894977"></script>
 
-    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
-    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754894977" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754894977"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

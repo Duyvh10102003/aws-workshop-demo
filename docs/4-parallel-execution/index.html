@@ -12,21 +12,21 @@
     <title>Parallel Test Execution with Multiple Test Files :: AWS System Manager</title>
 
     
-    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754894977" rel="stylesheet">
     
-    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754894977" rel="stylesheet">
     
     
 
-    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754894977"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
-<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754894977"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754894977"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754894977"></script>
 
     
   </div>
@@ -823,7 +823,7 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><img src="/images/4-parallel-execution/view-tests-vscode.png" alt="VS Code ViewTests"></p>
+</span></span></code></pre></div><p><img src="/aws-workshop-demo/images/4-parallel-execution/view-tests-vscode.png" alt="VS Code ViewTests"></p>
 <h3 id="webtestsperformancetestscs"><code>Web.Tests/PerformanceTests.cs</code></h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Threading;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> Xunit;
@@ -847,7 +847,7 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><img src="/images/4-parallel-execution/performance-test-results.png" alt="Performance Test Results"></p>
+</span></span></code></pre></div><p><img src="/aws-workshop-demo/images/4-parallel-execution/performance-test-results.png" alt="Performance Test Results"></p>
 <h2 id="-buildspec-requires-no-changes">⚙️ Buildspec Requires No Changes</h2>
 <p>Since dotnet test automatically detects and runs all test files in Web.Tests, you don&rsquo;t need to modify the buildspec.yml file.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#ae81ff">dotnet test Web.Tests/Web.Tests.csproj --logger &#34;trx;LogFileName=test_results.trx&#34;</span>
@@ -861,16 +861,16 @@
 <ul>
 <li>After pushing code, CodeBuild will automatically run all tests</li>
 </ul>
-<p><img src="/images/4-parallel-execution/test-results.png" alt="Test Results"></p>
+<p><img src="/aws-workshop-demo/images/4-parallel-execution/test-results.png" alt="Test Results"></p>
 <ul>
 <li>Open Build history in CodeBuild to view results of each build</li>
 </ul>
-<p><img src="/images/4-parallel-execution/test-results2.png" alt="Test Results"></p>
+<p><img src="/aws-workshop-demo/images/4-parallel-execution/test-results2.png" alt="Test Results"></p>
 <ul>
 <li>Check test report:
 <strong>CodeBuild</strong> → <strong>Build projects</strong> → <strong>Build history</strong> → <strong>ci-dotnet-unittest</strong> → <strong>[Select latest build]</strong> → <strong>Reports</strong> → <strong>[Select latest report]</strong></li>
 </ul>
-<p><img src="/images/4-parallel-execution/test-results3.png" alt="Test Results"></p>
+<p><img src="/aws-workshop-demo/images/4-parallel-execution/test-results3.png" alt="Test Results"></p>
 <h2 id="-additional-tips">🧠 Additional Tips</h2>
 <p>For thread-level parallel testing, you can configure xUnit parallelism:</p>
 <ul>
@@ -1244,19 +1244,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754894977"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754894977"></script>
 
-    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
-    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754894977" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754894977"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

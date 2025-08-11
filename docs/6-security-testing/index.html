@@ -12,21 +12,21 @@
     <title>Automated Security Scanning with CodeQL :: AWS System Manager</title>
 
     
-    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754894977" rel="stylesheet">
     
-    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754894977" rel="stylesheet">
     
     
 
-    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754894977"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
-<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754894977"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754894977"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754894977"></script>
 
     
   </div>
@@ -807,15 +807,15 @@
 <li>Access your repository page</li>
 <li>Click the <strong>&ldquo;Actions&rdquo;</strong> tab (in the top menu bar)</li>
 </ul>
-<p><img src="/images/6-security-testing/open-actions.png" alt="Open Actions Tab">
-<img src="/images/6-security-testing/open-actions2.png" alt="Select CodeQL"></p>
+<p><img src="/aws-workshop-demo/images/6-security-testing/open-actions.png" alt="Open Actions Tab">
+<img src="/aws-workshop-demo/images/6-security-testing/open-actions2.png" alt="Select CodeQL"></p>
 <hr>
 <h3 id="2-enable-the--workflow">2️⃣ Enable the <strong>&ldquo;CodeQL Analysis&rdquo;</strong> workflow</h3>
 <ul>
 <li>Find <strong>&ldquo;Security → Code scanning → CodeQL Analysis&rdquo;</strong></li>
 <li>Click <strong>&ldquo;Set up this workflow&rdquo;</strong></li>
 </ul>
-<p><img src="/images/6-security-testing/select-codeql.png" alt="Select CodeQL"></p>
+<p><img src="/aws-workshop-demo/images/6-security-testing/select-codeql.png" alt="Select CodeQL"></p>
 <hr>
 <h3 id="3-click-start-commit">3️⃣ Click <strong>Start commit</strong></h3>
 <ul>
@@ -823,22 +823,22 @@
 <li>Click <strong>&ldquo;Commit changes&rdquo; → Commit directly to main</strong></li>
 <li>GitHub will create <code>.github/workflows/codeql.yml</code> for you</li>
 </ul>
-<p><img src="/images/6-security-testing/start-commit.png" alt="Start Commit">
-<img src="/images/6-security-testing/start-commit2.png" alt="Start Commit"></p>
+<p><img src="/aws-workshop-demo/images/6-security-testing/start-commit.png" alt="Start Commit">
+<img src="/aws-workshop-demo/images/6-security-testing/start-commit2.png" alt="Start Commit"></p>
 <hr>
 <h3 id="4-wait-for-workflow-to-run">4️⃣ Wait for workflow to run</h3>
 <ul>
 <li>Go back to <strong>Actions</strong> tab, see &ldquo;CodeQL&rdquo; workflow running</li>
 <li>Takes about 1-2 minutes to analyze</li>
 </ul>
-<p><img src="/images/6-security-testing/workflow-running.png" alt="Workflow Running"></p>
+<p><img src="/aws-workshop-demo/images/6-security-testing/workflow-running.png" alt="Workflow Running"></p>
 <hr>
 <h3 id="5-view-security-results">5️⃣ View security results</h3>
 <ul>
 <li>Go to <strong>&ldquo;Security&rdquo; &gt; &ldquo;Code scanning alerts&rdquo;</strong></li>
 <li>If there are security issues in the code (like SQL injection, null errors, hardcoded passwords, &hellip;), GitHub will list them here</li>
 </ul>
-<p><img src="/images/6-security-testing/security-alerts.png" alt="Security Alerts"></p>
+<p><img src="/aws-workshop-demo/images/6-security-testing/security-alerts.png" alt="Security Alerts"></p>
 <hr>
 <h2 id="-summary">✅ Summary</h2>
 <table>
@@ -1242,19 +1242,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754894977"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754894977"></script>
 
-    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
-    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754894977" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754894977"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

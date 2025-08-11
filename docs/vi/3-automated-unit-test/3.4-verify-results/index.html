@@ -12,21 +12,21 @@
     <title>Kiểm tra kết quả Test tự động khi Push code :: AWS System Manager</title>
 
     
-    <link href="/aws-workshop-demo/css/nucleus.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hybrid.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/featherlight.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/auto-complete.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/theme.css?1754893814" rel="stylesheet">
-    <link href="/aws-workshop-demo/css/hugo-theme.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/nucleus.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/fontawesome-all.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hybrid.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/featherlight.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/perfect-scrollbar.min.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/auto-complete.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/atom-one-dark-reasonable.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme.css?1754894977" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/hugo-theme.css?1754894977" rel="stylesheet">
     
-    <link href="/aws-workshop-demo/css/theme-workshop.css?1754893814" rel="stylesheet">
+    <link href="/aws-workshop-demo/css/theme-workshop.css?1754894977" rel="stylesheet">
     
     
 
-    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/jquery-3.3.1.min.js?1754894977"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,8 +58,8 @@
 </div>
 
 
-<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754893814"></script>
-<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/lunr.min.js?1754894977"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/auto-complete.js?1754894977"></script>
 
 
 <script type="text/javascript">
@@ -68,7 +68,7 @@
     
 </script>
 
-<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754893814"></script>
+<script type="text/javascript" src="/aws-workshop-demo/js/search.js?1754894977"></script>
 
     
   </div>
@@ -811,7 +811,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Test trigger CodeBuild from GitHub&#34;</span>
 </span></span><span style="display:flex;"><span>git push origin main
-</span></span></code></pre></div><p><img src="/images/3-automated-unit-test/3.4-verify-results/push-code.png" alt="Push Code"></p>
+</span></span></code></pre></div><p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/push-code.png" alt="Push Code"></p>
 <hr>
 <h3 id="2-theo-dõi-build-tự-động">2️⃣ Theo dõi Build tự động</h3>
 <ul>
@@ -819,7 +819,7 @@
 <li>Chọn project <code>ci-dotnet-unittest</code></li>
 <li>Quan sát build mới tự động được tạo</li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.4-verify-results/build-history.png" alt="Build History"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-history.png" alt="Build History"></p>
 <hr>
 <h3 id="3-xem-chi-tiết-quá-trình-build">3️⃣ Xem chi tiết quá trình Build</h3>
 <p>Trong tab <strong>Build details</strong>, bạn có thể theo dõi:</p>
@@ -828,9 +828,9 @@
 <li><strong>Build logs</strong>: Log chi tiết của quá trình test</li>
 <li><strong>Environment variables</strong>: Biến môi trường được sử dụng</li>
 </ul>
-<p><img src="/images/3-automated-unit-test/3.4-verify-results/build-details1.png" alt="Build Details">
-<img src="/images/3-automated-unit-test/3.4-verify-results/build-details2.png" alt="Build Details">
-<img src="/images/3-automated-unit-test/3.4-verify-results/build-details3.png" alt="Build Details"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-details1.png" alt="Build Details">
+<img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-details2.png" alt="Build Details">
+<img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-details3.png" alt="Build Details"></p>
 <hr>
 <h3 id="4-kiểm-tra-kết-quả-test-trong-cloudwatch">4️⃣ Kiểm tra kết quả Test trong CloudWatch</h3>
 <ol>
@@ -838,8 +838,8 @@
 <li>Tìm Log group của CodeBuild</li>
 <li>Xem chi tiết log của build vừa chạy</li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs1.png" alt="CloudWatch Logs">
-<img src="/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs2.png" alt="CloudWatch Logs"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs1.png" alt="CloudWatch Logs">
+<img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs2.png" alt="CloudWatch Logs"></p>
 <p>Trong log, tìm đoạn:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Running tests...
 </span></span><span style="display:flex;"><span>Passed!  - Failed: 0, Passed: 2, Skipped: 0
@@ -851,8 +851,8 @@
 <li>Tìm thư mục <code>TestReport</code></li>
 <li>Tải về và mở file <code>index.html</code></li>
 </ol>
-<p><img src="/images/3-automated-unit-test/3.4-verify-results/s3-report-dir.png" alt="S3 Report Directory">
-<img src="/images/3-automated-unit-test/3.4-verify-results/html-report.png" alt="HTML Test Report"></p>
+<p><img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/s3-report-dir.png" alt="S3 Report Directory">
+<img src="/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/html-report.png" alt="HTML Test Report"></p>
 <hr>
 <h2 id="-mẹo">💡 Mẹo</h2>
 <ol>
@@ -1252,19 +1252,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/aws-workshop-demo/js/clipboard.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/featherlight.min.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/highlight.pack.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/clipboard.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/perfect-scrollbar.jquery.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/jquery.sticky.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/featherlight.min.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/highlight.pack.js?1754894977"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/learn.js?1754893814"></script>
-    <script src="/aws-workshop-demo/js/hugo-learn.js?1754893814"></script>
+    <script src="/aws-workshop-demo/js/modernizr.custom-3.6.0.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/learn.js?1754894977"></script>
+    <script src="/aws-workshop-demo/js/hugo-learn.js?1754894977"></script>
 
-    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754893814" rel="stylesheet" />
-    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754893814"></script>
+    <link href="/aws-workshop-demo/mermaid/mermaid.css?1754894977" rel="stylesheet" />
+    <script src="/aws-workshop-demo/mermaid/mermaid.js?1754894977"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
