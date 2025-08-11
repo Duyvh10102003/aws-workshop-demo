@@ -47,7 +47,7 @@ namespace Web.Tests
 }
 ```
 
-![VS Code LuotXemTests](/images/4-parallel-execution/luotxem-tests-vscode.png)
+![VS Code LuotXemTests](/aws-workshop-demo/images/4-parallel-execution/luotxem-tests-vscode.png)
 <!-- Cần thêm ảnh: Screenshot VS Code showing LuotXemTests.cs với syntax highlighting -->
 
 ### `Web.Tests/PerformanceTests.cs`
@@ -77,7 +77,7 @@ namespace Web.Tests
 }
 ```
 
-![Performance Test Results](/images/4-parallel-execution/performance-test-results.png)
+![Performance Test Results](/aws-workshop-demo/images/4-parallel-execution/performance-test-results.png)
 <!-- Cần thêm ảnh: Screenshot kết quả test hiệu năng -->
 
 ## ⚙️ Buildspec không cần thay đổi
@@ -107,16 +107,16 @@ Ví dụ:
 
 - Sau khi push code, CodeBuild sẽ tự động chạy lại toàn bộ test
 
-![Test Results](/images/4-parallel-execution/test-results.png)
+![Test Results](/aws-workshop-demo/images/4-parallel-execution/test-results.png)
 
 - Mở mục Build history trong CodeBuild để xem kết quả từng lần build
 
-![Test Results](/images/4-parallel-execution/test-results2.png)
+![Test Results](/aws-workshop-demo/images/4-parallel-execution/test-results2.png)
 
 - Kiểm tra báo cáo test:
 **CodeBuild** → **Build projects** → **Build history** → **ci-dotnet-unittest** → **[Chọn bản build gần nhất]**→ **Reports** → **[Chọn bản report gần nhất]**
 
-![Test Results](/images/4-parallel-execution/test-results3.png)
+![Test Results](/aws-workshop-demo/images/4-parallel-execution/test-results3.png)
 
 ## 🧠 Mẹo thêm
 

@@ -9,7 +9,7 @@ pre: "<b>1. </b>"
 ## Workshop Overview: Modern Test Automation with AWS CodeBuild & Parallel Execution
 
 ### Architecture Overview
-![Diagram](/images/diagram.png)
+![Diagram](/aws-workshop-demo/images/diagram.png)
 
 ### Prerequisites
 - AWS Account with administrative access

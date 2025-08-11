@@ -28,13 +28,13 @@ git push
 ### Theo dõi quá trình
 
 1. Truy cập CodeBuild console để xem build
-   ![Build Progress](/images/5-monitoring/5.4-verify/build-progress.png)
+   ![Build Progress](/aws-workshop-demo/images/5-monitoring/5.4-verify/build-progress.png)
 
 2. Đợi build thất bại
-   ![Build Failed](/images/5-monitoring/5.4-verify/build-failed.png)
+   ![Build Failed](/aws-workshop-demo/images/5-monitoring/5.4-verify/build-failed.png)
 
 3. Kiểm tra email
-   ![Email Alert](/images/5-monitoring/5.4-verify/email-alert.png)
+   ![Email Alert](/aws-workshop-demo/images/5-monitoring/5.4-verify/email-alert.png)
 
 {{% notice tip %}}
 Sau khi xác nhận hệ thống hoạt động, đừng quên sửa lại test case để không ảnh hưởng tới pipeline thực tế.

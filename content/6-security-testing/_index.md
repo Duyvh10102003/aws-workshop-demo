@@ -25,8 +25,8 @@ You'll configure GitHub Actions to automatically **check for security vulnerabil
 - Access your repository page
 - Click the **"Actions"** tab (in the top menu bar)
 
-![Open Actions Tab](/images/6-security-testing/open-actions.png)
-![Select CodeQL](/images/6-security-testing/open-actions2.png)
+![Open Actions Tab](/aws-workshop-demo/images/6-security-testing/open-actions.png)
+![Select CodeQL](/aws-workshop-demo/images/6-security-testing/open-actions2.png)
 
 ---
 
@@ -35,7 +35,7 @@ You'll configure GitHub Actions to automatically **check for security vulnerabil
 - Find **"Security → Code scanning → CodeQL Analysis"**
 - Click **"Set up this workflow"**
 
-![Select CodeQL](/images/6-security-testing/select-codeql.png)
+![Select CodeQL](/aws-workshop-demo/images/6-security-testing/select-codeql.png)
 
 ---
 
@@ -45,8 +45,8 @@ You'll configure GitHub Actions to automatically **check for security vulnerabil
 - Click **"Commit changes" → Commit directly to main**
 - GitHub will create `.github/workflows/codeql.yml` for you
 
-![Start Commit](/images/6-security-testing/start-commit.png)
-![Start Commit](/images/6-security-testing/start-commit2.png)
+![Start Commit](/aws-workshop-demo/images/6-security-testing/start-commit.png)
+![Start Commit](/aws-workshop-demo/images/6-security-testing/start-commit2.png)
 
 ---
 
@@ -55,7 +55,7 @@ You'll configure GitHub Actions to automatically **check for security vulnerabil
 - Go back to **Actions** tab, see "CodeQL" workflow running
 - Takes about 1-2 minutes to analyze
 
-![Workflow Running](/images/6-security-testing/workflow-running.png)
+![Workflow Running](/aws-workshop-demo/images/6-security-testing/workflow-running.png)
 
 ---
 
@@ -64,7 +64,7 @@ You'll configure GitHub Actions to automatically **check for security vulnerabil
 - Go to **"Security" > "Code scanning alerts"**
 - If there are security issues in the code (like SQL injection, null errors, hardcoded passwords, ...), GitHub will list them here
 
-![Security Alerts](/images/6-security-testing/security-alerts.png)
+![Security Alerts](/aws-workshop-demo/images/6-security-testing/security-alerts.png)
 
 ---
 

@@ -18,6 +18,8 @@ In this section, you will create a simple test file to ensure the CI/CD system c
 
 Create file at: `Web.Tests/LuotXemTests.cs`
 
+![UnitTest](/aws-workshop-demo/images/3-automated-unit-test/3.1-codebuild-setup/codeUnitTestLuotXem.png)
+
 ```csharp
 using System.Threading;
 using Xunit;
@@ -42,13 +44,6 @@ namespace Web.Tests
     }
 }
 ```
-
-## 🖼 Implementation Steps
-
-{{% notice info %}}
-Add your actual screenshot of the test file in Visual Studio here
-{{% /notice %}}
-
 ## ✅ Verification
 
 Run the following command in the root directory to verify the tests:
@@ -63,9 +58,7 @@ Expected output:
 Passed!  - Failed: 0, Passed: 2, Skipped: 0
 ```
 
-{{% notice info %}}
-Add your actual screenshot of the test results here
-{{% /notice %}}
+![UnitTest](/aws-workshop-demo/images/3-automated-unit-test/3.1-codebuild-setup/TestLuotXem.png)
 
 ## 📌 Notes
 

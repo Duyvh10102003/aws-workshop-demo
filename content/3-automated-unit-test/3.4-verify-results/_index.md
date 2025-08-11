@@ -28,7 +28,7 @@ git commit -m "Test trigger CodeBuild from GitHub"
 git push origin main
 ```
 
-![Push Code](/images/3-automated-unit-test/3.4-verify-results/push-code.png)
+![Push Code](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/push-code.png)
 
 ---
 
@@ -38,7 +38,7 @@ git push origin main
 - Select project `ci-dotnet-unittest`
 - Observe new build being automatically created
 
-![Build History](/images/3-automated-unit-test/3.4-verify-results/build-history.png)
+![Build History](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-history.png)
 
 ---
 
@@ -50,9 +50,9 @@ In the **Build details** tab, you can monitor:
 - **Build logs**: Detailed test process logs
 - **Environment variables**: Environment variables in use
 
-![Build Details](/images/3-automated-unit-test/3.4-verify-results/build-details1.png)
-![Build Details](/images/3-automated-unit-test/3.4-verify-results/build-details2.png)
-![Build Details](/images/3-automated-unit-test/3.4-verify-results/build-details3.png)
+![Build Details](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-details1.png)
+![Build Details](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-details2.png)
+![Build Details](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/build-details3.png)
 
 ---
 
@@ -62,8 +62,8 @@ In the **Build details** tab, you can monitor:
 2. Find CodeBuild Log group
 3. View detailed logs of the recent build
 
-![CloudWatch Logs](/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs1.png)
-![CloudWatch Logs](/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs2.png)
+![CloudWatch Logs](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs1.png)
+![CloudWatch Logs](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/cloudwatch-logs2.png)
 
 In the logs, look for:
 ```plaintext
@@ -80,8 +80,8 @@ Test Run Successful.
 2. Find `TestReport` directory
 3. Download and open `index.html`
 
-![S3 Report Directory](/images/3-automated-unit-test/3.4-verify-results/s3-report-dir.png)
-![HTML Test Report](/images/3-automated-unit-test/3.4-verify-results/html-report.png)
+![S3 Report Directory](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/s3-report-dir.png)
+![HTML Test Report](/aws-workshop-demo/images/3-automated-unit-test/3.4-verify-results/html-report.png)
 
 ---
 

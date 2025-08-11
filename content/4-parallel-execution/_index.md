@@ -47,7 +47,7 @@ namespace Web.Tests
 }
 ```
 
-![VS Code ViewTests](/images/4-parallel-execution/view-tests-vscode.png)
+![VS Code ViewTests](/aws-workshop-demo/images/4-parallel-execution/view-tests-vscode.png)
 <!-- Need image: Screenshot VS Code showing ViewTests.cs with syntax highlighting -->
 
 ### `Web.Tests/PerformanceTests.cs`
@@ -77,7 +77,7 @@ namespace Web.Tests
 }
 ```
 
-![Performance Test Results](/images/4-parallel-execution/performance-test-results.png)
+![Performance Test Results](/aws-workshop-demo/images/4-parallel-execution/performance-test-results.png)
 <!-- Need image: Screenshot of performance test results -->
 
 ## ⚙️ Buildspec Requires No Changes
@@ -107,16 +107,16 @@ Example:
 
 - After pushing code, CodeBuild will automatically run all tests
 
-![Test Results](/images/4-parallel-execution/test-results.png)
+![Test Results](/aws-workshop-demo/images/4-parallel-execution/test-results.png)
 
 - Open Build history in CodeBuild to view results of each build
 
-![Test Results](/images/4-parallel-execution/test-results2.png)
+![Test Results](/aws-workshop-demo/images/4-parallel-execution/test-results2.png)
 
 - Check test report:
 **CodeBuild** → **Build projects** → **Build history** → **ci-dotnet-unittest** → **[Select latest build]** → **Reports** → **[Select latest report]**
 
-![Test Results](/images/4-parallel-execution/test-results3.png)
+![Test Results](/aws-workshop-demo/images/4-parallel-execution/test-results3.png)
 
 ## 🧠 Additional Tips
 

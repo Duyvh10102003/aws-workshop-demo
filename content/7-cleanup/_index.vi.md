@@ -18,8 +18,8 @@ pre: "<b>7. </b>"
 2. Chọn project **ci-dotnet-unittest**
 3. Chọn **Delete** từ menu **Actions**
 
-![Delete CodeBuild](/images/7-cleanup/delete-codebuild.png)
-![Delete CodeBuild](/images/7-cleanup/delete-codebuild2.png)
+![Delete CodeBuild](/aws-workshop-demo/images/7-cleanup/delete-codebuild.png)
+![Delete CodeBuild](/aws-workshop-demo/images/7-cleanup/delete-codebuild2.png)
 
 ---
 
@@ -29,8 +29,8 @@ pre: "<b>7. </b>"
 2. Tìm rule **codebuild-failure-rule**
 3. Chọn rule và nhấn **Delete**
 
-![Delete Rule](/images/7-cleanup/delete-rule.png)
-![Delete Rule](/images/7-cleanup/delete-rule2.png)
+![Delete Rule](/aws-workshop-demo/images/7-cleanup/delete-rule.png)
+![Delete Rule](/aws-workshop-demo/images/7-cleanup/delete-rule2.png)
 ---
 
 ### 3️⃣ Xóa SNS Topic
@@ -39,8 +39,8 @@ pre: "<b>7. </b>"
 2. Chọn topic **test-failure-alerts**
 3. Nhấn **Delete**
 
-![Delete SNS](/images/7-cleanup/delete-sns.png)
-![Delete SNS](/images/7-cleanup/delete-sns2.png)
+![Delete SNS](/aws-workshop-demo/images/7-cleanup/delete-sns.png)
+![Delete SNS](/aws-workshop-demo/images/7-cleanup/delete-sns2.png)
 
 ---
 
@@ -51,11 +51,11 @@ pre: "<b>7. </b>"
 3. Chọn bucket và nhấn **Empty**
 4. Sau đó nhấn **Delete**
 
-![Delete S3](/images/7-cleanup/delete-s3.png)
-![Delete S3](/images/7-cleanup/delete-s3-2.png)
-![Delete S3](/images/7-cleanup/delete-s3-3.png)
-![Delete S3](/images/7-cleanup/delete-s3-4.png)
-![Delete S3](/images/7-cleanup/delete-s3-5.png)
+![Delete S3](/aws-workshop-demo/images/7-cleanup/delete-s3.png)
+![Delete S3](/aws-workshop-demo/images/7-cleanup/delete-s3-2.png)
+![Delete S3](/aws-workshop-demo/images/7-cleanup/delete-s3-3.png)
+![Delete S3](/aws-workshop-demo/images/7-cleanup/delete-s3-4.png)
+![Delete S3](/aws-workshop-demo/images/7-cleanup/delete-s3-5.png)
 
 ---
 

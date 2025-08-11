@@ -18,7 +18,7 @@ Trong phần này, bạn sẽ tạo một file test đơn giản để đảm b�
 
 Tạo file tại: `Web.Tests/LuotXemTests.cs`
 
-![UnitTest](/images/3-automated-unit-test/3.1-codebuild-setup/codeUnitTestLuotXem.png)
+![UnitTest](/aws-workshop-demo/images/3-automated-unit-test/3.1-codebuild-setup/codeUnitTestLuotXem.png)
 
 ```csharp
 using System.Threading;
@@ -59,7 +59,7 @@ Kết quả mong đợi:
 Passed!  - Failed: 0, Passed: 2, Skipped: 0
 ```
 
-![UnitTest](/images/3-automated-unit-test/3.1-codebuild-setup/TestLuotXem.png)
+![UnitTest](/aws-workshop-demo/images/3-automated-unit-test/3.1-codebuild-setup/TestLuotXem.png)
 
 ## 📌 Ghi chú
 

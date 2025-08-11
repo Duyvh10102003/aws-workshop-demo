@@ -17,7 +17,7 @@ Trong phần này, bạn sẽ tạo một S3 bucket để lưu trữ báo cáo t
 1. Đăng nhập vào AWS Console
 2. Tìm và chọn dịch vụ **S3**
 
-![Access S3](/images/2-environment-setup/2.3-create-s3/access-s3.jpg)
+![Access S3](/aws-workshop-demo/images/2-environment-setup/2.3-create-s3/access-s3.jpg)
 
 ### 2️⃣ Tạo Bucket
 
@@ -26,16 +26,16 @@ Trong phần này, bạn sẽ tạo một S3 bucket để lưu trữ báo cáo t
 3. Giữ các cài đặt khác ở mặc định
 4. Nhấn **Create bucket**
 
-![Create Bucket](/images/2-environment-setup/2.3-create-s3/create-bucket.png)
+![Create Bucket](/aws-workshop-demo/images/2-environment-setup/2.3-create-s3/create-bucket.png)
 
-![Create Bucket](/images/2-environment-setup/2.3-create-s3/create-bucket2.png)
+![Create Bucket](/aws-workshop-demo/images/2-environment-setup/2.3-create-s3/create-bucket2.png)
 
 ### 3️⃣ Xác nhận
 
 - Bucket mới sẽ xuất hiện trong danh sách
 - Trạng thái bucket là "Created"
 
-![Bucket Created](/images/2-environment-setup/2.3-create-s3/bucket-created.png)
+![Bucket Created](/aws-workshop-demo/images/2-environment-setup/2.3-create-s3/bucket-created.png)
 
 ---
 

@@ -27,7 +27,7 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 - Mở trang: [https://console.aws.amazon.com/codebuild/home](https://console.aws.amazon.com/codebuild/home)
 - Nhấn **Create build project**
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png)
 
 ---
 
@@ -36,7 +36,7 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 - **Project name**: `ci-dotnet-unittest`
 - **Description**: `Chạy unit test và sinh báo cáo HTML`
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png)
 
 ---
 
@@ -44,45 +44,45 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 
 1. Trong phần **Source**, chọn **Source provider** là **GitHub (Version 2)** và chọn **Manage account credentials** nếu bạn chưa kết nối GitHub.
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/Source.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Source.png)
 
 2. Nhấn **create a new GitHub connection** để bắt đầu tạo kết nối
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png)
 
 3. Một cửa sổ mới sẽ mở ra. Nhập tên cho connection:
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png)
 
 4. Chọn **Install a new app** để kết nối tới GitHub của bạn
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png)
 
 5. Nhập mật khẩu GitHub để kết nối
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png)
 
 6. Sau khi kết nối thành công, bạn sẽ thấy thông báo xác nhận
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png)
 
 7. Quay lại trang **Manage default source credential**, chọn connection vừa tạo
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png)
 
 8. Quay lại trang CodeBuild, chọn repository vừa kết nối và chọn branch chính của dự án (thường là `main` hoặc `master`)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png)
 
 9. Trong phần **Primary source webhook events**, chọn ✅ Tick vào "Rebuild every time a code change is pushed to this repository"
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/webhook.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/webhook.png)
 
 ---
 
@@ -96,7 +96,7 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 - **Runtime**: `Standard`
 - **Image**: `aws/codebuild/amazonlinux-x86_64-standard:5.0` 
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/environment.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/environment.png)
 
 ---
 
@@ -105,7 +105,7 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 - **Buildspec**: chọn `Use a buildspec file`
 - Đảm bảo repo của bạn có file `buildspec.yml` ở thư mục gốc
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png)
 
 ---
 
@@ -115,7 +115,7 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
   - **Artifacts type**: `Amazon S3`
   - **S3 bucket**: chọn bucket đã tạo trước
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/S3.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/S3.png)
 
 ---
 
@@ -125,9 +125,9 @@ Trong phần này, bạn sẽ tạo một project CodeBuild để chạy tự đ
 - Sau khi tạo xong:
   - Có thể chọn **Start build** để chạy thử
   - Hoặc push code lên GitHub để webhook tự động chạy
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png)
 
 ---
 

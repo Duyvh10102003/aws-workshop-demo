@@ -18,7 +18,7 @@ To avoid unnecessary charges, we need to delete all resources created during thi
 2. Select project **ci-dotnet-unittest**
 3. Choose **Delete** from **Actions** menu
 
-![Delete CodeBuild](/images/7-cleanup/delete-codebuild.png)
+![Delete CodeBuild](/aws-workshop-demo/images/7-cleanup/delete-codebuild.png)
 
 ---
 
@@ -28,7 +28,7 @@ To avoid unnecessary charges, we need to delete all resources created during thi
 2. Find rule **codebuild-failure-rule**
 3. Select rule and click **Delete**
 
-![Delete Rule](/images/7-cleanup/delete-rule.png)
+![Delete Rule](/aws-workshop-demo/images/7-cleanup/delete-rule.png)
 
 ---
 
@@ -38,7 +38,7 @@ To avoid unnecessary charges, we need to delete all resources created during thi
 2. Select topic **test-failure-alerts**
 3. Click **Delete**
 
-![Delete SNS](/images/7-cleanup/delete-sns.png)
+![Delete SNS](/aws-workshop-demo/images/7-cleanup/delete-sns.png)
 
 ---
 
@@ -49,7 +49,7 @@ To avoid unnecessary charges, we need to delete all resources created during thi
 3. Select bucket and click **Empty**
 4. Then click **Delete**
 
-![Delete S3](/images/7-cleanup/delete-s3.png)
+![Delete S3](/aws-workshop-demo/images/7-cleanup/delete-s3.png)
 
 ---
 

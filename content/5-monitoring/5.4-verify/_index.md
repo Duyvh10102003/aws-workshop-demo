@@ -28,13 +28,13 @@ git push
 ### Monitor Process
 
 1. Access CodeBuild console to watch the build
-   ![Build Progress](/images/5-monitoring/5.4-verify/build-progress.png)
+   ![Build Progress](/aws-workshop-demo/images/5-monitoring/5.4-verify/build-progress.png)
 
 2. Wait for build failure
-   ![Build Failed](/images/5-monitoring/5.4-verify/build-failed.png)
+   ![Build Failed](/aws-workshop-demo/images/5-monitoring/5.4-verify/build-failed.png)
 
 3. Check your email
-   ![Email Alert](/images/5-monitoring/5.4-verify/email-alert.png)
+   ![Email Alert](/aws-workshop-demo/images/5-monitoring/5.4-verify/email-alert.png)
 
 {{% notice tip %}}
 After confirming the system works, don't forget to fix the test case to avoid affecting the actual pipeline.

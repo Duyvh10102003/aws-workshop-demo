@@ -27,7 +27,7 @@ In this section, you will create a CodeBuild project to automatically run unit t
 - Open: [https://console.aws.amazon.com/codebuild/home](https://console.aws.amazon.com/codebuild/home)
 - Click **Create build project**
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateCodeBuilder.png)
 
 ---
 
@@ -36,7 +36,7 @@ In this section, you will create a CodeBuild project to automatically run unit t
 - **Project name**: `ci-dotnet-unittest`
 - **Description**: `Run unit tests and generate HTML report`
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/CreateProject.png)
 
 ---
 
@@ -44,45 +44,45 @@ In this section, you will create a CodeBuild project to automatically run unit t
 
 1. In the **Source** section, select **Source provider** as **GitHub (Version 2)** and select **Manage account credentials** if you haven't connected GitHub yet.
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/Source.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Source.png)
 
 2. Click **create a new GitHub connection** to start creating connection
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github1.png)
 
 3. A new window will open. Enter a name for the connection:
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github2.png)
 
 4. Select **Install a new app** to connect to your GitHub
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github3.png)
 
 5. Enter your GitHub password to connect
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github4.png)
 
 6. After successful connection, you'll see a confirmation message
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github5.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github6.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github7.png)
 
 7. Return to the **Manage default source credential** page, select the connection you just created
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github8.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github9.png)
 
 8. Back to CodeBuild page, select the connected repository and choose your project's main branch (usually `main` or `master`)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/connect-github10.png)
 
 9. In **Primary source webhook events** section, ✅ Check "Rebuild every time a code change is pushed to this repository"
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/webhook.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/webhook.png)
 
 ---
 
@@ -96,7 +96,7 @@ In this section, you will create a CodeBuild project to automatically run unit t
 - **Runtime**: `Standard`
 - **Image**: `aws/codebuild/amazonlinux-x86_64-standard:5.0`
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/environment.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/environment.png)
 
 ---
 
@@ -105,7 +105,7 @@ In this section, you will create a CodeBuild project to automatically run unit t
 - **Buildspec**: select `Use a buildspec file`
 - Ensure your repo has `buildspec.yml` in the root directory
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/buildspec.png)
 
 ---
 
@@ -115,7 +115,7 @@ In this section, you will create a CodeBuild project to automatically run unit t
   - **Artifacts type**: `Amazon S3`
   - **S3 bucket**: select previously created bucket
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/S3.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/S3.png)
 
 ---
 
@@ -126,9 +126,9 @@ In this section, you will create a CodeBuild project to automatically run unit t
   - You can select **Start build** to test
   - Or push code to GitHub for webhook to run automatically
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/Cloudwatch.png)
 
-![CodeBuilder](/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png)
+![CodeBuilder](/aws-workshop-demo/images/3-automated-unit-test/3.3-codebuild-project/doneCreate.png)
 
 ---
 

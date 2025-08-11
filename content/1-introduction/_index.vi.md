@@ -9,7 +9,7 @@ pre: "<b>1. </b>"
 ## Tổng quan Workshop: Tự động hóa Kiểm thử Hiện đại với AWS CodeBuild & Thực thi Song song
 
 ### Tổng quan Kiến trúc
-![Diagram](/images/diagram.png)
+![Diagram](/aws-workshop-demo/images/diagram.png)
 
 ### Yêu cầu Tiên quyết
 - Tài khoản AWS với quyền quản trị
